@@ -6,8 +6,7 @@ export default function Banner5() {
     const { width } = useWindowDimensions()
     return (
         <>
-            {width < 478 ?
-                <div className="flex flex-col items-center px-4 ">
+                <div className="sm:hidden flex flex-col items-center px-4 ">
                     <p className="text-3xl my-8 font-bold bg-gradient-to-r from-textGradientLeft to-textGradientRight inline-block text-transparent bg-clip-text">Meet Pi OS</p>
                     <div className="p-4">
                         <Image
@@ -33,12 +32,12 @@ export default function Banner5() {
                     </div>
                 </div>
 
-                :
+                
 
-                <div className="flex flex-col items-center bg-customRadialBanner5 ">
+                <div className="sm:flex hidden flex-col items-center bg-customRadialBanner5 ">
                     <div className="absolute w-full h-500 z-0 bg-customRadialBanner5-1"></div>
                     <p className="text-6xl my-8 font-bold bg-gradient-to-r from-textGradientLeft to-textGradientRight inline-block text-transparent bg-clip-text">Meet Pi OS</p>
-                    <div>
+                    <div className="z-10">
                         <Image
                             src={Assets.Banner5Image1}
                         />
@@ -61,7 +60,7 @@ export default function Banner5() {
                         </div>
                     </div>
                 </div>
-            }
+            
         </>
 
     )

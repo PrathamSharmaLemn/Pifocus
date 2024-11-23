@@ -8,14 +8,14 @@ import { useState } from "react";
 
 
 export default function Header({showBuyNow}) {
-  console.log(showBuyNow,"asssssssss")
   const { width, height } = useWindowDimensions()
   const [menuOpen, setMenuOpen] = useState(false)
   console.log(width, height, "width,height")
   return (
     <>
-      {width < 478 ? <div>
-        <header className="flex bg-footerBg bg-opacity-50 z-50 justify-between items-center py-4 px-10  fixed w-full">
+      
+       <div className="sm:hidden block">
+        <header className="flex bg-footerBg backdrop-blur-xl  bg-opacity-50 z-50 justify-between items-center py-4 px-10  fixed w-full">
           <div className='leftBox flex flex-row  items-center'>
             <Image
               src={Assets.logo}
@@ -46,9 +46,9 @@ export default function Header({showBuyNow}) {
           </div>}
         </div>
 
-        :
+        
 
-        <header className="flex bg-footerBg bg-opacity-50 justify-between z-50 items-center py-4 px-20  fixed w-full">
+        <header className="sm:flex hidden bg-footerBg bg-opacity-50  backdrop-blur-xl justify-between z-50 items-center py-4 px-20  fixed w-full">
           <div className='leftBox flex flex-row items-center'>
             <Image
               src={Assets.logo}
@@ -65,7 +65,7 @@ export default function Header({showBuyNow}) {
             {showBuyNow && <span className="bg-blue-500 p-3 rounded-md text-sm hover:cursor-pointer">Buy Now</span>}
           </div>
         </header>
-      }
+      
     </>
 
 

@@ -44,7 +44,7 @@ export default function Home() {
       </Head>
 
       <Header showBuyNow={showChat} />
-
+   {/* banner2 banner6 */}
       <main className='bg-bgColor'>
         {showChat && <ChatWithUs />}
         <Banner1 />

@@ -30,7 +30,10 @@ import pi from "/public/pi.png"
 import book from "/public/book.png"
 import pwLogotTilted from "/public/pw-logo-tilted.png"
 import goal from "/public/goal.png"
-
+import Banner3MobileImage from "/public/Banner3MobileImage.png"
+import google from "/public/google.jpg"
+import apple from "/public/apple.jpg"
+// import videoLaptop from "/public/videoLaptop.mp4"
 
 
 export const Assets={
@@ -65,5 +68,9 @@ export const Assets={
     pi,
     book,
     pwLogotTilted,
-    goal
+    goal,
+    Banner3MobileImage,
+    apple,
+    google,
+    // videoLaptop
 }

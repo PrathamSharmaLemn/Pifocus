@@ -12,8 +12,7 @@ export default function Footer() {
     const { width } = useWindowDimensions()
     return (
         <>
-            {width < 478 ?
-                <footer className="flex flex-col justify-evenly p-10 gap-10 bg-footerBg">
+                <footer className="sm:hidden flex flex-col justify-evenly p-10 gap-10 bg-footerBg">
                     <div className="text-white">
                         <div className="flex flex-row items-center">
                             <Image
@@ -63,9 +62,9 @@ export default function Footer() {
                     </div>
                 </footer>
 
-                :
+                
 
-                <footer className="flex flex-row justify-evenly p-20 bg-footerBg">
+                <footer className="sm:flex hidden flex-row justify-evenly p-20 bg-footerBg">
                     <div className="text-white">
                         <div className="flex flex-row items-center">
                             <Image
@@ -76,13 +75,27 @@ export default function Footer() {
                             <p className="ml-2">Physics Wallah</p>
                         </div>
                         <p className="mt-8">We understand that every student has different<br /> needs and capabilities, Which is why we create such<br /> a wonderful and unique curriculum that is the best<br /> fit for every student.</p>
-                        <p className="underline hover:cursor-pointer">...Read More</p>
-                        <div className="mt-10">
-                            <button className="bg-gradient-to-r from-purple-500 to-red-500 text-white font-semibold rounded p-0.5">
+                        <a href="https://www.pw.live/about-us" target="_self" className="underline hover:cursor-pointer">...Read More</a>
+                        <div className="mt-10 flex flex-row items-center">
+                            {/* <button className="bg-gradient-to-r from-purple-500 to-red-500 text-white font-semibold rounded p-0.5">
                                 <span className="flex w-full bg-gray-900 text-white rounded py-2 px-3 hover:cursor-pointer">
                                     Download Our App
                                 </span>
-                            </button>
+                            </button> */}
+                            <a href="https://play.google.com/store/apps/details?id=xyz.penpencil.physicswala" target="_blank">
+                                <Image
+                                src={Assets.google}
+                                height={110}
+                                width={110}
+                                />
+                            </a>
+                            <a href="https://apps.apple.com/in/app/physics-wallah/id1641443555" target="_blank" className="ml-4">
+                                <Image 
+                                src={Assets.apple}
+                                height={100}
+                                width={100}
+                                />
+                            </a>
                         </div>
                     </div>
 
@@ -108,7 +121,7 @@ export default function Footer() {
                         <p>Copyright c 2024 Physics Wallah Pvt.Ltd. All rights reserved.</p>
                     </div>
                 </footer>
-            }
+            
         </>
 
     )

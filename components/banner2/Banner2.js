@@ -8,8 +8,7 @@ export default function Banner2() {
     const { width, height } = useWindowDimensions()
     return (
         <>
-            {width < 478 ?
-                <div className="flex flex-col justify-center items-center pt-8">
+                <div className="sm:hidden flex flex-col justify-center items-center pt-8 bg-customRadialBanner2Mobile">
                     <p className="text-3xl font-bold bg-gradient-to-r from-textGradientLeft to-textGradientRight inline-block text-transparent bg-clip-text">Specifications</p>
                     <div className="flex flex-row mt-4">
                         <div className="mr-1">
@@ -30,25 +29,27 @@ export default function Banner2() {
                     </div>
                 </div>
 
-                :
+                
 
-                <div className="flex flex-col justify-center items-center bg-customRadial">
+                <div className="sm:flex hidden flex-col justify-center items-center bg-customRadialBanner2">
                     <p className="text-6xl font-bold bg-gradient-to-r from-textGradientLeft to-textGradientRight inline-block text-transparent bg-clip-text">Specifications</p>
 
 
-                    <div className="flex flex-row mt-12 justify-center items-center p-4">
-                        <div className="">
-                            <div className="absolute left-28">
+                    <div className="flex flex-row relative mt-12  justify-center items-center p-4">
+                        <div className="relative">
+                            <div className="absolute left-4 z-0 top-4">
                                 <Image
+                                    className="h-28 w-28"
                                     src={Assets.arrowDownwards}
                                 />
                             </div>
-                            <div className="absolute top-[1150px] left-[500px]">
+                            <div className="absolute right-28 z-0 bottom-56">
                                 <Image
+                                    className="h-28 w-28"
                                     src={Assets.arrowUpwards} />
                             </div>
 
-                            <div className="h-500 w-500 pl-12">
+                            <div className="pl-12">
                                 <Image
                                     className=""
                                     src={Assets.Banner2Laptop}
@@ -56,8 +57,8 @@ export default function Banner2() {
                                     height={500}
                                 />
                             </div>
-
                         </div>
+
                         <div className="flex flex-row ml-40 mb-10">
                             <div>
                                 <div className="">
@@ -91,7 +92,7 @@ export default function Banner2() {
                         </div>
                     </div>
                 </div>
-            }
+            
 
 
 

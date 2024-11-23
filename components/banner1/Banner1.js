@@ -17,12 +17,12 @@ export default function Banner1() {
     const [ddpr, setDdpr] = useState(0.5)
     return (
         <>
-            {width < 478 ?
-                <div className="flex flex-col justify-center items-center pt-20">
+            
+                <div className="sm:hidden flex flex-col justify-center items-center pt-20 bg-customRadialBanner1Mobile">
                     <p className="text-3xl font-bold bg-gradient-to-r from-textGradientLeft to-textGradientRight inline-block text-transparent bg-clip-text">AB PADHEGA BHARAT</p>
                     <p className="text-sm text-white">A tech-forward & affordable laptop for students</p>
-                    <div className="mt-4">
-                        <div className="absolute top-52 left-16 pl-3 w-56 ">
+                    <div className="mt-4 relative">
+                        <div className="absolute top-14 left-14 pl-3 w-56 ">
                             <Image
                                 src={Assets.mobileLaptopPiBook}
                             />
@@ -30,42 +30,41 @@ export default function Banner1() {
                         <Image
                             src={Assets.mobileLaptop} />
                     </div>
-                    <span className="py-3 px-8 mt-8 rounded-md text-sm bg-blue-500 text-white hover:cursor-pointer">Buy Now</span>
+                    <span className="py-3 px-8 mt-8 mb-2 rounded-md text-sm bg-blue-500 text-white hover:cursor-pointer">Buy Now</span>
                 </div>
 
-                :
+                
 
-                <div className="flex flex-row justify-evenly items-center py-12 bg-customRadialBanner1">
+                <div className="sm:flex hidden flex-row justify-evenly items-center py-12 bg-customRadialBanner1">
                     <div className="absolute w-full h-500 z-0 bg-customRadialBanner1-2"></div>
                     <div className="flex flex-col z-10 justify-between">
                         <p className="text-9xl font-bold bg-gradient-to-r from-textGradientLeft to-textGradientRight inline-block text-transparent bg-clip-text">PiBook</p>
-                        <p className="text-2xl text-white my-4">A tech-forward & affordable laptop<br /> for students Bharat to learn<br /> & upskill</p>
+                        <p className="text-2xl text-white my-4">A tech-forward & affordable laptop<br /> for students across Bharat to learn<br /> & upskill</p>
                         <div className="mt-8">
                             <span className="py-3 px-8 rounded-3xl text-sm bg-blue-500 text-white hover:cursor-pointer">Get it Now</span>
                         </div>
                     </div>
-                    <div className="w-500 h-500 bg-bgImage">
+                    <div className="w-[650px] h-500 relative bg-bgImage">
                         <div className="z-50">
                             <Image
                                 src={Assets.Banner1laptop}
                             />
                         </div>
-                        <div className="absolute z-10  right-24 top-32">
+                        <div className="absolute z-0 right-0 top-4">
                             <Image
-                                className=""
                                 src={Assets.pwVector}
                                 width={100}
                                 height={100}
                             />
                         </div>
-                        <div className="absolute right-28 top-72">
+                        <div className="absolute right-0 top-60 bg-no-repeat">
                             <Image
                                 src={Assets.scale}
                                 width={30}
                                 height={30}
                             />
                         </div>
-                        <div className="absolute right-40 top-[500px]">
+                        <div className="absolute right-20 top-[500px]">
                             <Image
                                 src={Assets.puzzle}
                                 width={40}
@@ -108,7 +107,7 @@ export default function Banner1() {
                     </div>
 
                 </div>
-            }
+            
 
 
 

@@ -6,13 +6,13 @@ export default function ChatWithUs() {
     return (
         <>
             {width < 478 ?
-                <span className="bg-white text-bgColor p-3 rounded-full hover:cursor-pointer fixed top-[610px] z-50 right-[15px]">
+                <span className="bg-white text-bgColor p-3 rounded-full hover:cursor-pointer fixed z-50 bottom-4 right-4">
                     <BsChatLeftTextFill
                         style={{ width: 20, height: 20 }}
                     />
                 </span>
                 :
-                <span className="bg-white text-bgColor p-4 rounded-full hover:cursor-pointer fixed top-[620px] z-50 right-[15px]">
+                <span className="bg-white text-bgColor p-4 rounded-full hover:cursor-pointer fixed  z-50 right-4 bottom-4">
                     <BsChatLeftTextFill
                         style={{ width: 30, height: 30 }}
                     />
