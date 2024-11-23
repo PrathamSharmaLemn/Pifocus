@@ -30,7 +30,7 @@ export default function Banner1() {
                         <Image
                             src={Assets.mobileLaptop} />
                     </div>
-                    <span className="py-3 px-8 mt-8 rounded-md text-sm bg-white hover:cursor-pointer">Buy Now</span>
+                    <span className="py-3 px-8 mt-8 rounded-md text-sm bg-blue-500 text-white hover:cursor-pointer">Buy Now</span>
                 </div>
 
                 :

@@ -37,39 +37,39 @@ export default function Banner7() {
 
                 <div className="flex flex-col items-center py-16 bg-customRadialBanner7">
                     {/* <div className="w-full b"></div> */}
-                    <div className="absolute left-52 top-[5080px]">
+                    <div className="absolute left-52 top-[5160px]">
                         <Image
                             src={Assets.goal
                             }
                         />
                     </div>
 
-                    <div className="absolute top-[5380px] left-[100px]">
+                    <div className="absolute top-[5460px] left-[100px]">
                         <Image
                             src={Assets.book} />
                     </div>
 
-                    <div className="absolute top-[5200px] left-[270px]">
+                    <div className="absolute top-[5240px] left-[270px]">
                         <Image
                             width={70}
                             height={70}
                             src={Assets.arrowDownwards} />
                     </div>
 
-                    <div className="absolute top-[5300px] left-[620px]">
+                    <div className="absolute top-[5360px] left-[620px]">
                         <Image src={Assets.arrowUpwards}
                             width={70}
                             height={70} />
                     </div>
 
-                    <div className="absolute top-[5150px] left-[1270px] ">
+                    <div className="absolute top-[5225px] left-[1270px] ">
                         <Image
                             src={Assets.pwLogotTilted}
                             width={60}
                             height={60} />
                     </div>
 
-                    <div className="absolute top-[5500px] left-[1170px]">
+                    <div className="absolute top-[5560px] left-[1170px]">
                         <Image
                             src={Assets.pi}
                         />

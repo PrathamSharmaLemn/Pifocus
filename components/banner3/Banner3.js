@@ -8,11 +8,10 @@ export default function Banner3() {
         <>
             {width < 478 ?
                 <div className="flex flex-col items-center py-8">
-                    <p className="text-3xl  font-bold texw bg-gradient-to-r from-textGradientLeft to-textGradientRight inline-block text-transparent bg-clip-text">All the Ports<br/> you need</p>
-                    <div className="mt-4">
+                    <p className="text-3xl font-bold bg-gradient-to-r from-textGradientLeft to-textGradientRight inline-block text-transparent bg-clip-text">All the Ports<br/> you need</p>
+                    <div className="mt-4 w-full">
                         <Image
                             src={Assets.Banner3Laptop}
-                            
                         />
                     </div>
                 </div>
