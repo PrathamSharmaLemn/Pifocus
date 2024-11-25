@@ -1,35 +1,34 @@
-import logo from '/public/Logo.png'
-import Banner1laptop from '/public/Performance 1.png'
-import Banner2Laptop from '/public/Frame 1171276007.png'
-import Banner3Laptop from '/public/Frame 1171276060.png'
-import Banner4Laptop from '/public/Frame 1171276008.png'
-import Banner5Image1 from '/public/Frame 1171276008 (1).png'
-import Banner5Image2 from '/public/Frame 1116600025.png'
-import Banner6Image from '/public/Frame 1116600025 (1).png'
-import Banner7Image from '/public/Frame 1171276083.png'
-import footerPW from '/public/Group 18955.png'
-import Banner1Bg from '/public/bg vectors.png'
-import mobileLaptop from '/public/Laptop Hero.png'
-import mobileLaptopPiBook from '/public/Pi book (1) 2.png'
-import processor from '/public/processor.png'
-import display from '/public/display.png'
-import battery from '/public/battery.png'
-import storage from '/public/storage.png'
-import ram from '/public/ram.png'
-import os from '/public/os.png'
-import Banner4ImageMobile from "/public/connectForMobile.png"
-import pwVector from "/public/pw_logo 1.png"
-import puzzle from "/public/puzzle.png"
-import scale from "/public/scale.png"
-import circle from "/public/circle.png"
+import logo from '/public/Logo.svg'
+import Banner1laptop from '/public/Performance 1.svg'
+import Banner2Laptop from '/public/Frame 1171276007.svg'
+import Banner3Laptop from '/public/Frame 1171276060.svg'
+import Banner4Laptop from '/public/Frame 1171276008.svg'
+import Banner5Image1 from '/public/Frame 1171276008 (1).svg'
+import Banner5Image2 from '/public/Frame 1116600025.svg'
+import Banner6Image from '/public/Frame 1116600025 (1).svg'
+import Banner7Image from '/public/Frame 1171276083.svg'
+import footerPW from '/public/Group 18955.svg'
+import Banner1Bg from '/public/bg vectors.svg'
+import mobileLaptop from '/public/Laptop Hero.svg'
+import mobileLaptopPiBook from '/public/Pi book (1) 2.svg'
+import processor from '/public/processor.svg'
+import display from '/public/display.svg'
+import battery from '/public/battery.svg'
+import storage from '/public/storage.svg'
+import ram from '/public/ram.svg'
+import os from '/public/os.svg'
+import Banner4ImageMobile from "/public/connectForMobile.svg"
+import pwVector from "/public/pw_logo 1.svg"
+import puzzle from "/public/puzzle.svg"
+import scale from "/public/scale.svg"
 import arrowDownwards from "/public/arrowDownwards.png"
 import arrowUpwards from "/public/arrowUpwards.png"
-import feather from "/public/feather.png"
-import thin from "/public/thin 1.png"
-import pi from "/public/pi.png"
-import book from "/public/book.png"
-import pwLogotTilted from "/public/pw-logo-tilted.png"
-import goal from "/public/goal.png"
+import feather from "/public/feather.svg"
+import thin from "/public/thin 1.svg"
+import pi from "/public/pi.svg"
+import book from "/public/book.svg"
+import pwLogotTilted from "/public/pw-logo-tilted.svg"
+import goal from "/public/goal.svg"
 import Banner3MobileImage from "/public/Banner3MobileImage.png"
 import google from "/public/google.jpg"
 import apple from "/public/apple.jpg"
@@ -60,7 +59,6 @@ export const Assets={
     pwVector,
     puzzle,
     scale,
-    circle,
     arrowDownwards,
     arrowUpwards,
     feather,

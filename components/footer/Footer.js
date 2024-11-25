@@ -24,12 +24,33 @@ export default function Footer() {
                         </div>
                         <p className="mt-8 text-xs">We understand that every student has different needs and capabilities, Which is why we create sucha wonderful and unique curriculum that is the best fit for every student.</p>
                         <p className="underline hover:cursor-pointer">...Read More</p>
-                        <div className="mt-5">
+                        {/* <div className="mt-5">
                             <button className="bg-gradient-to-r from-purple-500 to-red-500 text-white font-semibold rounded p-0.5">
                                 <span class="flex w-full bg-gray-900 text-white rounded py-2 px-3 hover:cursor-pointer">
                                     Download Our App
                                 </span>
                             </button>
+                        </div> */}
+                        <div className="mt-10 flex flex-row items-center">
+                            {/* <button className="bg-gradient-to-r from-purple-500 to-red-500 text-white font-semibold rounded p-0.5">
+                                <span className="flex w-full bg-gray-900 text-white rounded py-2 px-3 hover:cursor-pointer">
+                                    Download Our App
+                                </span>
+                            </button> */}
+                            <a href="https://play.google.com/store/apps/details?id=xyz.penpencil.physicswala" target="_blank">
+                                <Image
+                                src={Assets.google}
+                                height={110}
+                                width={110}
+                                />
+                            </a>
+                            <a href="https://apps.apple.com/in/app/physics-wallah/id1641443555" target="_blank" className="ml-4">
+                                <Image 
+                                src={Assets.apple}
+                                height={100}
+                                width={100}
+                                />
+                            </a>
                         </div>
                     </div>
 
@@ -118,7 +139,7 @@ export default function Footer() {
                             <span className="p-1 bg-white rounded-full text-black hover:cursor-pointer"><FaTwitter /></span>
                         </div>
                         <p>Privacy Policy | Terms & Conditions</p>
-                        <p>Copyright c 2024 Physics Wallah Pvt.Ltd. All rights reserved.</p>
+                        <p className="text-xs mt-4">Copyright c 2024 Physics Wallah Pvt.Ltd. All rights reserved.</p>
                     </div>
                 </footer>
             

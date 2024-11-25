@@ -34,7 +34,7 @@ export default function Banner7() {
                 
 
 
-                <div className="sm:flex hidden flex-col  relative items-center py-16 bg-customRadialBanner7">
+                <div className="sm:flex hidden flex-col h-screen  relative items-center py-16 bg-customRadialBanner7">
                     <div className="absolute left-40 top-40">
                         <Image
                             src={Assets.goal}
@@ -55,17 +55,17 @@ export default function Banner7() {
                         <div className="absolute z-0 right-0 top-0 ">
                             <Image
                                 src={Assets.pwLogotTilted}
-                                width={50}
-                                height={50} />
+                                width={70}
+                                height={70} />
                         </div>
 
-                        <div className="absolute right-0 bottom-0 ">
+                        <div className="absolute right-8 bottom-8 ">
                             <Image
                                 src={Assets.pi}
                             />
                         </div>
                         <div className="relative">
-                            <div className="absolute left-12 top-10">
+                            {/* <div className="absolute left-12 top-10">
                                 <Image
                                     width={70}
                                     height={70}
@@ -76,12 +76,12 @@ export default function Banner7() {
                                 <Image src={Assets.arrowUpwards}
                                     width={70}
                                     height={70} />
-                            </div>
+                            </div> */}
 
                             <Image
                                 src={Assets.Banner7Image}
-                                width={500}
-                                height={500}
+                                width={520}
+                                height={520}
                             />
                         </div>
                         <div className="ml-28 flex flex-col items-center">

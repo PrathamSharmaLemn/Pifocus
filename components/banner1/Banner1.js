@@ -21,14 +21,21 @@ export default function Banner1() {
                 <div className="sm:hidden flex flex-col justify-center items-center pt-20 bg-customRadialBanner1Mobile">
                     <p className="text-3xl font-bold bg-gradient-to-r from-textGradientLeft to-textGradientRight inline-block text-transparent bg-clip-text">AB PADHEGA BHARAT</p>
                     <p className="text-sm text-white">A tech-forward & affordable laptop for students</p>
-                    <div className="mt-4 relative">
-                        <div className="absolute top-14 left-14 pl-3 w-56 ">
+                    <div className="mt-4 relative w-full h-80 bg-bgImage bg-no-repeat bg-cover">
+                        <div className="absolute top-16 left-20 pl-2 w-60 ">
                             <Image
                                 src={Assets.mobileLaptopPiBook}
+                                width={200}
+                            height={200}
                             />
                         </div>
+                        <div className="mt-4 ml-4">
                         <Image
-                            src={Assets.mobileLaptop} />
+                            src={Assets.mobileLaptop} 
+                            
+                            />
+                        </div>
+                       
                     </div>
                     <span className="py-3 px-8 mt-8 mb-2 rounded-md text-sm bg-blue-500 text-white hover:cursor-pointer">Buy Now</span>
                 </div>
@@ -53,8 +60,8 @@ export default function Banner1() {
                         <div className="absolute z-0 right-0 top-4">
                             <Image
                                 src={Assets.pwVector}
-                                width={100}
-                                height={100}
+                                width={70}
+                                height={70}
                             />
                         </div>
                         <div className="absolute right-0 top-60 bg-no-repeat">
@@ -64,7 +71,7 @@ export default function Banner1() {
                                 height={30}
                             />
                         </div>
-                        <div className="absolute right-20 top-[500px]">
+                        <div className="absolute right-10 top-[500px]">
                             <Image
                                 src={Assets.puzzle}
                                 width={40}

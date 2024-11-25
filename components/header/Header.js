@@ -35,13 +35,13 @@ export default function Header({showBuyNow}) {
 
           
         </header>
-        {menuOpen && <div className='fixed top-16 z-50 rounded-md bg-bgColor py-2 bg-opacity-50 text-white flex flex-col w-full justify-center items-center gap-1'>
+        {menuOpen && <div className='fixed top-14 z-50 rounded-md bg-bgColor backdrop-blur-xl right-0 w-1/2 py-2 bg-opacity-50 text-white flex flex-col justify-center items-center gap-4'>
             <span className="hover:cursor-pointer">Home</span>
             <div className="w-16 text-white opacity-15 border-b-2"></div>
             <span className="hover:cursor-pointer">About Us</span>
             <div className="w-16 text-white opacity-15 border-b-2"></div>
             <span className="hover:cursor-pointer">Contact</span>
-            <div className="w-16 text-white opacity-15 border-b-2"></div>
+            {/* <div className="w-16 text-white opacity-15 border-b-2"></div> */}
             <span className="bg-blue-600 p-2 rounded-md text-sm hover:cursor-pointer">Buy Now</span>
           </div>}
         </div>
