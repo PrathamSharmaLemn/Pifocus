@@ -18,7 +18,7 @@ export function LaptopModel2(props) {
     //     }
     // });
   return (
-    <group ref={modelRef} position={[0,-2,0]} scale={[1.6,1.6,1.6]} rotation={[0,0,0]}
+    <group ref={modelRef} position={[0,-1.7,0]} scale={[0.8,0.8,0.8]} rotation={[0,0,0]}
      {...props} dispose={null}>
       <mesh
         castShadow

@@ -10,6 +10,7 @@ import Banner4 from '../components/banner4/Banner4'
 import Banner5 from '../components/banner5/Banner5'
 import Banner6 from '../components/banner6/Banner6'
 import Banner7 from '../components/banner7/Banner7'
+import Banner8 from '../components/banner8/Banner8';
 import ChatWithUs from '../components/chatWithUs/ChatWithUs';
 import 'tailwindcss/tailwind.css'
 import React from 'react';
@@ -40,11 +41,10 @@ export default function Home() {
     <div className={styles.container}>
       <Head>
         <title>Pi Book</title>
-        <link rel="icon" href="/Logo.png" />
+        <link rel="icon" href="/Logo.svg" />
       </Head>
 
       <Header showBuyNow={showChat} />
-   {/* banner2 banner6 */}
       <main className='bg-bgColor'>
         {showChat && <ChatWithUs />}
         <Banner1 />
@@ -54,6 +54,7 @@ export default function Home() {
         <Banner5 />
         <Banner6 />
         <Banner7 />
+        <Banner8 />
       </main>
 
       <Footer />

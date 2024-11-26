@@ -6,10 +6,8 @@ import { FaInstagram } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
 import { FaTelegramPlane } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
-import useWindowDimensions from "../../Dimensions";
 
 export default function Footer() {
-    const { width } = useWindowDimensions()
     return (
         <>
                 <footer className="sm:hidden flex flex-col justify-evenly p-10 gap-10 bg-footerBg">
@@ -23,7 +21,7 @@ export default function Footer() {
                             <p className="ml-2">Physics Wallah</p>
                         </div>
                         <p className="mt-8 text-xs">We understand that every student has different needs and capabilities, Which is why we create sucha wonderful and unique curriculum that is the best fit for every student.</p>
-                        <p className="underline hover:cursor-pointer">...Read More</p>
+                        <a href="https://www.pw.live/about-us" target="_self" className="underline hover:cursor-pointer">...Read More</a>
                         {/* <div className="mt-5">
                             <button className="bg-gradient-to-r from-purple-500 to-red-500 text-white font-semibold rounded p-0.5">
                                 <span class="flex w-full bg-gray-900 text-white rounded py-2 px-3 hover:cursor-pointer">

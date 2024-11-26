@@ -33,7 +33,8 @@ import Banner3MobileImage from "/public/Banner3MobileImage.png"
 import google from "/public/google.jpg"
 import apple from "/public/apple.jpg"
 // import videoLaptop from "/public/videoLaptop.mp4"
-
+import testimonialProfile from "/public/testimonialProfile.png"
+import reviewMark from "/public/reviewMark.svg"
 
 export const Assets={
     logo,
@@ -70,5 +71,7 @@ export const Assets={
     Banner3MobileImage,
     apple,
     google,
+    testimonialProfile,
+    reviewMark
     // videoLaptop
 }

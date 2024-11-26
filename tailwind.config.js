@@ -10,6 +10,14 @@ module.exports = {
   ],
   theme: {
     extend: {
+      spacing: {
+        'customWidth': '32%',
+        'customHeight': '10%',
+        'customLeft':'35%',
+        'customTop':'10%',
+        'customLeftMark':'13%',
+        'customTopMark':'6%',
+      },
       backgroundImage: {
         'fog': `radial-gradient(circle, 
           rgba(255, 255, 255, 0.5) 0%, 
@@ -60,9 +68,12 @@ module.exports = {
         'customRadialBanner5': 'radial-gradient(ellipse at 50% 30%, rgba(53, 17, 111,0.5) 0%, rgba(53, 17, 111,0.3) 20%, transparent 30%)',
         'customRadialBanner5-1': 'radial-gradient(ellipse at 0% 50%, rgba(111, 17, 17,0.2) 0%, rgba(111, 17, 17,0.2) 10%, transparent 70%)',
         'customRadialBanner5-2': 'radial-gradient(ellipse at 50% 50%, rgba(53, 17, 111,0.5) 0%, rgba(53, 17, 111,0.3) 30%, transparent 70%)',
+        'customRadialBanner5-3': 'radial-gradient(ellipse at 0% 100%, rgba(53, 17, 111,0.5) 0%, rgba(53, 17, 111,0.3) 30%, transparent 70%)',
         'customRadialBanner6': 'radial-gradient(ellipse at 50% 50%, rgba(53, 17, 111,0.5) 0%, rgba(53, 17, 111,0.5) 30%, transparent 50%)',
         'customRadialBanner6-1': 'radial-gradient(ellipse at 0% 50%, rgba(111, 17, 17,0.2) 0%, rgba(111, 17, 17,0.2) 20%, transparent 70%)',
         'customRadialBanner7': 'radial-gradient(ellipse at 40% 60%, rgba(53, 17, 111,0.5) 0%, rgba(53, 17, 111,0.5) 30%, transparent 50%)',
+        'customRadialBanner8': 'radial-gradient(ellipse at 50% 60%, rgba(53, 17, 111,0.5) 0%, rgba(53, 17, 111,0.5) 30%, transparent 50%)',
+        'customRadialBanner8-1': 'radial-gradient(ellipse at 0% 60%, rgba(111, 17, 17,0.3) 0%, rgba(111, 17, 17,0.2) 20%, transparent 40%)',
 
         'customRadialBanner2Mobile': 'radial-gradient(ellipse at 50% 60%, rgba(53, 17, 111,0.5) 0%, rgba(53, 17, 111,0.5) 20%, transparent 50%)',
         'customRadialBanner1Mobile': 'radial-gradient(ellipse at 50% 60%, rgba(53, 17, 111,4) 0%, rgba(53, 17, 111,0.3) 30%, transparent 60%)',

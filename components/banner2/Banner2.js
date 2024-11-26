@@ -1,11 +1,9 @@
 import { Assets } from "../../public/Assests"
 import Image from "next/image"
-import useWindowDimensions from "../../Dimensions"
 import Banner2Componenet from "../banner2component/Banner2Component"
 
 
 export default function Banner2() {
-    const { width, height } = useWindowDimensions()
     return (
         <>
                 <div className="sm:hidden flex flex-col justify-center items-center pt-8 bg-customRadialBanner2Mobile">

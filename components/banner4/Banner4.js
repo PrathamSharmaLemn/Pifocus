@@ -1,13 +1,11 @@
 import Image from "next/image"
 import { Assets } from "../../public/Assests"
-import useWindowDimensions from "../../Dimensions"
 
 export default function Banner4() {
-    const { width } = useWindowDimensions()
     return (
         <>
                 <div className="sm:hidden flex flex-col h-96 items-center bg-customRadialBanner4Mobile">
-                    <p className="text-3xl font-bold mb-8  bg-gradient-to-r from-textGradientLeft to-textGradientRight inline-block text-transparent bg-clip-text">Connects with<br /> Everything</p>
+                    <p className="text-3xl text-center font-bold mb-8  bg-gradient-to-r from-textGradientLeft to-textGradientRight inline-block text-transparent bg-clip-text">Connects with<br /> Everything</p>
                     <div className="flex items-center w-full bg-transparent justify-center bg-gray-900">
                         <div className="absolute z-10 mt-28">
                             <Image
@@ -24,7 +22,7 @@ export default function Banner4() {
                 
 
                 <div className="sm:flex hidden flex-col items-center bg-customRadialBanner4">
-                    <p className="text-6xl font-bold mb-8  bg-gradient-to-r from-textGradientLeft to-textGradientRight t inline-block text-transparent bg-clip-text">Connects with Everything</p>
+                    <p className="text-6xl text-center font-bold mb-8  bg-gradient-to-r from-textGradientLeft to-textGradientRight t inline-block text-transparent bg-clip-text">Connects with Everything</p>
                     <div className="flex items-center w-full bg-transparent justify-center h-screen bg-gray-900">
                         <div className="absolute z-10">
                             <Image
@@ -32,8 +30,8 @@ export default function Banner4() {
                             />
                         </div>
                         <div className="flex flex-col justify-center items-center">
-                            <div className="absolute w-[200px] h-[200px] bg-white rounded-full animate-ripple"></div>
-                            <div className="w-[300px] h-[300px] bg-opacity-10 bg-white rounded-full animate-ripple"></div>
+                            <div className="absolute sm:w-[140px] sm:h-[140px]  h-[200px] w-[200px] bg-white rounded-full animate-ripple"></div>
+                            <div className="sm:w-[140px] sm:h-[140px] md:w-[180px] md:h-[200px] bg-opacity-10 bg-white rounded-full animate-ripple"></div>
                         </div>
                     </div>
 
