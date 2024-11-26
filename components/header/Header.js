@@ -31,15 +31,16 @@ export default function Header({ showBuyNow }) {
 
 
         </header>
-        {menuOpen && <div className='fixed top-14 z-50 rounded-md bg-bgColor backdrop-blur-xl right-0 w-8/12 h-screen py-2 bg-opacity-50 text-white flex flex-col  items-center gap-4'>
-          <div>
+        {menuOpen && <div className='fixed top-0 z-50 rounded-md bg-bgColor right-0 w-8/12 h-screen py-2  text-white flex flex-col  items-center gap-4'>
+          <div className="w-full items-end ml-2" onClick={()=>setMenuOpen(!menuOpen)}><IoMdClose className="w-6 h-6" /></div>
+          <div className="h-1/2 flex gap-2 flex-col items-center">
             <span className="hover:cursor-pointer">Home</span>
             <div className="w-16 text-white opacity-15 border-b-2"></div>
-            <span className="hover:cursor-pointer my-4">About Us</span>
+            <span className="hover:cursor-pointer">About Us</span>
             <div className="w-16 text-white opacity-15 border-b-2"></div>
             <span className="hover:cursor-pointer">Contact</span>
           </div>
-          <span className="bg-blue-600 p-2 rounded-md text-sm hover:cursor-pointer">Buy Now</span>
+          <span className="bg-blue-600 p-2 rounded-md text-sm hover:cursor-pointer mt-0">Buy Now</span>
 
          
         </div>}

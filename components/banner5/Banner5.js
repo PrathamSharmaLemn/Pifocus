@@ -37,7 +37,7 @@ export default function Banner5() {
             <div className="sm:flex hidden flex-col items-center bg-customRadialBanner5 ">
                 <div className="absolute w-full h-500 z-0 bg-customRadialBanner5-1"></div>
 
-                <p className="text-6xl my-8 font-bold bg-gradient-to-r from-textGradientLeft to-textGradientRight inline-block text-transparent bg-clip-text">Meet Pi OS</p>
+                <p className="text-6xl my-14 font-bold bg-gradient-to-r from-textGradientLeft to-textGradientRight inline-block text-transparent bg-clip-text">Meet Pi OS</p>
                 <div className="z-10">
                     <Image
                         src={Assets.Banner5Image1}

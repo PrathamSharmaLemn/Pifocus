@@ -32,7 +32,7 @@ export default function Banner7() {
 
 
 
-            <div className="sm:flex hidden flex-col  relative items-center py-16 bg-customRadialBanner7">
+            <div className="sm:flex hidden flex-col  relative items-center py-10 bg-customRadialBanner7">
                 {/* <div className="absolute left-40 top-40">
                         <Image
                             src={Assets.goal}

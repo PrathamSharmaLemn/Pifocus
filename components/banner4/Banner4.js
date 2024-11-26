@@ -21,15 +21,15 @@ export default function Banner4() {
 
                 
 
-                <div className="sm:flex hidden flex-col items-center bg-customRadialBanner4">
-                    <p className="text-6xl text-center font-bold mb-8  bg-gradient-to-r from-textGradientLeft to-textGradientRight t inline-block text-transparent bg-clip-text">Connects with Everything</p>
-                    <div className="flex items-center w-full bg-transparent justify-center h-screen bg-gray-900">
-                        <div className="absolute z-10">
+                <div className="sm:flex hidden flex-col relative items-center bg-customRadialBanner4 ">
+                    <p className="text-6xl text-center font-bold bg-gradient-to-r from-textGradientLeft to-textGradientRight py-4 inline-block text-transparent bg-clip-text">Connects with Everything</p>
+                    <div className="flex items-center my-10 h-[500px]  w-full bg-transparent justify-center bg-gray-900">
+                        <div className="absolute z-10 bottom-0">
                             <Image
                                 src={Assets.Banner4Laptop}
                             />
                         </div>
-                        <div className="flex flex-col justify-center items-center">
+                        <div className="flex flex-col justify-center  items-center">
                             <div className="absolute sm:w-[140px] sm:h-[140px]  h-[200px] w-[200px] bg-white rounded-full animate-ripple"></div>
                             <div className="sm:w-[140px] sm:h-[140px] md:w-[180px] md:h-[200px] bg-opacity-10 bg-white rounded-full animate-ripple"></div>
                         </div>
