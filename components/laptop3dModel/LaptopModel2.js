@@ -5,13 +5,13 @@ import * as THREE from 'three';
 
 export function LaptopModel2(props) {
   const { nodes, materials } = useGLTF(
-    '/laptopModel2.glb'
+    '/laptopmodel2.glb'
   )
   // let nodes, materials, scene;
 
   // try {
   //   // Load the model
-  //   ({ nodes, materials, scene } = useGLTF('/laptopModel2.glb'));
+  //   ({ nodes, materials, scene } = useGLTF('/laptopmodel2.glb'));
   // } catch (err) {
   //   console.error('Error loading 3D model:', err);
   //   setError(err);
@@ -138,7 +138,7 @@ export function LaptopModel2(props) {
   )
 }
 
-useGLTF.preload('/laptopModel2.glb')
+useGLTF.preload('/laptopmodel2.glb')
 
 
 
