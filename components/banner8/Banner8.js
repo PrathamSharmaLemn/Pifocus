@@ -1,8 +1,10 @@
-import Marquee from "react-fast-marquee";
 import { Assets } from "../../public/Assests"
 import TestimonialCard from "../testimonialCard/TestimonialCard"
+import { useState, useRef, useEffect } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import Marquee from "react-fast-marquee";
+
 
 export default function Banner8() {
     const data = [
@@ -37,17 +39,18 @@ export default function Banner8() {
             items: 1
         }
     };
+    
     return (
-        <div className="">
-            <div className=" z-10 py-8  relative bg-customRadialBanner8 ">
+        <div className="py-10">
+            <div className=" z-10 relative bg-customRadialBanner8 ">
                 <div className="-z-100 absolute bg-customRadialBanner8-1 w-full h-full"></div>
 
-                <div className="my-12">
+                <div className="my-0">
                     <p className="text-3xl sm:text-5xl md:text-6xl text-center w-full font-bold bg-gradient-to-r from-textGradientLeft to-textGradientRight inline-block text-transparent bg-clip-text">Student Testimonials</p>
                     <p className="text-lg text-white text-center md:text-2xl py-4">Straight from the Student's Mouth</p>
                 </div>
-                <div className="w-full my-12">
-
+                <div className="w-full my-8 hover:cursor-pointer">
+                    {/* <Marquee data={data}/> */}
                     <Marquee
                         gradient={false}
                         speed={80}
@@ -56,6 +59,7 @@ export default function Banner8() {
                         delay={0}
                         play={true}
                         direction="left"
+
                     >
                         {
                             data.map((item, index) => {
@@ -63,8 +67,70 @@ export default function Banner8() {
                             })
                         }
                     </Marquee>
-                </div>
 
+                    {/* <Carousel
+                        additionalTransfrom={0}
+                        arrows={false}
+                        autoPlay
+                        // autoPlaySpeed={5000}
+                        customTransition="all 10s linear"
+                        centerMode={false}
+                        className=""
+                        containerClass="container-with-dots"
+                        dotListClass=""
+                        draggable
+                        focusOnSelect={false}
+                        infinite
+                        itemClass="hover:pause"
+                        keyBoardControl
+                        minimumTouchDrag={80}
+                        pauseOnHover={false}
+                        renderArrowsWhenDisabled={false}
+                        renderButtonGroupOutside={false}
+                        renderDotsOutside={false}
+                        responsive={{
+                            desktop: {
+                                breakpoint: {
+                                    max: 3000,
+                                    min: 1024
+                                },
+                                items: 3,
+                                partialVisibilityGutter: 40
+                            },
+                            mobile: {
+                                breakpoint: {
+                                    max: 464,
+                                    min: 0
+                                },
+                                items: 1,
+                                partialVisibilityGutter: 30
+                            },
+                            tablet: {
+                                breakpoint: {
+                                    max: 1024,
+                                    min: 464
+                                },
+                                items: 2,
+                                partialVisibilityGutter: 30
+                            }
+                        }}
+                        rewind={true}
+                        rewindWithAnimation={true}
+                        rtl={false}
+                        shouldResetAutoplay
+                        showDots={false}
+                        sliderClass=""
+                        slidesToSlide={2}
+                        swipeable
+                    >
+                        {
+                            data.map((item, index) => {
+                                return <TestimonialCard item={item} key={index} />
+                            })
+                        }
+                    </Carousel> */}
+
+                </div>
 
             </div>
         </div>

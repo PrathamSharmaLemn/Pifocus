@@ -38,9 +38,16 @@ module.exports = {
             opacity: '0',
           },
         },
+        'infinite-scroll': {
+          from: { transform: 'translateX(0)' },
+          to: { transform: 'translateX(-100%)' },
+        }
+
       },
       animation: {
         ripple: 'ripple 1.3s infinite',
+        'infinite-scroll': 'infinite-scroll 25s linear infinite',
+        'reverse-infinite-scroll': 'infinite-scroll 25s linear infinite'
       },
       colors: {
         footerBg: "#080811",

@@ -1,25 +1,32 @@
 import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 import { useEffect } from 'react'
-import { useFrame } from '@react-three/fiber'
+import * as THREE from 'three';
 
 export function LaptopModel2(props) {
-  const { nodes, materials } = useGLTF('/laptopmodel2.glb')
+  const { nodes, materials } = useGLTF(
+    '/laptopModel2.glb'
+  )
+  // let nodes, materials, scene;
+
+  // try {
+  //   // Load the model
+  //   ({ nodes, materials, scene } = useGLTF('/laptopModel2.glb'));
+  // } catch (err) {
+  //   console.error('Error loading 3D model:', err);
+  //   setError(err);
+  // }
+
   const modelRef = useRef()
-    useEffect(() => {
-        if (modelRef.current) {
-          modelRef.current.rotation.x = Math.PI / 6; // Rotate downwards by 30 degrees
-        //   modelRef.current.rotation.y = Math.PI / 9
-        }
-      }, []);
-    // useFrame(() => {
-    //     if (modelRef.current) {
-    //         modelRef.current.rotation.y += 0.001; // Adjust the value for speed
-    //     }
-    // });
+  useEffect(() => {
+    if (modelRef.current) {
+      modelRef.current.rotation.x = Math.PI / 6; // Rotate downwards by 30 degrees
+      //   modelRef.current.rotation.y = Math.PI / 9
+    }
+  }, []);
+
   return (
-    <group ref={modelRef} position={[0,-1.7,0]} scale={[0.8,0.8,0.8]} rotation={[0,0,0]}
-     {...props} dispose={null}>
+    <group ref={modelRef} {...props} dispose={null}>
       <mesh
         castShadow
         receiveShadow
@@ -131,6 +138,7 @@ export function LaptopModel2(props) {
   )
 }
 
-useGLTF.preload('/laptopmodel2.glb')
+useGLTF.preload('/laptopModel2.glb')
+
 
 
