@@ -42,7 +42,6 @@ export default function Banner6() {
                         /> */}
                     
                     <video
-                        // controls
                         autoPlay
                         loop
                         muted
@@ -50,7 +49,6 @@ export default function Banner6() {
                         height={1200}
                         playsInline
                         className=""
-                    // className="rounded-md border-2 sm:w-[180px] sm:h-[90px] sm:mb-16   md:w-full md:h-[124px] md:mb-20 lg:w-[400px] lg:h-[190px] lg:mb-36"
                     >
                         <source src="/videoWithFrame.mp4" type="video/mp4" />
                         Your browser does not support the video tag.
