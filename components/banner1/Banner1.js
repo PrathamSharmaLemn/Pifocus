@@ -21,7 +21,7 @@ export default function Banner1() {
                 <p className="text-sm text-white">A tech-forward & affordable laptop for students</p>
                 <div className="mt-4 w-full flex  flex-col justify-center items-center h-80 bg-bgImage bg-no-repeat bg-cover">
 
-                    {/* <div className="mt-4 ml-4 relative">
+                    <div className="mt-4 ml-4 relative">
                         <div className="absolute top-12 left-12 ml-5 w-60 ">
                             <Image
                                 src={Assets.mobileLaptopPiBook}
@@ -33,8 +33,8 @@ export default function Banner1() {
                             src={Assets.mobileLaptop}
 
                         />
-                    </div> */}
-                    <div className="w-80 h-96">
+                    </div>
+                    {/* <div className="w-80 h-96">
                         <Canvas className=" w-full h-full z-10" camera={{ fov: 38 }}  >
                             <pointLight color="white" intensity={1} position={[10, 10, 10]} />
                            
@@ -43,7 +43,7 @@ export default function Banner1() {
                             <Environment preset="city" shadows={true} intensity={0.75} />
                             <OrbitControls target={[0, 0, 0]} enableZoom={false} enableRotate={true} maxPolarAngle={Math.PI / 2} minPolarAngle={Math.PI / 2} />
 
-                        </Canvas>
+                        </Canvas> */}
                         {/* <Canvas id={"abcd"} className=" z-10" dpr={1} camera={{ fov: 38 }}  >
                             <PerformanceMonitor onIncline={() => setDdpr(1.3)} onDecline={() => setDdpr(0.8)} >
                                 <pointLight color="white" intensity={1} position={[10, 10, 10]} />
@@ -58,7 +58,7 @@ export default function Banner1() {
 
                             </PerformanceMonitor>
                         </Canvas> */}
-                    </div>
+                    {/* </div> */}
 
                 </div>
                 <span className="py-3 px-8 mt-8 mb-2 rounded-md text-sm bg-blue-500 text-white hover:cursor-pointer">Buy Now</span>
