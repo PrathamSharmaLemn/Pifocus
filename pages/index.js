@@ -18,52 +18,52 @@ import dynamic from 'next/dynamic';
 import { useInView } from 'react-intersection-observer';
 
 
-const HeavyHeader = dynamic((showBuyNow) => import('../components/header/Header'), {
-  ssr: false, // Optional: Disable server-side rendering for the component if it's not needed
+// const HeavyHeader = dynamic((showBuyNow) => import('../components/header/Header'), {
+//   ssr: false, // Optional: Disable server-side rendering for the component if it's not needed
 
-  loading: () => <p>Loading...</p>, // Optional: Add a fallback loading component
-});
-const HeavyShowChat = dynamic(() => import('../components/chatWithUs/ChatWithUs'), {
-  ssr: false, // Optional: Disable server-side rendering for the component if it's not needed
+//   loading: () => <p>Loading...</p>, // Optional: Add a fallback loading component
+// });
+// const HeavyShowChat = dynamic(() => import('../components/chatWithUs/ChatWithUs'), {
+//   ssr: false, // Optional: Disable server-side rendering for the component if it's not needed
 
-  loading: () => <p>Loading...</p>, // Optional: Add a fallback loading component
-});
-const HeavyBanner1 = dynamic(() => import('../components/banner1/Banner1'), {
-  ssr: false, // Optional: Disable server-side rendering for the component if it's not needed
-  loading: () => <p>Loading...</p>, // Optional: Add a fallback loading component
-});
-const HeavyBanner2 = dynamic(() => import('../components/banner2/Banner2'), {
-  ssr: false, // Optional: Disable server-side rendering for the component if it's not needed
-  loading: () => <p>Loading...</p>, // Optional: Add a fallback loading component
-});
-const HeavyBanner3 = dynamic(() => import('../components/banner3/Banner3'), {
-  ssr: false, // Optional: Disable server-side rendering for the component if it's not needed
-  loading: () => <p>Loading...</p>, // Optional: Add a fallback loading component
-});
-const HeavyBanner4 = dynamic(() => import('../components/banner4/Banner4'), {
-  ssr: false, // Optional: Disable server-side rendering for the component if it's not needed
-  loading: () => <p>Loading...</p>, // Optional: Add a fallback loading component
-});
-const HeavyBanner5 = dynamic(() => import('../components/banner5/Banner5'), {
-  ssr: false, // Optional: Disable server-side rendering for the component if it's not needed
-  loading: () => <p>Loading...</p>, // Optional: Add a fallback loading component
-});
-const HeavyBanner6 = dynamic(() => import('../components/banner6/Banner6'), {
-  ssr: false, // Optional: Disable server-side rendering for the component if it's not needed
-  loading: () => <p>Loading...</p>, // Optional: Add a fallback loading component
-});
-const HeavyBanner7 = dynamic(() => import('../components/banner7/Banner7'), {
-  ssr: false, // Optional: Disable server-side rendering for the component if it's not needed
-  loading: () => <p>Loading...</p>, // Optional: Add a fallback loading component
-});
-const HeavyBanner8 = dynamic(() => import('../components/banner8/Banner8'), {
-  ssr: false, // Optional: Disable server-side rendering for the component if it's not needed
-  loading: () => <p>Loading...</p>, // Optional: Add a fallback loading component
-});
-const HeavyFooter = dynamic(() => import('../components/footer/Footer'), {
-  ssr: false, // Optional: Disable server-side rendering for the component if it's not needed
-  loading: () => <p>Loading...</p>, // Optional: Add a fallback loading component
-});
+//   loading: () => <p>Loading...</p>, // Optional: Add a fallback loading component
+// });
+// const HeavyBanner1 = dynamic(() => import('../components/banner1/Banner1'), {
+//   ssr: false, // Optional: Disable server-side rendering for the component if it's not needed
+//   loading: () => <p>Loading...</p>, // Optional: Add a fallback loading component
+// });
+// const HeavyBanner2 = dynamic(() => import('../components/banner2/Banner2'), {
+//   ssr: false, // Optional: Disable server-side rendering for the component if it's not needed
+//   loading: () => <p>Loading...</p>, // Optional: Add a fallback loading component
+// });
+// const HeavyBanner3 = dynamic(() => import('../components/banner3/Banner3'), {
+//   ssr: false, // Optional: Disable server-side rendering for the component if it's not needed
+//   loading: () => <p>Loading...</p>, // Optional: Add a fallback loading component
+// });
+// const HeavyBanner4 = dynamic(() => import('../components/banner4/Banner4'), {
+//   ssr: false, // Optional: Disable server-side rendering for the component if it's not needed
+//   loading: () => <p>Loading...</p>, // Optional: Add a fallback loading component
+// });
+// const HeavyBanner5 = dynamic(() => import('../components/banner5/Banner5'), {
+//   ssr: false, // Optional: Disable server-side rendering for the component if it's not needed
+//   loading: () => <p>Loading...</p>, // Optional: Add a fallback loading component
+// });
+// const HeavyBanner6 = dynamic(() => import('../components/banner6/Banner6'), {
+//   ssr: false, // Optional: Disable server-side rendering for the component if it's not needed
+//   loading: () => <p>Loading...</p>, // Optional: Add a fallback loading component
+// });
+// const HeavyBanner7 = dynamic(() => import('../components/banner7/Banner7'), {
+//   ssr: false, // Optional: Disable server-side rendering for the component if it's not needed
+//   loading: () => <p>Loading...</p>, // Optional: Add a fallback loading component
+// });
+// const HeavyBanner8 = dynamic(() => import('../components/banner8/Banner8'), {
+//   ssr: false, // Optional: Disable server-side rendering for the component if it's not needed
+//   loading: () => <p>Loading...</p>, // Optional: Add a fallback loading component
+// });
+// const HeavyFooter = dynamic(() => import('../components/footer/Footer'), {
+//   ssr: false, // Optional: Disable server-side rendering for the component if it's not needed
+//   loading: () => <p>Loading...</p>, // Optional: Add a fallback loading component
+// });
 
 
 export default function Home() {
@@ -110,21 +110,21 @@ export default function Home() {
       {/* <div ref={refHeader}>
         {inViewHeader && <HeavyHeader showBuyNow={showChat} />}
       </div> */}
-      <HeavyHeader showBuyNow={showChat} />
-      {/* <Header showBuyNow={showChat} /> */}
+      {/* <HeavyHeader showBuyNow={showChat} /> */}
+      <Header showBuyNow={showChat} />
       <main className='bg-bgColor'>
         {/* <div ref={refShowChat}>
         {(inViewShowChat && showChat) && <ChatWithUs />}
         </div> */}
         {showChat && <HeavyShowChat />}
-        {/* <Banner1 />
+        <Banner1 />
         <Banner2 />
         <Banner3 />
         <Banner4 />
         <Banner5 />
         <Banner6 />
         <Banner7 />
-        <Banner8 />  */}
+        <Banner8 /> 
         {/* <div ref={ref1}>
           {inView1 && <HeavyBanner1 />}
         </div>
@@ -149,7 +149,7 @@ export default function Home() {
         <div ref={ref8}>
           {inView8 && <HeavyBanner8 />}
         </div> */}
-        <HeavyBanner1 />
+        {/* <HeavyBanner1 />
         <HeavyBanner2 />
         <HeavyBanner3 />
         <HeavyBanner4 />
@@ -157,14 +157,14 @@ export default function Home() {
         <HeavyBanner5 />
         <HeavyBanner6 />
         <HeavyBanner7 />
-        <HeavyBanner8 />
+        <HeavyBanner8 /> */}
       </main>
 
-      {/* <Footer /> */}
+      <Footer />
       {/* <div ref={refFooter}>
         {inViewFooter && <HeavyFooter />}
       </div> */}
-      <HeavyFooter />
+      {/* <HeavyFooter /> */}
 
     </div>
 
