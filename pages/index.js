@@ -110,7 +110,7 @@ export default function Home() {
       {/* <div ref={refHeader}>
         {inViewHeader && <HeavyHeader showBuyNow={showChat} />}
       </div> */}
-      <HeavyHeader />
+      <HeavyHeader showBuyNow={showChat} />
       {/* <Header showBuyNow={showChat} /> */}
       <main className='bg-bgColor'>
         {/* <div ref={refShowChat}>
