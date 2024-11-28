@@ -116,14 +116,14 @@ export default function Home() {
         {(inViewShowChat && showChat) && <ChatWithUs />}
         </div> */}
         {showChat && <ChatWithUs />}
-        <Banner1 />
+        {/* <Banner1 />
         <Banner2 />
         <Banner3 />
         <Banner4 />
         <Banner5 />
         <Banner6 />
         <Banner7 />
-        <Banner8 /> 
+        <Banner8 />  */}
         <div ref={ref1}>
           {inView1 && <HeavyBanner1 />}
         </div>
