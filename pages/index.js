@@ -68,18 +68,18 @@ const HeavyFooter = dynamic(() => import('../components/footer/Footer'), {
 
 export default function Home() {
   const [showChat, setShowChat] = useState(false);
-  const [refHeader, inViewHeader] = useInView({ triggerOnce: true, threshold: 0.1 });
-  const [ref1, inView1] = useInView({ triggerOnce: true, threshold: 0.1 });
-  const [refShowChat, inViewShowChat] = useInView({ triggerOnce: true, threshold: 0.1 });
-  const [ref2, inView2] = useInView({ triggerOnce: true, threshold: 0.1 });
-  const [ref3, inView3] = useInView({ triggerOnce: true, threshold: 0.1 });
-  const [ref4, inView4] = useInView({ triggerOnce: true, threshold: 0.1 });
-  const [ref5, inView5] = useInView({ triggerOnce: true, threshold: 0.1 });
-  const [ref6, inView6] = useInView({ triggerOnce: true, threshold: 0.1 });
-  const [ref7, inView7] = useInView({ triggerOnce: true, threshold: 0.1 });
-  const [ref8, inView8] = useInView({ triggerOnce: true, threshold: 0.1 });
+  // const [refHeader, inViewHeader] = useInView({ triggerOnce: true, threshold: 100 });
+  // const [ref1, inView1] = useInView({ triggerOnce: true, threshold: 100 });
+  // const [refShowChat, inViewShowChat] = useInView({ triggerOnce: true, threshold: 0.1 });
+  // const [ref2, inView2] = useInView({ triggerOnce: true, threshold: 0.1 });
+  // const [ref3, inView3] = useInView({ triggerOnce: true, threshold: 0.1 });
+  // const [ref4, inView4] = useInView({ triggerOnce: true, threshold: 0.1 });
+  // const [ref5, inView5] = useInView({ triggerOnce: true, threshold: 0.1 });
+  // const [ref6, inView6] = useInView({ triggerOnce: true, threshold: 0.1 });
+  // const [ref7, inView7] = useInView({ triggerOnce: true, threshold: 0.1 });
+  // const [ref8, inView8] = useInView({ triggerOnce: true, threshold: 0.1 });
 
-  const [refFooter, inViewFooter] = useInView({ triggerOnce: true, threshold: 0.1 });
+  // const [refFooter, inViewFooter] = useInView({ triggerOnce: true, threshold: 0.1 });
 
 
   useEffect(() => {
@@ -107,15 +107,16 @@ export default function Home() {
         <link rel="icon" href="/Logo.svg" />
       </Head>
 
-      <div ref={refHeader}>
+      {/* <div ref={refHeader}>
         {inViewHeader && <HeavyHeader showBuyNow={showChat} />}
-      </div>
-      {/* <HeavyHeader /> */}
+      </div> */}
+      <HeavyHeader />
       {/* <Header showBuyNow={showChat} /> */}
       <main className='bg-bgColor'>
-        <div ref={refShowChat}>
+        {/* <div ref={refShowChat}>
         {(inViewShowChat && showChat) && <ChatWithUs />}
-        </div>
+        </div> */}
+        {showChat && <HeavyShowChat />}
         {/* <Banner1 />
         <Banner2 />
         <Banner3 />
@@ -124,7 +125,7 @@ export default function Home() {
         <Banner6 />
         <Banner7 />
         <Banner8 />  */}
-        <div ref={ref1}>
+        {/* <div ref={ref1}>
           {inView1 && <HeavyBanner1 />}
         </div>
         <div ref={ref2}>
@@ -147,8 +148,8 @@ export default function Home() {
         </div>
         <div ref={ref8}>
           {inView8 && <HeavyBanner8 />}
-        </div>
-        {/* <HeavyBanner1 />
+        </div> */}
+        <HeavyBanner1 />
         <HeavyBanner2 />
         <HeavyBanner3 />
         <HeavyBanner4 />
@@ -156,14 +157,14 @@ export default function Home() {
         <HeavyBanner5 />
         <HeavyBanner6 />
         <HeavyBanner7 />
-        <HeavyBanner8 /> */}
+        <HeavyBanner8 />
       </main>
 
       {/* <Footer /> */}
-      <div ref={refFooter}>
+      {/* <div ref={refFooter}>
         {inViewFooter && <HeavyFooter />}
-      </div>
-      {/* <HeavyFooter /> */}
+      </div> */}
+      <HeavyFooter />
 
     </div>
 
