@@ -6,10 +6,10 @@ export default function Banner6() {
         <>
             <div className="sm:hidden flex flex-col items-center px-4 bg-customRadialBanner6Mobile">
                 <div className="absolute w-full h-500 z-0 bg-customRadialBanner6-1Mobile"></div>
-                <p className="text-3xl my-20 font-bold text-center bg-gradient-to-r from-textGradientLeft to-textGradientRight inline-block text-transparent bg-clip-text">Pi Store <br /> Your App Marketplace</p>
+                <p className="text-3xl mt-12 sm:my-20 font-bold text-center bg-gradient-to-r from-textGradientLeft to-textGradientRight inline-block text-transparent bg-clip-text">Pi Store <br /> Your App Marketplace</p>
                 {/* <div className="flex border-2 flex-row justify-center items-center h-[500px]  w-full  z-10  bg-bgImgaeBanner6 bg-no-repeat bg-contain bg-center"> */}
                 <div className="flex flex-col z-10  justify-center items-center  w-full h-[300px] bg-bgImgaeBanner6 bg-no-repeat bg-contain bg-center ">
-                    {/* <video
+                    <video
                             autoPlay
                             loop
                             // width={200}
@@ -17,12 +17,12 @@ export default function Banner6() {
                             muted
                             playsInline
                             // className=" bg-black w-1/2  rounded-sm py-1 "
-                            className="absolute h-customHeight w-customWidth mb-20 bg-black"
+                            
 
                         >
-                            <source src="/videoLaptop.mp4" type="video/mp4" />
+                            <source src="/videoWithFrame.mp4" type="video/mp4" />
                             Your browser does not support the video tag.
-                        </video> */}
+                        </video>
                 </div>
                 <p className="text-xs text-center   text-white">
                     Discover a curated selection of apps designed to enhance your learning experience. The Pi Store offers a safe and secure platform to download and install apps, ensuring you have the tools you need to succeed.
@@ -41,7 +41,7 @@ export default function Banner6() {
                             src={Assets.Banner6Image}
                         /> */}
                     
-                    {/* <video
+                    <video
                         // controls
                         autoPlay
                         loop
@@ -54,7 +54,7 @@ export default function Banner6() {
                     >
                         <source src="/videoWithFrame.mp4" type="video/mp4" />
                         Your browser does not support the video tag.
-                    </video> */}
+                    </video>
                 </div>
                 <p className="text-xl text-center my-8 text-white">
                     Discover a curated selection of apps designed to enhance your learning experience. The Pi Store<br /> offers a safe and secure platform to download and install apps, ensuring you have the tools you<br /> need to succeed.

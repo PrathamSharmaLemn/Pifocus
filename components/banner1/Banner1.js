@@ -36,19 +36,13 @@ export default function Banner1() {
                     </div> */}
                     <div className="w-80 h-96">
                         <Canvas className=" w-full h-full z-10" camera={{ fov: 38 }}  >
-                            {/* <PerformanceMonitor onIncline={() => setDdpr(1.3)} onDecline={() => setDdpr(0.8)} > */}
                             <pointLight color="white" intensity={1} position={[10, 10, 10]} />
-                            {/* <Suspense fallback={null}> */}
-                            {/* <Stage adjustCamera={false} intensity={2} shadows={false} > */}
-                            {/* <Bounds fit clip> */}
+                           
                             <LaptopModel2 scale={[0.59, 0.59, 0.59]} position={[0, -0.85, 0]} />
-                            {/* </Bounds> */}
-                            {/* </Stage> */}
-                            {/* </Suspense> */}
+                           
                             <Environment preset="city" shadows={true} intensity={0.75} />
                             <OrbitControls target={[0, 0, 0]} enableZoom={false} enableRotate={true} maxPolarAngle={Math.PI / 2} minPolarAngle={Math.PI / 2} />
 
-                            {/* </PerformanceMonitor> */}
                         </Canvas>
                         {/* <Canvas id={"abcd"} className=" z-10" dpr={1} camera={{ fov: 38 }}  >
                             <PerformanceMonitor onIncline={() => setDdpr(1.3)} onDecline={() => setDdpr(0.8)} >
@@ -106,19 +100,13 @@ export default function Banner1() {
                             <LaptopModel2 scale={[100, 100, 100]} position={[0,-100,0]} />
                         </Canvas> */}
                         <Canvas className=" w-full h-full z-10" camera={{ fov: 38 }}  >
-                            {/* <PerformanceMonitor onIncline={() => setDdpr(1.3)} onDecline={() => setDdpr(0.8)} > */}
                             <pointLight color="white" intensity={1} position={[10, 10, 10]} />
-                            {/* <Suspense fallback={null}> */}
-                            {/* <Stage adjustCamera={false} intensity={2} shadows={false} > */}
-                            {/* <Bounds fit clip> */}
+                          
                             <LaptopModel2 scale={[0.6, 0.6, 0.6]} position={[0, -0.85, 0]} />
-                            {/* </Bounds> */}
-                            {/* </Stage> */}
-                            {/* </Suspense> */}
+                           
                             <Environment preset="city" shadows={true} intensity={0.75} />
                             <OrbitControls target={[0, 0, 0]} enableZoom={false} enableRotate={true} maxPolarAngle={Math.PI / 2} minPolarAngle={Math.PI / 2} />
 
-                            {/* </PerformanceMonitor> */}
                         </Canvas>
                     </div>
                     <div className="absolute z-0 right-0 top-4">

@@ -15,6 +15,7 @@ export function LaptopModel2(props) {
   // } catch (err) {
   //   console.error('Error loading 3D model:', err);
   //   setError(err);
+  //   console.log(err,"err")
   // }
 
   const modelRef = useRef()

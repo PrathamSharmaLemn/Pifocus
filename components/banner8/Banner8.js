@@ -1,8 +1,5 @@
 import { Assets } from "../../public/Assests"
 import TestimonialCard from "../testimonialCard/TestimonialCard"
-import { useState, useRef, useEffect } from "react";
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
 import Marquee from "react-fast-marquee";
 
 
