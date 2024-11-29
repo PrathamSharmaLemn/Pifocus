@@ -4,6 +4,8 @@ import Marquee from "../marquee/Marquee"
 // import Marquee from "react-fast-marquee";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import HorizontalCarousel from "../marquee/Marquee";
+import DraggableCarousel from "../marquee/Marquee";
 
 export default function Banner8() {
     const data = [
@@ -30,7 +32,7 @@ export default function Banner8() {
                     <p className="text-3xl sm:text-5xl md:text-6xl text-center w-full font-bold bg-gradient-to-r from-textGradientLeft to-textGradientRight inline-block text-transparent bg-clip-text">Student Testimonials</p>
                     <p className="text-lg text-white text-center md:text-2xl py-4">Straight from the Student's Mouth</p>
                 </div>
-                <div className="w-full px-4 my-8 hover:cursor-pointer">
+                <div className="w-full my-8 hover:cursor-pointer">
                     {/* <Marquee data={data}/> */}
                     {/* <Marquee
                         gradient={false}
@@ -52,11 +54,10 @@ export default function Banner8() {
                     <Carousel
                         additionalTransfrom={0}
                         arrows={false}
-                        autoPlay
                         autoPlaySpeed={3000}
-                        centerMode={false}
-                        className=""
-                        containerClass="container-with-dots"
+                        centerMode
+                        className="w-full"
+                        containerClass="container"
                         dotListClass=""
                         draggable
                         focusOnSelect={false}
@@ -100,7 +101,7 @@ export default function Banner8() {
                         shouldResetAutoplay
                         showDots={false}
                         sliderClass=""
-                        slidesToSlide={2}
+                        slidesToSlide={1}
                         swipeable
                     >
                         {
@@ -109,7 +110,6 @@ export default function Banner8() {
                             })
                         }
                     </Carousel>
-
                     {/* <Marquee text="Hover to pause the scrolling marquee! 🎉" speed={15} /> */}
 
                 </div>

@@ -19,6 +19,7 @@
     "react-multi-carousel": "^2.8.5",
     "sharp": "^0.33.5",
     "sharp-cli": "^5.1.0",
+    "tailwind-scrollbar-hide": "^1.1.7",
     "three": "^0.170.0"
   },
   "engines": {
