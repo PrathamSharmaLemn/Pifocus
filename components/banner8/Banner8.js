@@ -10,7 +10,6 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-
 export default function Banner8() {
     const data = [
         { review: "The laptop's performance is excellent, and I personally appreciate its premium design. The battery backup is impressive as well.", rating: 5, img: Assets.testimonialProfile, name: "Harshita Kaira", batch: "Arjuna JEE Class 11th" },
@@ -43,11 +42,16 @@ export default function Banner8() {
                     <p className="text-3xl sm:text-5xl md:text-6xl text-center w-full font-bold bg-gradient-to-r from-textGradientLeft to-textGradientRight inline-block text-transparent bg-clip-text">Student Testimonials</p>
                     <p className="text-lg text-white text-center md:text-2xl py-4">Straight from the Student's Mouth</p>
                 </div>
-                <div className="w-full pl-4 rounded-xl my-8 hover:cursor-pointer">
-
+                <div className="w-full pl-2 sm:pl-4 rounded-xl my-8 hover:cursor-pointer">
+                    {/* <div className="flex flex-row  overflow-x-scroll w-full scrollbar-none"> */}
+                    {/* {
+                        data.map((item, index) => {
+                            return <TestimonialCard item={item} key={index} />
+                        })
+                    } */}
                     <Carousel
                         additionalTransfrom={0}
-                        arrows={false}
+                        arrows={true}
                         autoPlay
                         autoPlaySpeed={3000}
                         centerMode={false}
@@ -60,7 +64,7 @@ export default function Banner8() {
                         itemClass=""
                         keyBoardControl
                         minimumTouchDrag={80}
-                        pauseOnHover
+                        pauseOnHover={true}
                         renderArrowsWhenDisabled={false}
                         renderButtonGroupOutside={false}
                         renderDotsOutside={false}
@@ -84,7 +88,8 @@ export default function Banner8() {
                             tablet: {
                                 breakpoint: {
                                     max: 1024,
-                                    min: 464
+                                    // min: 464
+                                    min:200
                                 },
                                 items: 2,
                                 partialVisibilityGutter: 30
@@ -105,13 +110,9 @@ export default function Banner8() {
                             })
                         }
                     </Carousel>
-                    {/* <Slider centerMode={true} {...settings}>
-                        {
-                            data.map((item, index) => {
-                                return <TestimonialCard item={item} key={index} />
-                            })
-                        }
-                    </Slider> */}
+
+
+
                     {/* <Marquee text="Hover to pause the scrolling marquee! 🎉" speed={15} /> */}
 
                 </div>

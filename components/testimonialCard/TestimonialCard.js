@@ -9,13 +9,12 @@ export default function TestimonialCard({ item }) {
         stars.push(i)
     }
     return (
-        <div className="text-white relative mr-4 sm:ml-0 max-w-full sm:max-w-full md:max-w-[500px] z-10 flex flex-col py-2 sm:py-4  px-12 h-52 sm:h-72 md:h-96 justify-around   bg-white shadow-customShadow  bg-opacity-15  items-center  rounded-xl">
-            <p className="text-white  text-center text-xs sm:text-sm md:text-lg lg:text-lg">
-                <div className="absolute top-2 left-6 sm:top-6 sm:left-7  ">
+        <div className="text-white relative  mr-2 sm:mr-4 sm:ml-0 max-w-full sm:max-w-full md:max-w-[500px] z-10 flex flex-col py-2 sm:py-4 px-4 sm:px-12 h-52 sm:h-72 md:h-96 justify-around   bg-white shadow-customShadow  bg-opacity-15  items-center  rounded-xl">
+            <p className="text-white   text-center text-xxs sm:text-sm md:text-lg lg:text-lg">
+                <div className="absolute top-4 left-2 sm:top-6 sm:left-7  ">
                     <Image
                         src={Assets.reviewMark}
-                        width={20}
-                        height={20}
+                        className="h-2 w-2 sm:h-6 sm:w-6"
                     />
                 </div>
                 {item.review}
@@ -38,7 +37,7 @@ export default function TestimonialCard({ item }) {
                 </div> */}
 
                 <div>
-                    <p className="text-sm  sm:text-sm md:text-xl">{item.name}</p>
+                    <p className="text-xs  sm:text-sm md:text-xl">{item.name}</p>
                     <p className="text-xxs sm:text-xs md:text-sm opacity-60">{item.batch}</p>
                 </div>
             </div>
