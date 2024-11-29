@@ -10,7 +10,9 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+
 export default function Banner8() {
+    const width= window.innerWidth
     const data = [
         { review: "The laptop's performance is excellent, and I personally appreciate its premium design. The battery backup is impressive as well.", rating: 5, img: Assets.testimonialProfile, name: "Harshita Kaira", batch: "Arjuna JEE Class 11th" },
         { review: "The laptop is smooth, user-friendly, and ideal for online classes, Zoom meetings, and browsing. Its portability and excellent battery life make it perfect for students.", rating: 5, img: Assets.testimonialProfile, name: "Rahul Ojha", batch: "Arjuna JEE Class 11th" },
@@ -51,7 +53,7 @@ export default function Banner8() {
                     } */}
                     <Carousel
                         additionalTransfrom={0}
-                        arrows={true}
+                        arrows={(width>415)}
                         autoPlay
                         autoPlaySpeed={3000}
                         centerMode={false}
