@@ -9,7 +9,7 @@ export default function TestimonialCard({ item }) {
         stars.push(i)
     }
     return (
-        <div className="text-white relative  max-w-64 sm:max-w-72 md:max-w-[500px] z-10 mx-2 flex flex-col py-2 sm:py-4  px-12 h-52 sm:h-72 md:h-96 justify-around   bg-white shadow-customShadow  bg-opacity-15  items-center  rounded-xl">
+        <div className="text-white relative mx-8 sm:ml-0 max-w-80 sm:max-w-72 md:max-w-[500px] z-10 sm:mx-3 flex flex-col py-2 sm:py-4  px-12 h-52 sm:h-72 md:h-96 justify-around   bg-white shadow-customShadow  bg-opacity-15  items-center  rounded-xl">
             <p className="text-white  text-center text-xs sm:text-sm md:text-lg">
                 <div className="absolute top-2 left-6 sm:top-6 sm:left-7  ">
                     <Image

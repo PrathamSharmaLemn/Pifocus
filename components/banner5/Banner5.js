@@ -41,6 +41,9 @@ export default function Banner5() {
                 <div className="z-10">
                     <Image
                         src={Assets.Banner5Image1}
+                        width={900}
+                        height={900}
+                        loading="lazy"
                     />
                 </div>
 

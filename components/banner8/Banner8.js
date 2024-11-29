@@ -1,7 +1,9 @@
 import { Assets } from "../../public/Assests"
 import TestimonialCard from "../testimonialCard/TestimonialCard"
-import Marquee from "react-fast-marquee";
-
+import Marquee from "../marquee/Marquee"
+// import Marquee from "react-fast-marquee";
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
 
 export default function Banner8() {
     const data = [
@@ -17,26 +19,8 @@ export default function Banner8() {
         { review: "The laptop is good and works well for classes. The big screen and good sound quality enhance the study experience.", rating: 5, img: Assets.testimonialProfile, name: "Aman Yadav", batch: "Arjuna JEE Class 11th" },
         { review: "The response time is excellent, and the device is great for online education. Live lectures work seamlessly with no lag.", rating: 5, img: Assets.testimonialProfile, name: "Rahul Pandey", batch: "Arjuna JEE Class 11th" },
     ]
-    const responsive = {
-        superLargeDesktop: {
-            // the naming can be any, depends on you.
-            breakpoint: { max: 4000, min: 3000 },
-            items: 5
-        },
-        desktop: {
-            breakpoint: { max: 3000, min: 1024 },
-            items: 3
-        },
-        tablet: {
-            breakpoint: { max: 1024, min: 464 },
-            items: 2
-        },
-        mobile: {
-            breakpoint: { max: 464, min: 0 },
-            items: 1
-        }
-    };
-    
+
+
     return (
         <div className="py-10">
             <div className=" z-10 relative bg-customRadialBanner8 ">
@@ -46,9 +30,9 @@ export default function Banner8() {
                     <p className="text-3xl sm:text-5xl md:text-6xl text-center w-full font-bold bg-gradient-to-r from-textGradientLeft to-textGradientRight inline-block text-transparent bg-clip-text">Student Testimonials</p>
                     <p className="text-lg text-white text-center md:text-2xl py-4">Straight from the Student's Mouth</p>
                 </div>
-                <div className="w-full my-8 hover:cursor-pointer">
+                <div className="w-full px-4 my-8 hover:cursor-pointer">
                     {/* <Marquee data={data}/> */}
-                    <Marquee
+                    {/* <Marquee
                         gradient={false}
                         speed={80}
                         pauseOnHover={true}
@@ -63,14 +47,13 @@ export default function Banner8() {
                                 return <TestimonialCard item={item} key={index} />
                             })
                         }
-                    </Marquee>
+                    </Marquee> */}
 
-                    {/* <Carousel
+                    <Carousel
                         additionalTransfrom={0}
                         arrows={false}
                         autoPlay
-                        // autoPlaySpeed={5000}
-                        customTransition="all 10s linear"
+                        autoPlaySpeed={3000}
                         centerMode={false}
                         className=""
                         containerClass="container-with-dots"
@@ -78,10 +61,10 @@ export default function Banner8() {
                         draggable
                         focusOnSelect={false}
                         infinite
-                        itemClass="hover:pause"
+                        itemClass=""
                         keyBoardControl
                         minimumTouchDrag={80}
-                        pauseOnHover={false}
+                        pauseOnHover
                         renderArrowsWhenDisabled={false}
                         renderButtonGroupOutside={false}
                         renderDotsOutside={false}
@@ -111,8 +94,8 @@ export default function Banner8() {
                                 partialVisibilityGutter: 30
                             }
                         }}
-                        rewind={true}
-                        rewindWithAnimation={true}
+                        rewind={false}
+                        rewindWithAnimation={false}
                         rtl={false}
                         shouldResetAutoplay
                         showDots={false}
@@ -125,7 +108,9 @@ export default function Banner8() {
                                 return <TestimonialCard item={item} key={index} />
                             })
                         }
-                    </Carousel> */}
+                    </Carousel>
+
+                    {/* <Marquee text="Hover to pause the scrolling marquee! 🎉" speed={15} /> */}
 
                 </div>
 

@@ -13,10 +13,10 @@ module.exports = {
       spacing: {
         'customWidth': '32%',
         'customHeight': '10%',
-        'customLeft':'35%',
-        'customTop':'10%',
-        'customLeftMark':'13%',
-        'customTopMark':'6%',
+        'customLeft': '35%',
+        'customTop': '10%',
+        'customLeftMark': '13%',
+        'customTopMark': '6%',
       },
       backgroundImage: {
         'fog': `radial-gradient(circle, 
@@ -41,13 +41,19 @@ module.exports = {
         'infinite-scroll': {
           from: { transform: 'translateX(0)' },
           to: { transform: 'translateX(-100%)' },
-        }
+        },
+        'marquee': {
+          '0%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
 
       },
       animation: {
         ripple: 'ripple 1.3s infinite',
         'infinite-scroll': 'infinite-scroll 25s linear infinite',
-        'reverse-infinite-scroll': 'infinite-scroll 25s linear infinite'
+        'reverse-infinite-scroll': 'infinite-scroll 25s linear infinite',
+        'marquee': 'marquee linear infinite',
+        'paused': 'none',
       },
       colors: {
         footerBg: "#080811",
@@ -65,7 +71,7 @@ module.exports = {
       backgroundImage: {
         'bgImage': "url('/bg vectors.svg')",
         'circle': "url('/circle.png')",
-        'bgImgaeBanner6':"url('/Frame 1116600025 (1).svg')",
+        'bgImgaeBanner6': "url('/Frame 1116600025 (1).svg')",
         'customRadialBanner2': 'radial-gradient(ellipse at 25% 65%, rgba(53, 17, 111,0.5) 0%, rgba(53, 17, 111,0.2) 25%, transparent 40%)',
         'customRadialBanner1': 'radial-gradient(ellipse at 80% 50%, rgba(53, 17, 111,4) 0%, rgba(111, 17, 17,0.2) 30%, transparent 50%)',
         'customRadialBanner1-2': 'radial-gradient(ellipse at 0% 40%, rgba(53, 17, 111,0.3) 0%, rgba(53, 17, 111,0.2) 20%, transparent 30%)',

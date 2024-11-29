@@ -77,10 +77,10 @@ export default function Banner1() {
                 </div>
                 <div className="w-[650px] h-500 flex flex-col justify-center items-center relative bg-bgImage">
                     <div className="sm:w-80 sm:h-80 sm:mb-28 sm:ml-12 md:w-[370px]  md:h-[350px] lg:w-[520px] lg:h-[550px]  lg:mt-12">
-                        {/* <Image
+                        <Image
                             src={Assets.Banner1laptop}
                             className="sm:w-[600px] sm:h-[500px] lg:w-[600px] lg:h-[600px] z-0"
-                        /> */}
+                        />
                         {/* <Canvas
                             className="h-full w-full border-2"
                             // style={{'height':'100%'}}
@@ -99,7 +99,7 @@ export default function Banner1() {
                             </EffectComposer>
                             <LaptopModel2 scale={[100, 100, 100]} position={[0,-100,0]} />
                         </Canvas> */}
-                        <Canvas className=" w-full h-full z-10" camera={{ fov: 38 }}  >
+                        {/* <Canvas className=" w-full h-full z-10" camera={{ fov: 38 }}  >
                             <pointLight color="white" intensity={1} position={[10, 10, 10]} />
                           
                             <LaptopModel2 scale={[0.6, 0.6, 0.6]} position={[0, -0.85, 0]} />
@@ -107,7 +107,7 @@ export default function Banner1() {
                             <Environment preset="city" shadows={true} intensity={0.75} />
                             <OrbitControls target={[0, 0, 0]} enableZoom={false} enableRotate={true} maxPolarAngle={Math.PI / 2} minPolarAngle={Math.PI / 2} />
 
-                        </Canvas>
+                        </Canvas> */}
                     </div>
                     <div className="absolute z-0 right-0 top-4">
                         <Image
