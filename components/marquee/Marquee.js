@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import { Assets } from "../../public/Assests";
 import Image from "next/image";
+import TestimonialCard from "../testimonialCard/TestimonialCard";
 
 const DraggableCarousel = () => {
   const data = [
@@ -15,7 +16,7 @@ const DraggableCarousel = () => {
     { review: "The app on the laptop works wonderfully, and it has been a great experience. It helps me focus on my studies effectively.", rating: 5, img: Assets.testimonialProfile, name: "Prachi Chauhan", batch: "Arjuna JEE Class 11th" },
     { review: "The laptop is good and works well for classes. The big screen and good sound quality enhance the study experience.", rating: 5, img: Assets.testimonialProfile, name: "Aman Yadav", batch: "Arjuna JEE Class 11th" },
     { review: "The response time is excellent, and the device is great for online education. Live lectures work seamlessly with no lag.", rating: 5, img: Assets.testimonialProfile, name: "Rahul Pandey", batch: "Arjuna JEE Class 11th" },
-]
+  ]
   const carouselRef = useRef(null);
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
@@ -57,44 +58,13 @@ const DraggableCarousel = () => {
   };
 
   return (
-    // <div
-    //   ref={carouselRef}
-    //   className="w-full overflow-x-scroll scroll-smooth flex space-x-4 snap-x snap-mandatory scrollbar-hide"
-    //   onMouseDown={handleMouseDown}
-    //   onMouseMove={handleMouseMove}
-    //   onMouseUp={handleMouseUp}
-    //   onMouseLeave={handleMouseUp} // Stop dragging if mouse leaves the container
-    //   onTouchStart={handleTouchStart}
-    //   onTouchMove={handleTouchMove}
-    //   onTouchEnd={handleTouchEnd}
-    //   style={{ cursor: isDragging ? "grabbing" : "grab" }} // Change cursor style
-    // >
-    //   {[...Array(10)].map((_, i) => (
-    //     <div
-    //       key={i}
-    //       className="w-64 h-40 flex-shrink-0 bg-blue-500 text-white flex items-center justify-center snap-center rounded-lg"
-    //     >
-    //       Item {i + 1}
-    //     </div>
-    //   ))}
-    // </div>
-    <div className="w-full inline-flex py-6 rounded-xl overflow-hidden">
-    <div className="flex items-center animate-infinite-scroll justify-center">
-        {data.map((partner, i) => (
-            <div key={i} className="flex h-auto w-44 justify-center items-center mx-2.5">
-                <Image className="rounded-xl brightness-50" src={partner.img} alt={partner.name} />
-            </div>
-        ))}
+    <div className="flex flex-row w-96 overflow-x-scroll">
+      {
+        data.map((item, index) => {
+          return <TestimonialCard item={item} key={index} />
+        })
+      }
     </div>
-    <div className="flex items-center animate-infinite-scroll whitespace-nowrap justify-center" aria-hidden="true">
-        {data.map((partner, i) => (
-            <div key={i} className="flex h-auto w-44 justify-center items-center mx-2.5">
-                <Image className="rounded-xl brightness-50" src={partner.img} alt={partner.name} />
-            </div>
-        ))}
-        
-    </div>  
-       </div>
   );
 };
 

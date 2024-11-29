@@ -9,8 +9,8 @@ export default function TestimonialCard({ item }) {
         stars.push(i)
     }
     return (
-        <div className="text-white relative mx-1 sm:ml-0 max-w-60 sm:max-w-72 md:max-w-[500px] z-10 sm:mx-3 flex flex-col py-2 sm:py-4  px-12 h-52 sm:h-72 md:h-96 justify-around   bg-white shadow-customShadow  bg-opacity-15  items-center  rounded-xl">
-            <p className="text-white  text-center text-xxs sm:text-xs md:text-sm lg:text-lg">
+        <div className="text-white relative mx-4 sm:ml-0 max-w-full sm:max-w-full md:max-w-[500px] z-10 flex flex-col py-2 sm:py-4  px-12 h-52 sm:h-72 md:h-96 justify-around   bg-white shadow-customShadow  bg-opacity-15  items-center  rounded-xl">
+            <p className="text-white  text-center text-xs sm:text-sm md:text-lg lg:text-lg">
                 <div className="absolute top-2 left-6 sm:top-6 sm:left-7  ">
                     <Image
                         src={Assets.reviewMark}
@@ -38,7 +38,7 @@ export default function TestimonialCard({ item }) {
                 </div> */}
 
                 <div>
-                    <p className="text-xs  sm:text-sm md:text-xl">{item.name}</p>
+                    <p className="text-sm  sm:text-sm md:text-xl">{item.name}</p>
                     <p className="text-xxs sm:text-xs md:text-sm opacity-60">{item.batch}</p>
                 </div>
             </div>

@@ -6,6 +6,10 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import HorizontalCarousel from "../marquee/Marquee";
 import DraggableCarousel from "../marquee/Marquee";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 
 export default function Banner8() {
     const data = [
@@ -22,6 +26,13 @@ export default function Banner8() {
         { review: "The response time is excellent, and the device is great for online education. Live lectures work seamlessly with no lag.", rating: 5, img: Assets.testimonialProfile, name: "Rahul Pandey", batch: "Arjuna JEE Class 11th" },
     ]
 
+    var settings = {
+        dots: false,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+    };
 
     return (
         <div className="py-10">
@@ -33,31 +44,15 @@ export default function Banner8() {
                     <p className="text-lg text-white text-center md:text-2xl py-4">Straight from the Student's Mouth</p>
                 </div>
                 <div className="w-full my-8 hover:cursor-pointer">
-                    {/* <Marquee data={data}/> */}
-                    {/* <Marquee
-                        gradient={false}
-                        speed={80}
-                        pauseOnHover={true}
-                        pauseOnClick={true}
-                        delay={0}
-                        play={true}
-                        direction="left"
-
-                    >
-                        {
-                            data.map((item, index) => {
-                                return <TestimonialCard item={item} key={index} />
-                            })
-                        }
-                    </Marquee> */}
 
                     <Carousel
                         additionalTransfrom={0}
                         arrows={false}
+                        autoPlay
                         autoPlaySpeed={3000}
-                        centerMode
-                        className="w-full"
-                        containerClass="container"
+                        centerMode={false}
+                        className=""
+                        containerClass="container-with-dots"
                         dotListClass=""
                         draggable
                         focusOnSelect={false}
@@ -110,6 +105,13 @@ export default function Banner8() {
                             })
                         }
                     </Carousel>
+                    {/* <Slider centerMode={true} {...settings}>
+                        {
+                            data.map((item, index) => {
+                                return <TestimonialCard item={item} key={index} />
+                            })
+                        }
+                    </Slider> */}
                     {/* <Marquee text="Hover to pause the scrolling marquee! 🎉" speed={15} /> */}
 
                 </div>
