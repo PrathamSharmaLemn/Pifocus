@@ -47,7 +47,7 @@ export default function Banner5() {
                     />
                 </div>
 
-                <p className="text-xl my-12 text-white">Experience the future of mobile computing with Android 13. Enjoy a seamless user experience,<br /> enhanced performance, and a wide range of features designed to make your life easier.</p>
+                <p className="text-xl my-12 text-white">Experiencecdr the future of mobile computing with Android 13. Enjoy a seamless user experience,<br /> enhanced performance, and a wide range of features designed to make your life easier.</p>
 
                 <div className="flex flex-row items-center bg-customRadialBanner5-2 ">
                     <div>

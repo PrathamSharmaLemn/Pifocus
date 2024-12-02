@@ -3,9 +3,13 @@ import Banner1laptop from '/public/Performance 1.svg'
 import Banner2Laptop from '/public/Frame 1171276007.svg'
 import Banner3Laptop from '/public/Frame 1171276060.svg'
 import Banner4Laptop from '/public/Frame 1171276008.svg'
-import Banner5Image1 from '/public/Frame 1171276008 (1).svg'
-import Banner5Image2 from '/public/Frame 1116600025.svg'
-import Banner6Image from '/public/Frame 1116600025 (1).svg'
+// import Banner5Image1 from "/public/Frame 1116600025 (1).png"
+import Banner5Image1 from '/public/Frame 1171276008 (1).png'
+// import Banner5Image1 from '/public/Frame 1171276008 (1).svg'
+import Banner5Image2 from '/public/Frame 1116600025.png'
+// import Banner5Image2 from '/public/Frame 1116600025.svg'
+import Banner6Image from '/public/Frame 1116600025 (1).png'
+// import Banner6Image from '/public/Frame 1116600025 (1).svg'
 import Banner7Image from '/public/Frame 1171276083.svg'
 import footerPW from '/public/Group 18955.svg'
 import Banner1Bg from '/public/bg vectors.svg'
@@ -17,7 +21,8 @@ import battery from '/public/battery.svg'
 import storage from '/public/storage.svg'
 import ram from '/public/ram.svg'
 import os from '/public/os.svg'
-import Banner4ImageMobile from "/public/connectForMobile.svg"
+import Banner4ImageMobile from "/public/connectForMobile.png"
+// import Banner4ImageMobile from "/public/connectForMobile.svg"
 import pwVector from "/public/pw_logo 1.svg"
 import puzzle from "/public/puzzle.svg"
 import scale from "/public/scale.svg"

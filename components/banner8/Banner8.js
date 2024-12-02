@@ -12,7 +12,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 
 export default function Banner8() {
-    const width= window.innerWidth
+    const width = window.innerWidth
     const data = [
         { review: "The laptop's performance is excellent, and I personally appreciate its premium design. The battery backup is impressive as well.", rating: 5, img: Assets.testimonialProfile, name: "Harshita Kaira", batch: "Arjuna JEE Class 11th" },
         { review: "The laptop is smooth, user-friendly, and ideal for online classes, Zoom meetings, and browsing. Its portability and excellent battery life make it perfect for students.", rating: 5, img: Assets.testimonialProfile, name: "Rahul Ojha", batch: "Arjuna JEE Class 11th" },
@@ -45,13 +45,13 @@ export default function Banner8() {
                     <p className="text-lg text-white text-center md:text-2xl py-4">Straight from the Student's Mouth</p>
                 </div>
                 <div className="w-full pl-2 sm:pl-4 rounded-xl my-8 hover:cursor-pointer">
-                    {/* <div className="flex flex-row  overflow-x-scroll w-full scrollbar-none"> */}
-                    {/* {
-                        data.map((item, index) => {
-                            return <TestimonialCard item={item} key={index} />
-                        })
-                    } */}
-                    <Carousel
+                    {/* <div className="flex flex-row  overflow-x-scroll w-full scrollbar-hide"> */}
+                        {/* {
+                            data.map((item, index) => {
+                                return <TestimonialCard item={item} key={index} />
+                            })
+                        } */}
+                        <Carousel
                         additionalTransfrom={0}
                         arrows={(width>415)}
                         autoPlay
@@ -113,13 +113,10 @@ export default function Banner8() {
                         }
                     </Carousel>
 
-
-
-                    {/* <Marquee text="Hover to pause the scrolling marquee! 🎉" speed={15} /> */}
+                    {/* </div> */}
+                    </div>
 
                 </div>
-
             </div>
-        </div>
-    )
+            )
 }
