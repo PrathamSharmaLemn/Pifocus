@@ -1,5 +1,6 @@
 import logo from '/public/Logo.svg'
-import Banner1laptop from '/public/Performance 1.svg'
+import Banner1laptop from '/public/Performance 1.png'
+// import Banner1laptop from '/public/Performance 1.svg'
 import Banner2Laptop from '/public/Frame 1171276007.svg'
 import Banner3Laptop from '/public/Frame 1171276060.svg'
 import Banner4Laptop from '/public/Frame 1171276008.svg'

@@ -22,7 +22,7 @@ export default function Banner1() {
                 <div className="mt-4 w-full flex  flex-col justify-center items-center h-80 bg-bgImage bg-no-repeat bg-cover">
 
                     <div className="mt-4 ml-4 relative">
-                        <div className="absolute top-12 left-12 ml-5 w-60 ">
+                        <div className="absolute top-14 left-16 ml-6 w-60 ">
                             <Image
                                 src={Assets.mobileLaptopPiBook}
                                 width={210}
@@ -79,7 +79,7 @@ export default function Banner1() {
                     <div className="sm:w-80 sm:h-80 sm:mb-28 sm:ml-12 md:w-[370px]  md:h-[350px] lg:w-[520px] lg:h-[550px]  lg:mt-12">
                         <Image
                             src={Assets.Banner1laptop}
-                            className="sm:w-[600px] sm:h-[500px] lg:w-[600px] lg:h-[600px] z-0"
+                            className="sm:w-[600px] sm:h-[500px] lg:w-[700px] lg:h-[520px] z-0"
                         />
                         {/* <Canvas
                             className="h-full w-full border-2"
