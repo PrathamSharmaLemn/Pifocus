@@ -24,7 +24,7 @@ export default function Banner4() {
                 <div className="sm:flex hidden flex-col relative items-center bg-customRadialBanner4 ">
                     <p className="text-6xl text-center font-bold bg-gradient-to-r from-textGradientLeft to-textGradientRight py-4 inline-block text-transparent bg-clip-text">Connects with Everything</p>
                     <div className="flex items-center my-10 h-[500px]  w-full bg-transparent justify-center bg-gray-900">
-                        <div className="absolute z-10 bottom-0">
+                        <div className="absolute z-10 bottom-0 px-8">
                             <Image
                                 src={Assets.Banner4Laptop}
                             />

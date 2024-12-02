@@ -88,8 +88,8 @@ export default function Banner7() {
 
                         <Image
                             src={Assets.Banner7Image}
-                            width={520}
-                            height={520}
+                            width={600}
+                            height={600}
                         />
                     </div>
                     <div className="ml-28 flex flex-col items-center">
