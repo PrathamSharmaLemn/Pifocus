@@ -79,7 +79,7 @@ export default function Banner1() {
                     <div className="sm:w-80 sm:h-80 sm:mb-28 sm:ml-12 md:w-[370px]  md:h-[350px] lg:w-[520px] lg:h-[550px]  lg:mt-12">
                         <Image
                             src={Assets.Banner1laptop}
-                            className="sm:w-[600px] sm:h-[500px] lg:w-[700px] lg:h-[520px] z-0"
+                            className="sm:w-[800px] sm:h-[400px] lg:w-[700px] lg:h-[520px] z-0"
                         />
                         {/* <Canvas
                             className="h-full w-full border-2"
