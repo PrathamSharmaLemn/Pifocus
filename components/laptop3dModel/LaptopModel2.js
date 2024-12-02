@@ -3,6 +3,7 @@ import { useGLTF } from '@react-three/drei'
 import { useEffect } from 'react'
 import * as THREE from 'three';
 
+
 export function LaptopModel2(props) {
   const { nodes, materials } = useGLTF(
     '/laptopmodel2.glb'
