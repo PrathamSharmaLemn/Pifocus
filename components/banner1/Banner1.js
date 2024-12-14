@@ -6,12 +6,14 @@ import { Environment, OrbitControls, useProgress, Stage, Bounds, useScroll } fro
 import { Suspense, useState } from "react"
 import { LaptopModel2 } from "../laptop3dModel/LaptopModel2"
 import { PerformanceMonitor } from "@react-three/drei"
+import ModalForm from "../modal/ModalForm"
 // import { GLTFLoader } from "three/examples/jsm/Addons.js"
+// import { EffectComposer, BrightnessContrast } from '@react-three/postprocessing';
 
 
-export default function Banner1() {
-
+export default function Banner1({setOpenModal}) {
     const [ddpr, setDdpr] = useState(0.5)
+    
     return (
         <>
 
@@ -20,13 +22,14 @@ export default function Banner1() {
                 <p className="text-sm text-white">A tech-forward & affordable laptop for students</p>
                 <div className="mt-4 w-full flex  flex-col justify-center items-center h-80 bg-bgImage bg-no-repeat bg-cover">
 
-                    <div className="mt-4 ml-4 relative">
+                    <div className="mt-4 ml-0 flex relative justify-center items-center">
                         <Image
                             src={Assets.mobileLaptop}
                             width={400}
                             height={400}
                         />
-                        <div className="absolute top-14 left-16 ml-6 w-60 ">
+                        <div className="absolute top-16">
+                        {/* <div> */}
                             <Image
                                 src={Assets.mobileLaptopPiBook}
                                 width={210}
@@ -58,19 +61,22 @@ export default function Banner1() {
                                 <OrbitControls target={[0, 0, 0]} enableZoom={false} enableRotate={true} maxPolarAngle={Math.PI / 2} minPolarAngle={Math.PI / 2} />
 
                             </PerformanceMonitor>
-                        </Canvas> */}
+                        </Canvas> */}   
                     {/* </div> */}
 
                 </div>
-                <span className="py-3 px-8 mt-8 mb-2 rounded-md text-sm bg-blue-500 text-white hover:cursor-pointer">Buy Now</span>
+                <span onClick={()=>setOpenModal(true)} className="py-3 px-8 mt-8 mb-2 rounded-md text-sm bg-blue-500 text-white hover:cursor-pointer">Buy Now</span>
             </div>
+
+
+
 
             <div className="sm:flex hidden flex-row justify-evenly items-center py-12 px-8 bg-customRadialBanner1">
                 <div className="absolute w-full h-500 z-0 bg-customRadialBanner1-2"></div>
                 <div className="flex flex-col z-10 justify-between">
                     <p className="sm:text-7xl md:text-8xl lg:text-9xl  font-bold bg-gradient-to-r from-textGradientLeft to-textGradientRight inline-block text-transparent bg-clip-text">PiBook</p>
-                    <p className="sm:text-lg  md:text-xl text-white my-4 md:w-72 lg:w-96">A tech-forward & affordable laptop for students across Bharat to learn& upskill</p>
-                    <div className="mt-8">
+                    <p className="sm:text-lg  md:text-xl text-white my-4 md:w-72 lg:w-96">A tech-forward & affordable laptop for students across Bharat to learn & upskill</p>
+                    <div className="mt-8" onClick={()=>setOpenModal(true)}>
                         <span className="py-3 px-8 rounded-3xl text-sm bg-blue-500 text-white hover:cursor-pointer">Get it Now</span>
                     </div>
                 </div>
@@ -78,7 +84,7 @@ export default function Banner1() {
                     <div className="sm:w-80 sm:h-80 sm:mb-28 sm:ml-12 md:w-[370px]  md:h-[350px] lg:w-[520px] lg:h-[550px]  lg:mt-12">
                         <Image
                             src={Assets.Banner1laptop}
-                            className="sm:w-[800px] sm:h-[400px] lg:w-[700px] lg:h-[520px] z-0"
+                            className="sm:w-[800px] sm:h-[370px] lg:w-[700px] lg:h-[510px] z-0"
                         />
                         {/* <Canvas
                             className="h-full w-full border-2"

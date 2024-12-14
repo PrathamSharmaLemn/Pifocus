@@ -48,7 +48,7 @@ export default function Banner7() {
 
 
                 <p className="text-6xl text-center font-bold bg-gradient-to-r from-textGradientLeft to-textGradientRight inline-block text-transparent bg-clip-text">The Perfect Laptop for Students</p>
-                <p className="text-white text-xl mt-4">Affordable, Lightweight, and built for productivity</p>
+                <p className="text-white text-xl mt-4">Affordable, Lightweight, Built for productivity</p>
                 <div className="flex flex-row items-center relative mt-8 ">
                     <div className="absolute z-0 right-0 top-0 ">
                         <Image

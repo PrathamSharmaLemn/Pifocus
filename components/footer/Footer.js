@@ -20,7 +20,7 @@ export default function Footer() {
                             />
                             <p className="ml-2">Physics Wallah</p>
                         </div>
-                        <p className="mt-8 text-xs">We understand that every student has different needs and capabilities, Which is why we create sucha wonderful and unique curriculum that is the best fit for every student.</p>
+                        <p className="mt-8 text-xs">We understand that every student has different needs and capabilities, which is why we create sucha wonderful and unique curriculum that is the best fit for every student.</p>
                         <a href="https://www.pw.live/about-us" target="_self" className="underline hover:cursor-pointer">...Read More</a>
                         {/* <div className="mt-5">
                             <button className="bg-gradient-to-r from-purple-500 to-red-500 text-white font-semibold rounded p-0.5">
@@ -75,7 +75,7 @@ export default function Footer() {
 
                         <div>
                             <p className="text-lg">Privacy Policy | Terms & Conditions</p>
-                            <p className="text-xxs mt-4">Copyright c 2024 Physics Wallah Pvt.Ltd. All rights reserved.</p>
+                            <p className="text-xxs mt-4">Copyright © 2024 Physics Wallah Pvt. Ltd. All rights reserved.</p>
                         </div>
 
                     </div>
@@ -93,7 +93,7 @@ export default function Footer() {
                             />
                             <p className="ml-2">Physics Wallah</p>
                         </div>
-                        <p className="mt-8">We understand that every student has different<br /> needs and capabilities, Which is why we create such<br /> a wonderful and unique curriculum that is the best<br /> fit for every student.</p>
+                        <p className="mt-8">We understand that every student has different<br /> needs and capabilities, which is why we create such<br /> a wonderful and unique curriculum that is the best<br /> fit for every student.</p>
                         <a href="https://www.pw.live/about-us" target="_self" className="underline hover:cursor-pointer">...Read More</a>
                         <div className="mt-10 flex flex-row items-center">
                             {/* <button className="bg-gradient-to-r from-purple-500 to-red-500 text-white font-semibold rounded p-0.5">
@@ -137,7 +137,7 @@ export default function Footer() {
                             <span className="p-1 bg-white rounded-full text-black hover:cursor-pointer"><FaTwitter /></span>
                         </div>
                         <p>Privacy Policy | Terms & Conditions</p>
-                        <p className="text-xs mt-4">Copyright c 2024 Physics Wallah Pvt.Ltd. All rights reserved.</p>
+                        <p className="text-xs mt-4">Copyright © 2024 Physics Wallah Pvt. Ltd. All rights reserved.</p>
                     </div>
                 </footer>
             
