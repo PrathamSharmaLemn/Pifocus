@@ -9,7 +9,6 @@ export default async function handler(req, res) {
     if (req.method === 'GET') {
         res.status(200).json({ message: 'Fetching posts' });
     } else if (req.method === 'POST') {
-        console.log()
         try {
             const client = await clientPromise;
             const db = client.db('piBookBuyNow');

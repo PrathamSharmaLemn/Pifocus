@@ -42,7 +42,7 @@ export default function Banner8() {
 
                 <div className="my-0">
                     <p className="text-3xl sm:text-5xl md:text-6xl text-center w-full font-bold bg-gradient-to-r from-textGradientLeft to-textGradientRight inline-block text-transparent bg-clip-text">Student Testimonials</p>
-                    <p className="text-lg text-white text-center md:text-2xl py-4">Straight from the Student's</p>
+                    <p className="text-lg text-white text-center md:text-2xl py-4">Straight from the Students</p>
                 </div>
                 <div className="w-full pl-2 sm:pl-4 rounded-xl my-8 hover:cursor-pointer">
                     {/* <div className="flex flex-row  overflow-x-scroll w-full scrollbar-hide"> */}

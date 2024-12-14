@@ -8,16 +8,7 @@ export function LaptopModel2(props) {
   const { nodes, materials } = useGLTF(
     '/laptopmodel2.glb'
   )
-  // let nodes, materials, scene;
-
-  // try {
-  //   // Load the model
-  //   ({ nodes, materials, scene } = useGLTF('/laptopmodel2.glb'));
-  // } catch (err) {
-  //   console.error('Error loading 3D model:', err);
-  //   setError(err);
-  //   console.log(err,"err")
-  // }
+ 
 
   const modelRef = useRef()
   useEffect(() => {

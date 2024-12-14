@@ -18,7 +18,6 @@ export default function ModalForm({ setOpenModal, reff }) {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        console.log(inputs, "inputs")
         inputs["className"]=className
         inputs["city"]=city
         try {
@@ -38,9 +37,7 @@ export default function ModalForm({ setOpenModal, reff }) {
                         }, 1000);
                     }
                 });
-            // const res= await axios.post("http://localhost:3000/api/posts/route",inputs)
-            // const {data}=res
-            // console.log(data,"data")
+            
         } catch (error) {
             setSubmitResponse(error.response.data)
         }
@@ -166,17 +163,11 @@ export default function ModalForm({ setOpenModal, reff }) {
       
     const onCLassNameOptionChangeHandler = (event) => {
         setClassName(event.target.value);
-        console.log(
-            "User Selected Value - ",
-            event.target.value
-        );
+        
     };
     const onCityOptionChangeHandler = (event) => {
         setCity(event.target.value);
-        console.log(
-            "User Selected Value - ",
-            event.target.value
-        );
+       
     };
     return (
 

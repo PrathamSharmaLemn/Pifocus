@@ -105,7 +105,6 @@ export default function Home() {
     const handleClickOutside = (event) => {
         if (modalRef.current && !modalRef.current.contains(event.target)) {
             setOpenModal(false) // Close modal when clicking outside
-            console.log("Fre")
         }
     };
 
