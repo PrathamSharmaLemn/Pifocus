@@ -4,9 +4,7 @@ import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { Assets } from "../../public/Assests";
 import Image from "next/image";
 import { FaArrowUp } from "react-icons/fa";
-import WhatsappChatBox from "../WhatsappChatBox/WhatsappChatBox";
 
-const phone=process.env.NEXT_PUBLIC_PHONENO
 export default function ChatWithUs() {
     const [openChat, setOpenChat] = useState(false)
     return (
@@ -19,16 +17,19 @@ export default function ChatWithUs() {
 
 
 
-            {openChat && <WhatsappChatBox setOpenChat={setOpenChat} />}
+            {/* {openChat && <WhatsappChatBox setOpenChat={setOpenChat} />} */}
 
             <span className="sm:flex hidden bg-white text-bgColor p-4 rounded-full hover:cursor-pointer fixed  z-50 right-4 bottom-4">
-                {!openChat && <BsChatLeftTextFill
+                {/* {!openChat && <BsChatLeftTextFill
                     style={{ width: 30, height: 30 }}
                 />}
                 {openChat && <IoMdClose
                     style={{ width: 30, height: 30 }}
 
-                />}
+                />} */}
+                <BsChatLeftTextFill
+                    style={{ width: 30, height: 30 }}
+                />
 
             </span>
             
