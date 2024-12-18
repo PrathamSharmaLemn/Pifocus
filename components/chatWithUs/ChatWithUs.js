@@ -11,17 +11,17 @@ export default function ChatWithUs() {
     const [openChat, setOpenChat] = useState(false)
     return (
         <>
-            <a href={`https://wa.me/${phone}`} target="_blank"  className="sm:hidden flex bg-white text-bgColor p-3 rounded-full hover:cursor-pointer fixed z-50 bottom-4 right-4">
+            {/* <a href={`https://wa.me/${phone}`} target="_blank"  className="sm:hidden flex bg-white text-bgColor p-3 rounded-full hover:cursor-pointer fixed z-50 bottom-4 right-4">
                 <BsChatLeftTextFill
                     style={{ width: 20, height: 20 }}
                 />
-            </a>
+            </a> */}
 
 
 
-            {/* {openChat && <WhatsappChatBox setOpenChat={setOpenChat} />}
+            {openChat && <WhatsappChatBox setOpenChat={setOpenChat} />}
 
-            <span onClick={() => setOpenChat(!openChat)} className="sm:flex hidden bg-white text-bgColor p-4 rounded-full hover:cursor-pointer fixed  z-50 right-4 bottom-4">
+            <span className="sm:flex hidden bg-white text-bgColor p-4 rounded-full hover:cursor-pointer fixed  z-50 right-4 bottom-4">
                 {!openChat && <BsChatLeftTextFill
                     style={{ width: 30, height: 30 }}
                 />}
@@ -30,13 +30,14 @@ export default function ChatWithUs() {
 
                 />}
 
-            </span> */}
-            <a href={`https://wa.me/${phone}`} target="_blank" className="sm:flex hidden bg-white text-bgColor p-4 rounded-full fixed  z-50 right-4 bottom-4">
+            </span>
+            
+            {/* <a href={`https://wa.me/${phone}`} target="_blank" className="sm:flex hidden bg-white text-bgColor p-4 rounded-full fixed  z-50 right-4 bottom-4">
                 <BsChatLeftTextFill
                     style={{ width: 30, height: 30 }}
                 />
 
-            </a>
+            </a> */}
         </>
 
     )

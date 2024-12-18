@@ -60,7 +60,8 @@ export default function Header({ showBuyNow,setOpenModal }) {
             <div className="w-16 text-white opacity-15 border-b-2"></div>
             <span className="hover:cursor-pointer">Contact</span>
           </div>
-          <span onClick={()=>setOpenModal(true)} className="bg-blue-600 p-2 rounded-md text-sm hover:cursor-pointer mt-0">Buy Now</span>
+          {/* <span onClick={()=>setOpenModal(true)} className="bg-blue-600 p-2 rounded-md text-sm hover:cursor-pointer mt-0">Buy Now</span> */}
+          <span className="bg-blue-600 p-2 rounded-md text-sm hover:cursor-pointer mt-0">Buy Now</span>
 
          
         </div>}
@@ -82,7 +83,9 @@ export default function Header({ showBuyNow,setOpenModal }) {
           <span className="mx-2 hover:cursor-pointer">Home</span>
           <span className="mx-4 hover:cursor-pointer">About Us</span>
           <span className="mr-4 hover:cursor-pointer">Contact</span>
-          {showBuyNow && <span onClick={()=>setOpenModal(true)} className="bg-blue-500 p-3 rounded-md text-sm hover:cursor-pointer">Buy Now</span>}
+          {/* {showBuyNow && <span onClick={()=>setOpenModal(true)} className="bg-blue-500 p-3 rounded-md text-sm hover:cursor-pointer">Buy Now</span>} */}
+          <span className="bg-blue-500 p-3 rounded-md text-sm hover:cursor-pointer">Buy Now</span>
+
           {/* {showBuyNow && <ModalForm />} */}
 
         </div>
