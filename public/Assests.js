@@ -44,7 +44,68 @@ import google from "/public/google.jpg"
 import apple from "/public/apple.jpg"
 // import videoLaptop from "/public/videoLaptop.mp4"
 import reviewMark from "/public/reviewMark.svg"
+import joystick from "/public/joystick.png"
+import aim from "/public/aim.png"
+import addkey from "/public/addkey.png"
+import exit from "/public/exit.png"
+import mleft from "/public/mleft.png"
+import mright from "/public/mright.png"
+import reset from "/public/reset.png"
+import swipedown from "/public/swipedown.png"
+import swipeleft from "/public/swipeleft.png"
+import swipeup from "/public/swipeup.png"
+import swiperight from "/public/swiperight.png"
+import lte from "/public/lte.png"
 
+const addBannerLine1=[
+    {
+        name:"Joystick",
+        img:joystick
+    },
+    {
+        name:"Add Key",
+        img:addkey
+    },
+    {
+        name:"Swipe Left",
+        img:swipeleft
+    },
+    {
+        name:"Swipe Right",
+        img:swiperight
+    },
+    {
+        name:"Swipe Up",
+        img:swipeup
+    },{
+        name:"Swipe Down",
+        img:swipedown
+    }
+]
+
+
+const addBannerLine2=[
+    {
+        name:"M-LEFT",
+        img:mleft
+    },
+    {
+        name:"M-RIGHT",
+        img:mright
+    },
+    {
+        name:"Reset",
+        img:reset
+    },
+    {
+        name:"Exit",
+        img:exit
+    },
+    {
+        name:"AIM",
+        img:aim
+    }
+]
 export const Assets={
     logo,
     Banner1laptop,
@@ -80,6 +141,9 @@ export const Assets={
     Banner3MobileImage,
     apple,
     google,
-    reviewMark
+    reviewMark,
+    addBannerLine1,
+    addBannerLine2,
+    lte
     // videoLaptop
 }
