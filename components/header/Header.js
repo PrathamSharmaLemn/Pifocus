@@ -106,8 +106,12 @@ export default function Header({ showBuyNow, setOpenModal }) {
             <div className="w-full text-white opacity-15 border-b-1"></div>
             <span className="hover:cursor-pointer">About Us</span>
             <div className="w-full text-white opacity-15 border-b-1"></div>
-            <span className="hover:cursor-pointer">Contact</span>
+            <div className="w-16 text-white opacity-15 border-b-2"></div>
+            <span onClick={() => {
+              window.open(`https://wa.me/9289105061`)
+            }} className="hover:cursor-pointer">Contact</span>
           </div>
+
           {/* <Link href="/preorder" className="bg-blue-600 p-2 rounded-md text-sm hover:cursor-pointer mt-0">Pre-Order</Link> */}
           <Link href={'https://store.pw.live/products/pi-book'} referrerPolicy="no-referrer" target="_blank"><span className="bg-blue-600 p-2 px-10 rounded-md text-sm hover:cursor-pointer mt-0">Pre-Order</span></Link>
         </div>}
