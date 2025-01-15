@@ -37,13 +37,17 @@ export default function ChatWithUs() {
                         <img src={"/whatsapp.png"} className="w-14 h-14" />
                     </div> */}
                 <div  className="fixed h-16   -bottom-2 sm:bottom-0 right-4 flex flex-col items-center">
-                    <div className="relative">
+                    <div className="relative ">
                         {/* Animated "Any Questions?" Message */}
+
                         <p
-                            className="text-black p-2 text-xxs sm:text-xs absolute w-fit -top-10 -left-12 sm:-top-10 sm:-left-20 rounded-t-lg rounded-bl-lg  sm:rounded-t-xl sm:rounded-bl-xl bg-white transition-opacity duration-500 ease-in-out animate-fade-in-out"
+                        // className=""
+                            className="text-black p-2 text-xxs sm:text-xs absolute min-w-14 sm:min-w-[75px] -top-12 -left-0 rounded-t-lg rounded-br-lg  sm:-top-12 sm:-left-4 sm:rounded-t-xl sm:rounded-br-xl   bg-white transition-opacity duration-500 ease-in-out animate-fade-in-out"
                         >
                             Contact us
                         </p>
+
+                        
 
                         {/* WhatsApp Button */}
                         <img
