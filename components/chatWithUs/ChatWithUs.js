@@ -22,7 +22,7 @@ export default function ChatWithUs() {
             {/* {openChat && <WhatsappChatBox setOpenChat={setOpenChat} />} */}
 
             <span onClick={() => {
-                window.open(`https://wa.me/${phone}`)
+                window.open(`https://wa.me/9289105061`)
             }} className=" text-bgColor p-0 rounded-full hover:cursor-pointer fixed  z-50 right-5 bottom-5">
                 {/* {!openChat && <BsChatLeftTextFill
                     style={{ width: 30, height: 30 }}
@@ -36,7 +36,7 @@ export default function ChatWithUs() {
                         <p className="text-black p-2 absolute w-fit -top-10 -left-32 rounded-t-xl rounded-bl-xl bg-white">Any Questions ?</p>
                         <img src={"/whatsapp.png"} className="w-14 h-14" />
                     </div> */}
-                <div className="fixed h-16   -bottom-2 sm:bottom-0 right-4 flex flex-col items-center">
+                <div  className="fixed h-16   -bottom-2 sm:bottom-0 right-4 flex flex-col items-center">
                     <div className="relative">
                         {/* Animated "Any Questions?" Message */}
                         <p
