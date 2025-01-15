@@ -61,10 +61,12 @@ export default function Header({ showBuyNow, setOpenModal }) {
             <div className="w-16 text-white opacity-15 border-b-2"></div>
             <span className="hover:cursor-pointer">About Us</span>
             <div className="w-16 text-white opacity-15 border-b-2"></div>
-            <span className="hover:cursor-pointer">Contact</span>
+            <span onClick={() => {
+              window.open(`https://wa.me/9289105061`)
+            }} className="hover:cursor-pointer">Contact</span>
           </div>
           {/* <Link href="/preorder" className="bg-blue-600 p-2 rounded-md text-sm hover:cursor-pointer mt-0">Pre-Order</Link> */}
-          <span onClick={()=>setOpenModal(true)} className="bg-blue-600 p-2 rounded-md text-sm hover:cursor-pointer mt-0">Pre-Order</span>
+          <span onClick={() => setOpenModal(true)} className="bg-blue-600 p-2 rounded-md text-sm hover:cursor-pointer mt-0">Pre-Order</span>
 
 
         </div>}
@@ -87,10 +89,10 @@ export default function Header({ showBuyNow, setOpenModal }) {
           {/* <span className="mx-2 hover:cursor-pointer">Home</span> */}
           <a href="https://www.pw.live/about-us" target="_blank" className="mx-4 hover:cursor-pointer">About Us</a>
           <span onClick={() => {
-            window.open(`https://wa.me/${phone}`)
+            window.open(`https://wa.me/9289105061`)
           }} className="mr-4 hover:cursor-pointer">Contact</span>
           {/* {showBuyNow && <Link href="/preorder" className="bg-blue-500 p-3 rounded-md text-sm hover:cursor-pointer">Pre-Order</Link>} */}
-          {showBuyNow && <span onClick={()=>setOpenModal(true)} className="bg-blue-500 p-3 rounded-md text-sm hover:cursor-pointer">Pre-Order</span>}
+          {showBuyNow && <span onClick={() => setOpenModal(true)} className="bg-blue-500 p-3 rounded-md text-sm hover:cursor-pointer">Pre-Order</span>}
 
           {/* {showBuyNow && <ModalForm />} */}
 
