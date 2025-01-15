@@ -17,7 +17,7 @@ export default function Banner1({setOpenModal}) {
     return (
         <>
 
-            <div className="sm:hidden flex flex-col justify-center items-center pt-20 bg-customRadialBanner1Mobile">
+            <div className="sm:hidden pt-96 flex flex-col justify-center items-center bg-customRadialBanner1Mobile">
                 <p className="text-3xl font-bold bg-gradient-to-r from-textGradientLeft to-textGradientRight inline-block text-transparent bg-clip-text">AB PADHEGA BHARAT</p>
                 <p className="text-sm text-white">A tech-forward & affordable laptop for students</p>
                 <div className="mt-4 w-full flex  flex-col justify-center items-center h-80 bg-bgImage bg-no-repeat bg-cover">
@@ -39,49 +39,22 @@ export default function Banner1({setOpenModal}) {
                         </div>
 
                     </div>
-                    {/* <div className="w-80 h-96">
-                        <Canvas className=" w-full h-full z-10" camera={{ fov: 38 }}  >
-                            <pointLight color="white" intensity={1} position={[10, 10, 10]} />
-                           
-                            <LaptopModel2 scale={[0.59, 0.59, 0.59]} position={[0, -0.85, 0]} />
-                           
-                            <Environment preset="city" shadows={true} intensity={0.75} />
-                            <OrbitControls target={[0, 0, 0]} enableZoom={false} enableRotate={true} maxPolarAngle={Math.PI / 2} minPolarAngle={Math.PI / 2} />
-
-                        </Canvas> */}
-                    {/* <Canvas id={"abcd"} className=" z-10" dpr={1} camera={{ fov: 38 }}  >
-                            <PerformanceMonitor onIncline={() => setDdpr(1.3)} onDecline={() => setDdpr(0.8)} >
-                                <pointLight color="white" intensity={1} position={[10, 10, 10]} />
-                                <Suspense fallback={null}>
-                                    <Stage adjustCamera={false} intensity={2} shadows={false} >
-                                        <Bounds fit clip>
-                                            <LaptopModel2 position={[0, -1, 0]} scale={[0.35, 0.35, 0.35]} />
-                                        </Bounds>
-                                    </Stage>
-                                </Suspense>
-                                <OrbitControls target={[0, 0, 0]} enableZoom={false} enableRotate={true} maxPolarAngle={Math.PI / 2} minPolarAngle={Math.PI / 2} />
-
-                            </PerformanceMonitor>
-                        </Canvas> */}   
-                    {/* </div> */}
 
                 </div>
-                {/* <Link href="/preorder" className="py-3 px-8 mt-8 mb-2 rounded-md text-sm bg-blue-500 text-white hover:cursor-pointer">Pre-Order</Link> */}
-                <span onClick={()=>setOpenModal(true)} className="py-3 px-8 mt-8 mb-2 rounded-md text-sm bg-blue-500 text-white hover:cursor-pointer">Pre-Order</span>
+                {/* <span onClick={()=>setOpenModal(true)} className="py-3 px-8 mt-8 mb-2 rounded-md text-sm bg-blue-500 text-white hover:cursor-pointer">Pre-Order</span> */}
 
             </div>
 
 
 
 
-            <div className="sm:flex hidden flex-row justify-evenly items-center py-12 px-8 bg-customRadialBanner1">
+            <div className="sm:flex  hidden flex-row justify-evenly items-center py-12 px-8 bg-customRadialBanner1">
                 <div className="absolute w-full h-500 z-0 bg-customRadialBanner1-2"></div>
                 <div className="flex flex-col z-10 justify-between">
                     <p className="sm:text-7xl md:text-8xl lg:text-9xl  font-bold bg-gradient-to-r from-textGradientLeft to-textGradientRight inline-block text-transparent bg-clip-text">PiBook</p>
                     <p className="sm:text-lg  md:text-xl text-white my-4 md:w-72 lg:w-96">A tech-forward & affordable laptop for students across Bharat to learn & upskill</p>
                     <div className="mt-8">
                         {/* <Link href="/preorder" className="py-3 px-8 rounded-3xl text-sm bg-blue-500 text-white hover:cursor-pointer">Pre - Book</Link> */}
-                        <span onClick={()=>setOpenModal(true)} href="/preorder" className="py-3 px-8 rounded-3xl text-sm bg-blue-500 text-white hover:cursor-pointer">Pre-Order</span>
 
                     </div>
                     {/* <div className="mt-8">
