@@ -106,10 +106,6 @@ export default function Header({ showBuyNow, setOpenModal }) {
             <div className="w-full text-white opacity-15 border-b-1"></div>
             <span className="hover:cursor-pointer">About Us</span>
             <div className="w-full text-white opacity-15 border-b-1"></div>
-            <div className="w-16 text-white opacity-15 border-b-2"></div>
-            <span onClick={() => {
-              window.open(`https://wa.me/9289105061`)
-            }} className="hover:cursor-pointer">Contact</span>
             <span onClick={() => {
               window.open(`https://wa.me/9289105061`)
             }} className="hover:cursor-pointer">Contact</span>
@@ -365,8 +361,7 @@ export default function Header({ showBuyNow, setOpenModal }) {
             window.open(`https://wa.me/9289105061`)
           }} className="mr-4 hover:cursor-pointer">Contact</span>
           {/* {showBuyNow && <Link href="/preorder" className="bg-blue-500 p-3 rounded-md text-sm hover:cursor-pointer">Pre-Order</Link>} */}
-          {showBuyNow && <Link href={'https://store.pw.live/products/pi-book'} referrerPolicy="no-referrer" target="_blank"><span  className="bg-blue-500 p-3 rounded-md text-sm hover:cursor-pointer">Pre-Order</span></Link>}
-
+          {showBuyNow && <Link href={'https://store.pw.live/products/pi-book'} referrerPolicy="no-referrer" target="_blank"><span className="bg-blue-500 p-3 rounded-md text-sm hover:cursor-pointer">Pre-Order</span></Link>}
           {/* {showBuyNow && <ModalForm />} */}
 
         </div>

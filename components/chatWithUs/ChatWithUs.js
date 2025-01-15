@@ -42,7 +42,7 @@ export default function ChatWithUs() {
 
                         <p
                         // className=""
-                            className="text-black p-2 text-xxs sm:text-xs absolute min-w-14 sm:min-w-[75px] -top-12 -left-0 rounded-t-lg rounded-br-lg  sm:-top-12 sm:-left-4 sm:rounded-t-xl sm:rounded-br-xl   bg-white transition-opacity duration-500 ease-in-out animate-fade-in-out"
+                            className="text-black p-2 text-nowrap text-xxs sm:text-xs absolute min-w-14 sm:min-w-[75px] -top-12 -left-0 rounded-t-lg rounded-br-lg  sm:-top-12 sm:-left-4 sm:rounded-t-xl sm:rounded-br-xl   bg-white transition-opacity duration-500 ease-in-out animate-fade-in-out"
                         >
                             Contact us
                         </p>
