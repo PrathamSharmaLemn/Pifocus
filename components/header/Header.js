@@ -106,6 +106,7 @@ export default function Header({ showBuyNow, setOpenModal }) {
             <div className="w-full text-white opacity-15 border-b-1"></div>
             <span className="hover:cursor-pointer">About Us</span>
             <div className="w-full text-white opacity-15 border-b-1"></div>
+            <div className="w-16 text-white opacity-15 border-b-2"></div>
             <span onClick={() => {
               window.open(`https://wa.me/9289105061`)
             }} className="hover:cursor-pointer">Contact</span>
