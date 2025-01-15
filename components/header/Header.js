@@ -109,7 +109,7 @@ export default function Header({ showBuyNow, setOpenModal }) {
             <span className="hover:cursor-pointer">Contact</span>
           </div>
           {/* <Link href="/preorder" className="bg-blue-600 p-2 rounded-md text-sm hover:cursor-pointer mt-0">Pre-Order</Link> */}
-          <span onClick={()=>setOpenModal(true)} className="bg-blue-600 p-2 px-10 rounded-md text-sm hover:cursor-pointer mt-0">Pre-Order</span>
+          <Link href={'https://store.pw.live/products/pi-book'} referrerPolicy="no-referrer" target="_blank"><span className="bg-blue-600 p-2 px-10 rounded-md text-sm hover:cursor-pointer mt-0">Pre-Order</span></Link>
         </div>}
         
           
@@ -358,7 +358,7 @@ export default function Header({ showBuyNow, setOpenModal }) {
             window.open(`https://wa.me/${phone}`)
           }} className="mr-4 hover:cursor-pointer">Contact</span>
           {/* {showBuyNow && <Link href="/preorder" className="bg-blue-500 p-3 rounded-md text-sm hover:cursor-pointer">Pre-Order</Link>} */}
-          {showBuyNow && <span onClick={()=>setOpenModal(true)} className="bg-blue-500 p-3 rounded-md text-sm hover:cursor-pointer">Pre-Order</span>}
+          {showBuyNow && <Link href={'https://store.pw.live/products/pi-book'} referrerPolicy="no-referrer" target="_blank"><span  className="bg-blue-500 p-3 rounded-md text-sm hover:cursor-pointer">Pre-Order</span></Link>}
 
           {/* {showBuyNow && <ModalForm />} */}
 
