@@ -362,12 +362,7 @@ export default function Header({ showBuyNow, setOpenModal }) {
             window.open(`https://wa.me/9289105061`)
           }} className="mr-4 hover:cursor-pointer">Contact</span>
           {/* {showBuyNow && <Link href="/preorder" className="bg-blue-500 p-3 rounded-md text-sm hover:cursor-pointer">Pre-Order</Link>} */}
-<<<<<<< HEAD
-          {showBuyNow && <Link href={'https://store.pw.live/products/pi-book'} referrerPolicy="no-referrer" target="_blank"><span className="bg-blue-500 p-3 rounded-md text-sm hover:cursor-pointer">Pre-Order</span></Link>}
-=======
           {showBuyNow && <Link href={'https://store.pw.live/products/pi-book'} referrerPolicy="no-referrer" target="_blank"><span  className="bg-blue-500 p-3 rounded-md text-sm hover:cursor-pointer">Pre-Order</span></Link>}
-
->>>>>>> bbc30e3 (ui fixes link routing)
           {/* {showBuyNow && <ModalForm />} */}
 
         </div>
