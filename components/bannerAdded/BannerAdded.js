@@ -116,7 +116,7 @@ export default function BannerAdded() {
                                 <p className="bg-[#FF7F7F] rounded-full sm:py-2 sm:px-4 md:py-4 md:px-6 font-semibold text-3xl text-white ">A</p>
 
                             </div>
-                            <p className="sm:text-2xl md:text-3xl">ALakh Sir</p>
+                            <p className="sm:text-2xl md:text-3xl">Alakh Sir</p>
                             <p className="sm:text-sm md:text-lg">02 : 36</p>
                         </div>
 
