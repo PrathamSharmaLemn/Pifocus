@@ -110,6 +110,9 @@ export default function Header({ showBuyNow, setOpenModal }) {
             <span onClick={() => {
               window.open(`https://wa.me/9289105061`)
             }} className="hover:cursor-pointer">Contact</span>
+            <span onClick={() => {
+              window.open(`https://wa.me/9289105061`)
+            }} className="hover:cursor-pointer">Contact</span>
           </div>
 
           {/* <Link href="/preorder" className="bg-blue-600 p-2 rounded-md text-sm hover:cursor-pointer mt-0">Pre-Order</Link> */}
@@ -359,7 +362,7 @@ export default function Header({ showBuyNow, setOpenModal }) {
           {/* <span className="mx-2 hover:cursor-pointer">Home</span> */}
           <a href="https://www.pw.live/about-us" target="_blank" className="mx-4 hover:cursor-pointer">About Us</a>
           <span onClick={() => {
-            window.open(`https://wa.me/${phone}`)
+            window.open(`https://wa.me/9289105061`)
           }} className="mr-4 hover:cursor-pointer">Contact</span>
           {/* {showBuyNow && <Link href="/preorder" className="bg-blue-500 p-3 rounded-md text-sm hover:cursor-pointer">Pre-Order</Link>} */}
           {showBuyNow && <Link href={'https://store.pw.live/products/pi-book'} referrerPolicy="no-referrer" target="_blank"><span  className="bg-blue-500 p-3 rounded-md text-sm hover:cursor-pointer">Pre-Order</span></Link>}
