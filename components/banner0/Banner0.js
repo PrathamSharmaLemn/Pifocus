@@ -87,11 +87,11 @@ export default function Banner0() {
     useEffect(() => {
         const generateRandomCount = () => {
             // Generate random number between 1.0 and 9.9
-            const randomNum = (Math.random() * 8.9 + 1).toFixed(1);
+            const randomNum = (Math.random() * 4.9 + 2).toFixed(1);
             setVisitorCount(parseFloat(randomNum));
         };
 
-        const countInterval = setInterval(generateRandomCount, 10000);
+        const countInterval = setInterval(generateRandomCount, 120000);
         return () => clearInterval(countInterval);
     }, []);
 

@@ -5,6 +5,7 @@ import { Assets } from "../../public/Assests";
 import Image from "next/image";
 import { FaArrowUp } from "react-icons/fa";
 import WhatsappChatBox from "../WhatsappChatBox/WhatsappChatBox";
+import { TrackGoogleAnalyticsEvent } from "../../utils/analytics";
 
 const phone = process.env.NEXT_PUBLIC_PHONENO
 export default function ChatWithUs() {
@@ -22,6 +23,9 @@ export default function ChatWithUs() {
             {/* {openChat && <WhatsappChatBox setOpenChat={setOpenChat} />} */}
 
             <span onClick={() => {
+                TrackGoogleAnalyticsEvent('contact_click', 'Contact', {
+                    method: 'whatsapp'
+                });
                 window.open(`https://wa.me/9289105061`)
             }} className=" text-bgColor p-0 rounded-full hover:cursor-pointer fixed  z-50 right-5 bottom-5">
                 {/* {!openChat && <BsChatLeftTextFill

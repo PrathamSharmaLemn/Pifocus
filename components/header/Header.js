@@ -4,6 +4,7 @@ import { IoMdClose } from "react-icons/io";
 import { useState, useRef, useEffect } from "react";
 import ModalForm from "../modal/ModalForm";
 import Link from "next/link";
+import { TrackGoogleAnalyticsEvent } from "../../utils/analytics";
 
 
 const phone = process.env.NEXT_PUBLIC_PHONENO
@@ -108,12 +109,15 @@ export default function Header({ showBuyNow, setOpenModal }) {
             <div className="w-full text-white opacity-15 border-b-1"></div>
             <div className="w-16 text-white opacity-15 border-b-2"></div>
             <span onClick={() => {
+              TrackGoogleAnalyticsEvent('contact_click', 'Contact', {
+                method: 'whatsapp'
+              });
               window.open(`https://wa.me/9289105061`)
             }} className="hover:cursor-pointer">Contact</span>
           </div>
 
           {/* <Link href="/preorder" className="bg-blue-600 p-2 rounded-md text-sm hover:cursor-pointer mt-0">Pre-Order</Link> */}
-          <Link href={'https://store.pw.live/products/pi-book'} referrerPolicy="no-referrer" target="_blank"><span className="bg-blue-600 p-2 px-10 rounded-md text-sm hover:cursor-pointer mt-0">Pre-Order</span></Link>
+          <Link href={'https://store.pw.live/products/pi-book'} referrerPolicy="no-referrer" target="_blank"><span onClick={()=>TrackGoogleAnalyticsEvent('preorder_click','Pre-Order')} className="bg-blue-600 p-2 px-10 rounded-md text-sm hover:cursor-pointer mt-0">Pre-Order</span></Link>
         </div>}
         
           
@@ -172,7 +176,7 @@ export default function Header({ showBuyNow, setOpenModal }) {
               </div>
               
               <Link href={'https://store.pw.live/products/pi-book'} referrerPolicy="no-referrer" target="_blank">
-              <button className="bg-blue-600 p-2 px-5 rounded-md text-lg flex flex-row gap-2 items-center justify-center text-white hover:cursor-pointer">
+              <button onClick={()=>TrackGoogleAnalyticsEvent('preorder_click','Pre-Order')} className="bg-blue-600 p-2 px-5 rounded-md text-lg flex flex-row gap-2 items-center justify-center text-white hover:cursor-pointer">
                 <h3>Pre-Order Now</h3>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -203,7 +207,7 @@ export default function Header({ showBuyNow, setOpenModal }) {
               </div>
 
             <Link href={'https://store.pw.live/products/pi-book'} referrerPolicy="no-referrer" target="_blank">
-              <button className="bg-blue-600 mt-4 p-2 px-5 rounded-md text-lg flex flex-row gap-2 items-center justify-center text-white hover:cursor-pointer">
+              <button onClick={()=>TrackGoogleAnalyticsEvent('preorder_click','Pre-Order')} className="bg-blue-600 mt-4 p-2 px-5 rounded-md text-lg flex flex-row gap-2 items-center justify-center text-white hover:cursor-pointer">
                 <h3>Pre-Order Now</h3>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -285,7 +289,7 @@ export default function Header({ showBuyNow, setOpenModal }) {
               </div>
               
               <Link href={'https://store.pw.live/products/pi-book'} referrerPolicy="no-referrer" target="_blank">
-              <button className="bg-blue-600 p-2 px-5 rounded-md text-lg flex flex-row gap-2 items-center justify-center text-white hover:cursor-pointer">
+              <button onClick={()=>TrackGoogleAnalyticsEvent('preorder_click','Pre-Order')} className="bg-blue-600 p-2 px-5 rounded-md text-lg flex flex-row gap-2 items-center justify-center text-white hover:cursor-pointer">
                 <h3>Pre-Order Now</h3>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -316,7 +320,7 @@ export default function Header({ showBuyNow, setOpenModal }) {
               </div>
 
             <Link href={'https://store.pw.live/products/pi-book'} referrerPolicy="no-referrer" target="_blank">
-              <button className="bg-blue-600 mt-4 p-2 px-5 rounded-md text-lg flex flex-row gap-2 items-center justify-center text-white hover:cursor-pointer">
+              <button onClick={()=>TrackGoogleAnalyticsEvent('preorder_click','Pre-Order')} className="bg-blue-600 mt-4 p-2 px-5 rounded-md text-lg flex flex-row gap-2 items-center justify-center text-white hover:cursor-pointer">
                 <h3>Pre-Order Now</h3>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -359,10 +363,13 @@ export default function Header({ showBuyNow, setOpenModal }) {
           {/* <span className="mx-2 hover:cursor-pointer">Home</span> */}
           <a href="https://www.pw.live/about-us" target="_blank" className="mx-4 hover:cursor-pointer">About Us</a>
           <span onClick={() => {
+            TrackGoogleAnalyticsEvent('contact_click', 'Contact', {
+              method: 'whatsapp'
+            });
             window.open(`https://wa.me/9289105061`)
           }} className="mr-4 hover:cursor-pointer">Contact</span>
           {/* {showBuyNow && <Link href="/preorder" className="bg-blue-500 p-3 rounded-md text-sm hover:cursor-pointer">Pre-Order</Link>} */}
-          {showBuyNow && <Link href={'https://store.pw.live/products/pi-book'} referrerPolicy="no-referrer" target="_blank"><span  className="bg-blue-500 p-3 rounded-md text-sm hover:cursor-pointer">Pre-Order</span></Link>}
+          {showBuyNow && <Link href={'https://store.pw.live/products/pi-book'} referrerPolicy="no-referrer" target="_blank"><span onClick={()=>TrackGoogleAnalyticsEvent('preorder_click','Pre-Order')} className="bg-blue-500 p-3 rounded-md text-sm hover:cursor-pointer">Pre-Order</span></Link>}
           {/* {showBuyNow && <ModalForm />} */}
 
         </div>
