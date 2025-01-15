@@ -26,7 +26,7 @@ export default function Banner7() {
                         </div>
                     </div>
                 </div>
-                <span  className="bg-blue-600 p-3 rounded-md text-sm w-80 text-center text-white hover:cursor-pointer mt-12">Pre-Order</span>
+                {/* <span  className="bg-blue-600 p-3 rounded-md text-sm w-80 text-center text-white hover:cursor-pointer mt-12">Pre-Order</span> */}
             </div>
 
 
@@ -103,7 +103,7 @@ export default function Banner7() {
                                 <p className="text-lg">Thin</p>
                             </div>
                         </div>
-                        <span className="bg-blue-600 p-3 rounded-md text-sm text-white hover:cursor-pointer mt-10 text-center w-52">Pre-Order</span>
+                        {/* <span className="bg-blue-600 p-3 rounded-md text-sm text-white hover:cursor-pointer mt-10 text-center w-52">Pre-Order</span> */}
 
                     </div>
                 </div>

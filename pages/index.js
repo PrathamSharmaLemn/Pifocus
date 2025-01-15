@@ -18,6 +18,13 @@ import React from 'react';
 import dynamic from 'next/dynamic';
 import { useInView } from 'react-intersection-observer';
 import ModalForm from '../components/modal/ModalForm';
+import ReactGA from "react-ga4";
+import GoogleAnalytics from '@bradgarropy/next-google-analytics'
+import { TrackGoogleAnalyticsEvent } from '../utils/analytics';
+
+
+
+
 
 const HeavyHeader = dynamic((showBuyNow,setOpenModal) => import('../components/header/Header'), {
   ssr: false, // Optional: Disable server-side rendering for the component if it's not needed
@@ -85,6 +92,37 @@ export default function Home() {
   const [ref7, inView7] = useInView({ triggerOnce: true, threshold: 0.1 });
   const [ref8, inView8] = useInView({ triggerOnce: true, threshold: 0.1 });
   const [refFooter, inViewFooter] = useInView({ triggerOnce: true, threshold: 0.1 });
+
+  ReactGA.initialize([
+    {
+      trackingId: "G-QDKDHC6PBB",
+      // gaOptions: {
+      //   debug_mode: true,
+      // },
+      // gtagOptions: {
+      //   debug_mode: true,
+      // }, 
+    },
+  ]);
+
+  const incrementVisitCount = () => {
+    const visits = localStorage.getItem('visitCount') || 0;
+    const newCount = parseInt(visits) + 1;
+    localStorage.setItem('visitCount', newCount);
+    return newCount;
+  };
+
+  useEffect(() => {
+    const visitCount = incrementVisitCount();
+    TrackGoogleAnalyticsEvent('page_view', 'home', {
+      visit_count: visitCount
+    });
+  }, []);
+
+  useEffect(()=>{
+    TrackGoogleAnalyticsEvent('page_view','home', {visit_count: 1})
+  },[])
+
 
 
   useEffect(() => {
@@ -187,6 +225,7 @@ export default function Home() {
         {inViewFooter && <HeavyFooter />}
       </div> */}
       <HeavyFooter />
+      <GoogleAnalytics measurementId="G-QDKDHC6PBB"/>
 
     </div>
 
