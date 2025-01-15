@@ -8,8 +8,9 @@ export default function Banner4() {
                     <p className="text-3xl text-center font-bold mb-8  bg-gradient-to-r from-textGradientLeft to-textGradientRight inline-block text-transparent bg-clip-text">Connects with<br /> Everything</p>
                     <div className="flex items-center w-full bg-transparent justify-center bg-gray-900">
                         <div className="absolute z-10 mt-28">
-                            <Image
-                                src={Assets.Banner4ImageMobile}
+                            <img
+                                // src={Assets.Banner4ImageMobile}
+                                src="/connectForMobile.png"
                             />
                         </div>
                         <div className="flex flex-col mt-20 justify-center items-center">
@@ -25,8 +26,9 @@ export default function Banner4() {
                     <p className="text-6xl text-center font-bold bg-gradient-to-r from-textGradientLeft to-textGradientRight py-4 inline-block text-transparent bg-clip-text">Connects with Everything</p>
                     <div className="flex items-center my-10 h-[500px]  w-full bg-transparent justify-center bg-gray-900">
                         <div className="absolute z-10 bottom-0 w-full flex items-center justify-center">
-                            <Image
-                                src={Assets.Banner4Laptop}
+                            <img
+                                // src={Assets.Banner4Laptop}
+                                src="/Frame 1171276008.svg"
                                 width={1400}
                                 height={1400}
                             />

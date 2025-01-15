@@ -9,7 +9,7 @@ import { PerformanceMonitor } from "@react-three/drei"
 import ModalForm from "../modal/ModalForm"
 // import { GLTFLoader } from "three/examples/jsm/Addons.js"
 // import { EffectComposer, BrightnessContrast } from '@react-three/postprocessing';
-
+import Link from "next/link"
 
 export default function Banner1({setOpenModal}) {
     const [ddpr, setDdpr] = useState(0.5)
@@ -23,15 +23,16 @@ export default function Banner1({setOpenModal}) {
                 <div className="mt-4 w-full flex  flex-col justify-center items-center h-80 bg-bgImage bg-no-repeat bg-cover">
 
                     <div className="mt-4 ml-0 flex relative justify-center items-center">
-                        <Image
-                            src={Assets.mobileLaptop}
+                        <img
+                            src={"/Laptop Hero.png"}
                             width={400}
                             height={400}
                         />
                         <div className="absolute top-16">
                         {/* <div> */}
-                            <Image
-                                src={Assets.mobileLaptopPiBook}
+                            <img
+                                // src={Assets.mobileLaptopPiBook}
+                                src="/Pi book (1) 2.svg"
                                 width={210}
                                 height={210}
                             />
@@ -65,8 +66,8 @@ export default function Banner1({setOpenModal}) {
                     {/* </div> */}
 
                 </div>
-                <span onClick={()=>setOpenModal(true)} className="py-3 px-8 mt-8 mb-2 rounded-md text-sm bg-blue-500 text-white hover:cursor-pointer">Pre - Book</span>
-                {/* <span className="py-3 px-8 mt-8 mb-2 rounded-md text-sm bg-blue-500 text-white hover:cursor-pointer">Buy Now</span> */}
+                {/* <Link href="/preorder" className="py-3 px-8 mt-8 mb-2 rounded-md text-sm bg-blue-500 text-white hover:cursor-pointer">Pre-Order</Link> */}
+                <span onClick={()=>setOpenModal(true)} className="py-3 px-8 mt-8 mb-2 rounded-md text-sm bg-blue-500 text-white hover:cursor-pointer">Pre-Order</span>
 
             </div>
 
@@ -78,8 +79,10 @@ export default function Banner1({setOpenModal}) {
                 <div className="flex flex-col z-10 justify-between">
                     <p className="sm:text-7xl md:text-8xl lg:text-9xl  font-bold bg-gradient-to-r from-textGradientLeft to-textGradientRight inline-block text-transparent bg-clip-text">PiBook</p>
                     <p className="sm:text-lg  md:text-xl text-white my-4 md:w-72 lg:w-96">A tech-forward & affordable laptop for students across Bharat to learn & upskill</p>
-                    <div className="mt-8" onClick={()=>setOpenModal(true)}>
-                        <span className="py-3 px-8 rounded-3xl text-sm bg-blue-500 text-white hover:cursor-pointer">Pre - Book</span>
+                    <div className="mt-8">
+                        {/* <Link href="/preorder" className="py-3 px-8 rounded-3xl text-sm bg-blue-500 text-white hover:cursor-pointer">Pre - Book</Link> */}
+                        <span onClick={()=>setOpenModal(true)} href="/preorder" className="py-3 px-8 rounded-3xl text-sm bg-blue-500 text-white hover:cursor-pointer">Pre-Order</span>
+
                     </div>
                     {/* <div className="mt-8">
                         <span className="py-3 px-8 rounded-3xl text-sm bg-blue-500 text-white hover:cursor-pointer">Get it Now</span>
@@ -87,8 +90,8 @@ export default function Banner1({setOpenModal}) {
                 </div>
                 <div className="w-[650px] h-500 flex flex-col justify-center items-center relative bg-bgImage">
                     <div className="sm:w-80 sm:h-80 sm:mb-28 sm:ml-12 md:w-[370px]  md:h-[350px] lg:w-[520px] lg:h-[550px]  lg:mt-12">
-                        <Image
-                            src={Assets.Banner1laptop}
+                        <img
+                            src={"/Performance 1.png"}
                             className="sm:w-[800px] sm:h-[370px] lg:w-[700px] lg:h-[510px] z-0"
                         />
                         {/* <Canvas
@@ -121,22 +124,25 @@ export default function Banner1({setOpenModal}) {
                         </Canvas> */}
                     </div>
                     <div className="absolute z-0 right-0 top-4">
-                        <Image
-                            src={Assets.pwVector}
+                        <img
+                            // src={Assets.pwVector}
+                            src="/pw_logo 1.svg"
                             width={70}
                             height={70}
                         />
                     </div>
                     <div className="absolute right-0 top-60 bg-no-repeat">
-                        <Image
-                            src={Assets.scale}
+                        <img
+                            // src={Assets.scale}
+                            src="/scale.svg"
                             width={30}
                             height={30}
                         />
                     </div>
                     <div className="absolute right-10 top-[500px]">
-                        <Image
-                            src={Assets.puzzle}
+                        <img
+                            // src={Assets.puzzle}
+                            src="/puzzle.svg"
                             width={40}
                             height={40}
                         />

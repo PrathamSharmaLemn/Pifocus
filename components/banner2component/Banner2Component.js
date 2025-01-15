@@ -10,7 +10,7 @@ export default function Banner2Componenet({ title, subTitle, src }) {
         // </button>
         <div className="flex flex-col bg-white shadow-customShadow  bg-opacity-10  items-center justify-center my-4 rounded-xl w-40 h-24">
         <div>
-            <Image
+            <img
                 src={src}
                 width={30}
                 height={30}

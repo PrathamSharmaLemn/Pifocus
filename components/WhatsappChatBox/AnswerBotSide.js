@@ -1,12 +1,12 @@
-import Image from "next/image"
 import { Assets } from "../../public/Assests"
 
 export default function AnswerBotSide() {
     return (
         <div className=" flex w-fit flex-row px-1 justify-center my-2">
                         <div className="w-10 flex flex-col justify-end  items-center">
-                            <Image
-                            src={Assets.logo}
+                            <img
+                            // src={Assets.logo}
+                            src="/Logo.svg"
                             width={25}
                             height={25}
                             className="p-1 bg-blue-700 rounded-full"

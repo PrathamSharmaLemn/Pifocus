@@ -60,26 +60,26 @@ import lte from "/public/lte.png"
 const addBannerLine1=[
     {
         name:"Joystick",
-        img:joystick
+        img:"/joystick.png"
     },
     {
         name:"Add Key",
-        img:addkey
+        img:"/addkey.png"
     },
     {
         name:"Swipe Left",
-        img:swipeleft
+        img:"/swipeleft.png"
     },
     {
         name:"Swipe Right",
-        img:swiperight
+        img:"/swiperight.png"
     },
     {
         name:"Swipe Up",
-        img:swipeup
+        img:"/swipeup.png"
     },{
         name:"Swipe Down",
-        img:swipedown
+        img:"/swipedown.png"
     }
 ]
 
@@ -87,23 +87,23 @@ const addBannerLine1=[
 const addBannerLine2=[
     {
         name:"M-LEFT",
-        img:mleft
+        img:"/mleft.png"
     },
     {
         name:"M-RIGHT",
-        img:mright
+        img:"/mright.png"
     },
     {
         name:"Reset",
-        img:reset
+        img:"/reset.png"
     },
     {
         name:"Exit",
-        img:exit
+        img:"/exit.png"
     },
     {
         name:"AIM",
-        img:aim
+        img:"/aim.png"
     }
 ]
 export const Assets={

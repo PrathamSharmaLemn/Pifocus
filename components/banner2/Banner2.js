@@ -15,14 +15,14 @@ export default function Banner2() {
                                     Download Our App
                                 </span> 
                             </button> */}
-                            <Banner2Componenet title="Mediatek 8788" subTitle="Octa Core Processor" src={Assets.processor} />
-                            <Banner2Componenet title="128GB" subTitle="Storage" src={Assets.storage} />
-                            <Banner2Componenet title="4000 mah" subTitle="Battery Life (Upto 8 Hours)" src={Assets.battery} />
+                            <Banner2Componenet title="Mediatek 8788" subTitle="Octa Core Processor" src="/processor.svg" />
+                            <Banner2Componenet title="128GB" subTitle="Storage" src="/storage.svg" />
+                            <Banner2Componenet title="4000 mah" subTitle="Battery Life (Upto 8 Hours)" src="/battery.svg" />
                         </div>
                         <div className="ml-1">
-                            <Banner2Componenet title="11.4 Inches" subTitle="Display Size" src={Assets.display} />
-                            <Banner2Componenet title="6GB" subTitle="Ram" src={Assets.ram} />
-                            <Banner2Componenet title="Powered by Pi OS" subTitle="By PW" src={Assets.os} />
+                            <Banner2Componenet title="11.4 Inches" subTitle="Display Size" src="/display.svg" />
+                            <Banner2Componenet title="6GB" subTitle="Ram" src="/ram.svg" />
+                            <Banner2Componenet title="Powered by Pi OS" subTitle="By PW" src="/os.svg" />
                         </div>
                     </div>
                 </div>
@@ -36,21 +36,25 @@ export default function Banner2() {
                     <div className="flex flex-row relative mt-12  justify-center items-center p-4">
                         <div className="relative">
                             <div className="absolute left-4 z-0 top-4">
-                                <Image
+                                <img
                                     className="h-28 w-28"
-                                    src={Assets.arrowDownwards}
+                                    // src={Assets.arrowDownwards}
+                                    src="/arrowDownwards.png"
                                 />
                             </div>
                             <div className="absolute right-28 z-0 bottom-56">
-                                <Image
+                                <img
                                     className="h-28 w-28"
-                                    src={Assets.arrowUpwards} />
+                                    // src={Assets.arrowUpwards}
+                                    src="/arrowUpwards.png"
+                                     />
                             </div>
 
                             <div className="pl-12">
-                                <Image
+                                <img
                                     className=""
-                                    src={Assets.Banner2Laptop}
+                                    // src={Assets.Banner2Laptop}
+                                    src="/Frame 1171276007.png"
                                     width={500}
                                     height={500}
                                 />
@@ -83,7 +87,7 @@ export default function Banner2() {
                                     <p className="text-xs text-white">Ram</p>
                                 </div>
                                 <div>
-                                    <p className="text-4xl font-semibold text-white">Powered by Pi OS</p>
+                                    <p className="text-4xl font-semibold text-white">Powered by PiBook OS</p>
                                     <p className="text-xs text-white">By PW</p>
                                 </div>
                             </div>

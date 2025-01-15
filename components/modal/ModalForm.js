@@ -319,12 +319,11 @@ const ModalForm = ({ setOpenModal, reff }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(formData)
         if (validate()) {
             formData["className"] = formData.class
             delete formData.class
             try {
-                fetch("http://localhost:3000/api/posts/route", {
+                fetch("https://api.penpencil.co/pi-os-backend/v1/user/query", {
                     method: "POST",
                     body: JSON.stringify(formData),
                     headers: {
@@ -334,16 +333,15 @@ const ModalForm = ({ setOpenModal, reff }) => {
                     .then((response) => response.json())
                     .then((json) => {
                         setSubmitResponse(json)
-                        if (json.success) {
+                        // if (json.data.success) {
                             setTimeout(() => {
                                 setOpenModal(false)
                             }, 1000);
-                        }
+                        // }
                     });
                     
             } catch (error) {
                 setSubmitResponse(error.response.data)
-                console.log(error, "error")
             }
             setFormData({
                 name: "",
@@ -354,7 +352,7 @@ const ModalForm = ({ setOpenModal, reff }) => {
             });
         }
     };
-
+    console.log(submitResponse,"submit Response")
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({ ...formData, [name]: value });
@@ -447,10 +445,10 @@ const ModalForm = ({ setOpenModal, reff }) => {
 
                     {/* Submit Button */}
                     <div className="w-full flex flex-col justify-center items-center mt-4">
-                        {submitResponse.success ?
-                            <p className="text-green-600">{submitResponse.message}</p>
+                        {submitResponse?.data?.success ?
+                            <p className="text-green-600">{submitResponse.data?.message}</p>
                             :
-                            <p className="text-red-600">{submitResponse.message}</p>
+                            <p className="text-red-600">{submitResponse.data?.message}</p>
                         }
                         <button
                             type="submit"

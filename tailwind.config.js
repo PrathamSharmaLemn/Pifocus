@@ -48,6 +48,10 @@ module.exports = {
           '0%': { transform: 'translateX(100%)' },
           '100%': { transform: 'translateX(-100%)' },
         },
+        fadeInOut: {
+          '0%, 100%': { opacity: '0' },
+          '50%': { opacity: '1' },
+        },
 
       },
       animation: {
@@ -56,6 +60,8 @@ module.exports = {
         'reverse-infinite-scroll': 'infinite-scroll 25s linear infinite',
         'marquee': 'marquee linear infinite',
         'paused': 'none',
+        'fade-in-out': 'fadeInOut 5s infinite', // Fades in and out every 5 seconds
+        bounce: 'bounce 2s infinite', 
       },
       colors: {
         footerBg: "#080811",

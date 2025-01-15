@@ -1,4 +1,3 @@
-import Image from "next/image"
 import { Assets } from "../../public/Assests"
 import { MdOutlineMail } from "react-icons/md";
 import { FaYoutube } from "react-icons/fa";
@@ -13,8 +12,9 @@ export default function Footer() {
                 <footer className="sm:hidden flex flex-col justify-evenly p-10 gap-10 bg-footerBg">
                     <div className="text-white">
                         <div className="flex flex-row items-center">
-                            <Image
-                                src={Assets.footerPW}
+                            <img
+                                // src={Assets.footerPW}
+                                src="/Group 18955.svg"
                                 width={30}
                                 height={30}
                             />
@@ -36,15 +36,17 @@ export default function Footer() {
                                 </span>
                             </button> */}
                             <a href="https://play.google.com/store/apps/details?id=xyz.penpencil.physicswala" target="_blank">
-                                <Image
-                                src={Assets.google}
+                                <img
+                                // src={Assets.google}
+                                src="/google.jpg"
                                 height={110}
                                 width={110}
                                 />
                             </a>
                             <a href="https://apps.apple.com/in/app/physics-wallah/id1641443555" target="_blank" className="ml-4">
-                                <Image 
-                                src={Assets.apple}
+                                <img
+                                // src={Assets.apple}
+                                src="/apple.jpg"
                                 height={100}
                                 width={100}
                                 />
@@ -57,7 +59,7 @@ export default function Footer() {
                         <p className="my-4 text-sm">Have queries? Feel free to get in<br /> touch wiith us right away!</p>
                         <div className="flex flex-row items-center hover:cursor-pointer">
                             <span><MdOutlineMail /></span>
-                            <p className="ml-2">support@pw.live</p>
+                            <p className="ml-2">pibook@pw.live</p>
                         </div>
                     </div>
 
@@ -65,11 +67,11 @@ export default function Footer() {
                         <div className="flex flex-row items-center">
                             <p>Follow us</p>
                             <div className="flex flex-row gap-2 my-4 ml-4 ">
-                                <span className="p-1 bg-white rounded-full text-black hover:cursor-pointer"><FaYoutube /></span>
-                                <span className="p-1 bg-white rounded-full text-black hover:cursor-pointer"><FaInstagram /></span>
+                                <a href="" target="_blank" className="p-1 bg-white rounded-full text-black hover:cursor-pointer"><FaYoutube /></a>
+                                {/* <span className="p-1 bg-white rounded-full text-black hover:cursor-pointer"><FaInstagram /></span>
                                 <span className="p-1 bg-white rounded-full text-black hover:cursor-pointer"><FaTelegramPlane /></span>
                                 <span className="p-1 bg-white rounded-full text-black hover:cursor-pointer"><FaFacebookF /></span>
-                                <span className="p-1 bg-white rounded-full text-black hover:cursor-pointer"><FaTwitter /></span>
+                                <span className="p-1 bg-white rounded-full text-black hover:cursor-pointer"><FaTwitter /></span> */}
                             </div>
                         </div>
 
@@ -86,8 +88,9 @@ export default function Footer() {
                 <footer className="sm:flex hidden flex-row justify-evenly p-20 bg-footerBg">
                     <div className="text-white">
                         <div className="flex flex-row items-center">
-                            <Image
-                                src={Assets.footerPW}
+                            <img
+                                // src={Assets.footerPW}
+                                src="/Group 18955.svg"
                                 width={30}
                                 height={30}
                             />
@@ -102,15 +105,17 @@ export default function Footer() {
                                 </span>
                             </button> */}
                             <a href="https://play.google.com/store/apps/details?id=xyz.penpencil.physicswala" target="_blank">
-                                <Image
-                                src={Assets.google}
+                                <img
+                                // src={Assets.google}
+                                src="/google.jpg"
                                 height={110}
                                 width={110}
                                 />
                             </a>
                             <a href="https://apps.apple.com/in/app/physics-wallah/id1641443555" target="_blank" className="ml-4">
-                                <Image 
-                                src={Assets.apple}
+                                <img
+                                // src={Assets.apple}
+                                src="/apple.jpg"
                                 height={100}
                                 width={100}
                                 />
@@ -121,23 +126,25 @@ export default function Footer() {
                     <div className="text-white">
                         <p>Get in touch</p>
                         <p className="my-4">Have queries? Feel free to get in<br /> touch wiith us right away!</p>
-                        <div className="flex flex-row items-center hover:cursor-pointer">
+                        <div onClick={()=>{
+                                window.location = "mailto:pi@pw.live";
+                        }} className="flex flex-row items-center hover:cursor-pointer">
                             <span><MdOutlineMail /></span>
-                            <p className="ml-2">support@pw.live</p>
+                            <p className="ml-2">pi@pw.live</p>
                         </div>
                     </div>
 
                     <div className="text-white">
                         <p>Follow us</p>
                         <div className="flex flex-row gap-2 my-4 ">
-                            <span className="p-1 bg-white rounded-full text-black hover:cursor-pointer"><FaYoutube /></span>
-                            <span className="p-1 bg-white rounded-full text-black hover:cursor-pointer"><FaInstagram /></span>
+                            <a href="" className="p-1 bg-white rounded-full text-black hover:cursor-pointer"><FaYoutube /></a>
+                            {/* <span className="p-1 bg-white rounded-full text-black hover:cursor-pointer"><FaInstagram /></span>
                             <span className="p-1 bg-white rounded-full text-black hover:cursor-pointer"><FaTelegramPlane /></span>
                             <span className="p-1 bg-white rounded-full text-black hover:cursor-pointer"><FaFacebookF /></span>
-                            <span className="p-1 bg-white rounded-full text-black hover:cursor-pointer"><FaTwitter /></span>
+                            <span className="p-1 bg-white rounded-full text-black hover:cursor-pointer"><FaTwitter /></span> */}
                         </div>
                         <p>Privacy Policy | Terms & Conditions</p>
-                        <p className="text-xs mt-4">Copyright © 2024 Physics Wallah Pvt. Ltd. All rights reserved.</p>
+                        <p className="text-xs mt-4">Copyright © 2024 Physics Wallah Limited All rights reserved.</p>
                     </div>
                 </footer>
             
