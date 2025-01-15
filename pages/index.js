@@ -3,6 +3,7 @@ import { useEffect, useState,useRef } from 'react';
 import styles from '../styles/Home.module.css';
 import Header from '../components/header/Header'
 import Footer from '../components/footer/Footer'
+import Banner0 from '../components/banner0/Banner0'
 import Banner1 from '../components/banner1/Banner1'
 import Banner2 from '../components/banner2/Banner2'
 import Banner3 from '../components/banner3/Banner3'
@@ -26,6 +27,10 @@ const HeavyHeader = dynamic((showBuyNow,setOpenModal) => import('../components/h
 const HeavyShowChat = dynamic(() => import('../components/chatWithUs/ChatWithUs'), {
   ssr: false, // Optional: Disable server-side rendering for the component if it's not needed
 
+  loading: () => <p>Loading...</p>, // Optional: Add a fallback loading component
+});
+const HeavyBanner0 = dynamic(() => import('../components/banner0/Banner0'), {
+  ssr: false, // Optional: Disable server-side rendering for the component if it's not needed
   loading: () => <p>Loading...</p>, // Optional: Add a fallback loading component
 });
 const HeavyBanner1 = dynamic((setOpenModal) => import('../components/banner1/Banner1'), {
@@ -165,6 +170,7 @@ export default function Home() {
           {inView8 && <HeavyBanner8 />}
         </div> */}
         <HeavyBanner1 setOpenModal={setOpenModal} />
+        <HeavyBanner0/>
         <HeavyBanner5 />
         <HeavyBanner6 />
 
