@@ -8,7 +8,7 @@ export default function Banner2Componenet({ title, subTitle, src }) {
         //     </span>
             
         // </button>
-        <div className="flex flex-col bg-white shadow-customShadow  bg-opacity-10  items-center justify-center my-4 rounded-xl w-40 h-24">
+        <div className="flex flex-col bg-white shadow-customShadow  bg-opacity-10  items-center justify-center my-4 rounded-xl w-40 h-28">
         <div>
             <img
                 src={src}
@@ -16,8 +16,8 @@ export default function Banner2Componenet({ title, subTitle, src }) {
                 height={30}
             />
         </div>
-        <p className="text-white font-semibold my-1">{title}</p>
-        <p className="text-white text-xxs">{subTitle}</p>
+        <p className="text-white font-semibold my-1 text-center">{title}</p>
+        <p className="text-white text-xxs text-center">{subTitle}</p>
     </div>
 
     )

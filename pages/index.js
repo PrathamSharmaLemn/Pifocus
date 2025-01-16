@@ -127,16 +127,22 @@ export default function Home() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 100) { // Adjust the threshold as needed
+      if (window.scrollY > 100) {
         setShowChat(true);
       } else {
         setShowChat(false);
+      }
+
+      if ((window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight) {
+        TrackGoogleAnalyticsEvent('scroll_depth', 'page_bottom', {
+          location: 'home',
+          scroll_percent: '100'
+        });
       }
     };
 
     window.addEventListener('scroll', handleScroll);
 
-    // Clean up the event listener on component unmount
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };

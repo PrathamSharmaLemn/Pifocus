@@ -103,9 +103,9 @@ export default function Header({ showBuyNow, setOpenModal }) {
             <IoMdClose className="w-6 h-6" />
           </div>
           <div className="h-1/2 w-full px-10 flex gap-2 flex-col items-center">
-            <span className="hover:cursor-pointer">Home</span>
+            <a href="/" className="hover:cursor-pointer">Home</a>
             <div className="w-full text-white opacity-15 border-b-1"></div>
-            <span className="hover:cursor-pointer">About Us</span>
+            <a href="https://www.pw.live/about-us" target="_blank" className="mx-4 hover:cursor-pointer"><span className="hover:cursor-pointer">About Us</span></a>
             <div className="w-full text-white opacity-15 border-b-1"></div>
             <div className="w-16 text-white opacity-15 border-b-2"></div>
             <span onClick={() => {
