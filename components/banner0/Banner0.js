@@ -7,7 +7,7 @@ export default function Banner0() {
     const [fadeIn, setFadeIn] = useState(true);
     const carouselRef = useRef(null);
     const slideCount = 4;
-    const [visitorCount, setVisitorCount] = useState(2.4);
+    const [visitorCount, setVisitorCount] = useState(1.2);
 
     const slides = [
         {
@@ -86,8 +86,7 @@ export default function Banner0() {
     // Add new useEffect for visitor count
     useEffect(() => {
         const generateRandomCount = () => {
-            // Generate random number between 1.0 and 9.9
-            const randomNum = (Math.random() * 4.9 + 2).toFixed(1);
+            const randomNum = (Math.random() * 1.0 + 1.0).toFixed(1);
             setVisitorCount(parseFloat(randomNum));
         };
 

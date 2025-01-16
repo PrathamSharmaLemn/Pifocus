@@ -20,9 +20,9 @@ export default function Banner2() {
                             <Banner2Componenet title="4000 mah" subTitle="Battery Life (Upto 8 Hours)" src="/battery.svg" />
                         </div>
                         <div className="ml-1">
-                            <Banner2Componenet title="11.4 Inches" subTitle="Display Size" src="/display.svg" />
+                            <Banner2Componenet title="11.6 Inches" subTitle="Display Size" src="/display.svg" />
                             <Banner2Componenet title="6GB" subTitle="Ram" src="/ram.svg" />
-                            <Banner2Componenet title="Powered by Pi OS" subTitle="By PW" src="/os.svg" />
+                            <Banner2Componenet title={<>Powered by <br /> PiBook OS</>} subTitle="By PW" src="/os.svg" />
                         </div>
                     </div>
                 </div>

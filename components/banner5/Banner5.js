@@ -16,7 +16,7 @@ export default function Banner5() {
                     />
                 </div>
 
-                <p className="text-xs  my-4 text-white text-center">Experience the future of mobile computing with Android 13. Enjoy a seamless user experience, enhanced performance, and a wide range of features designed to make your life easier.</p>
+                <p className="text-xs  my-4 text-white text-center">Experience the future of computing with Android 13. Enjoy a seamless user experience, enhanced performance, and a wide range of features designed to make your life easier.</p>
 
 
 
@@ -63,7 +63,7 @@ export default function Banner5() {
                     />
                 </div>
 
-                <p className="text-xl my-12 text-white">Experience the future of mobile computing with Android 13. Enjoy a seamless user experience,<br /> enhanced performance, and a wide range of features designed to make your life easier.</p>
+                <p className="text-xl my-12 text-white">Experience the future of computing with Android 13. Enjoy a seamless user experience,<br /> enhanced performance, and a wide range of features designed to make your life easier.</p>
 
 
                 <div className=" w-full">
