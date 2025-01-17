@@ -19,6 +19,23 @@ export default function Header({ showBuyNow, setOpenModal }) {
     seconds: 0
   });
 
+  // Add windowHeight state
+  const [windowHeight, setWindowHeight] = useState(typeof window !== 'undefined' ? window.innerHeight : 0);
+  
+  // Add effect to handle window resize
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowHeight(window.innerHeight);
+      console.log(window.innerHeight);
+    };
+
+    // Set initial height
+    setWindowHeight(window.innerHeight);
+    
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   // Add timer calculation effect
   useEffect(() => {
     const targetDate = new Date('2025-01-29T23:59:59').getTime(); // Set your target date here
@@ -242,105 +259,119 @@ export default function Header({ showBuyNow, setOpenModal }) {
         } left-10 z-40`}>
           {(
             <div className={`bg-black/80 backdrop-blur-xl p-6 ${scrollPosition > 100 ? 'pt-2' : 'pt-6'} rounded-xl`}>
-              {!showBuyNow &&<div className="flex gap-1">
-                <div className="flex flex-col items-center bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl p-2 rounded-l-lg w-16">
-                  <span className="text-xl font-bold text-white">{timeLeft.days}</span>
-                  <span className="text-xs text-white">Days</span>
+              {!showBuyNow && windowHeight > 700 && (
+                <div className="flex gap-1">
+                  <div className="flex flex-col items-center bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl p-2 rounded-l-lg w-16">
+                    <span className="text-xl font-bold text-white">{timeLeft.days}</span>
+                    <span className="text-xs text-white">Days</span>
+                  </div>
+                  <div className="flex flex-col items-center bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl p-2 w-16">
+                    <span className="text-xl font-bold text-white">{timeLeft.hours}</span>
+                    <span className="text-xs text-white">Hours</span>
+                  </div>
+                  <div className="flex flex-col items-center bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl p-2 w-16">
+                    <span className="text-xl font-bold text-white">{timeLeft.minutes}</span>
+                    <span className="text-xs text-white">Minutes</span>
+                  </div>
+                  <div className="flex flex-col items-center bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl p-2 rounded-r-lg w-16">
+                    <span className="text-xl font-bold text-white">{timeLeft.seconds}</span>
+                    <span className="text-xs text-white">Seconds</span>
+                  </div>
                 </div>
-                <div className="flex flex-col items-center bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl p-2 w-16">
-                  <span className="text-xl font-bold text-white">{timeLeft.hours}</span>
-                  <span className="text-xs text-white">Hours</span>
-                </div>
-                <div className="flex flex-col items-center bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl p-2 w-16">
-                  <span className="text-xl font-bold text-white">{timeLeft.minutes}</span>
-                  <span className="text-xs text-white">Minutes</span>
-                </div>
-                <div className="flex flex-col items-center bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl p-2 rounded-r-lg w-16">
-                  <span className="text-xl font-bold text-white">{timeLeft.seconds}</span>
-                  <span className="text-xs text-white">Seconds</span>
-                </div>
-              </div>}
-              {!showBuyNow ?
-            <div className="w-full flex flex-col justify-center items-center mt-5">
-              <div className='leftBox flex flex-row  items-center'>
-                <span className="text-white text-2xl ml-2">Pre-order your</span>
-                <img
-                  // src={Assets.logo}
-                  className="w-32 "
-                  src="/Pi book (1) 2.svg"
-                  width={30}
-                  height={30}
-                  alt="Logo"
-                />
-              </div>
-              <div className="w-full flex text-xl text-white row justify-center items-center pt-2 pb-4">
-                <h3>
-                  at <span className="line-through text-lg text-gray-400 decoration-white">₹25000</span> ₹14999/-
-                </h3>
-                <div>
-                <img
-                  className="w-20 ml-1 "
-                  src="/discount.svg"
-                  width={30}
-                  height={30}
-                  alt="discount"
-                />
-              </div>
-              </div>
-              
-              <Link href={'https://store.pw.live/products/pi-book'} referrerPolicy="no-referrer" target="_blank">
-              <button onClick={()=>TrackGoogleAnalyticsEvent('preorder_click','Pre-Order')} className="bg-blue-600 p-2 px-5 rounded-md text-lg flex flex-row gap-2 items-center justify-center text-white hover:cursor-pointer">
-                <h3>Pre-Order Now</h3>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="10"
-                  height="14"
-                  fill="none"
-                  viewBox="0 0 7 10"
-                >
-                  <path
-                    fill="#fff"
-                    fillRule="evenodd"
-                    d="M.71 9.77a.75.75 0 0 1 .02-1.06L4.668 5 .73 1.29A.75.75 0 1 1 1.77.21l4.5 4.25a.75.75 0 0 1 0 1.08l-4.5 4.25a.75.75 0 0 1-1.06-.02"
-                    clipRule="evenodd"
-                  ></path>
-                </svg>
-              </button>
-              </Link>
-            </div>
+              )}
+              {!showBuyNow ? (
+                <div className="w-full flex flex-col justify-center items-center ">
+                  {windowHeight > 700 ? (
+                    <div>
+                      <div className='leftBox flex flex-row items-center'>
+                        <span className="text-white text-2xl ml-2">Pre-order your</span>
+                        <img
+                          className="w-32"
+                          src="/Pi book (1) 2.svg"
+                          width={30}
+                          height={30}
+                          alt="Logo"
+                        />
+                      </div>
+                      <div className="w-full flex text-xl text-white row justify-center items-center pt-2 pb-4">
+                        <h3>
+                          at <span className="line-through text-lg text-gray-400 decoration-white">₹25000</span> ₹14999/-
+                        </h3>
+                        <div>
+                          <img
+                            className="w-20 ml-1"
+                            src="/discount.svg"
+                            width={30}
+                            height={30}
+                            alt="discount"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  ) : (
+                    
+                    <div className="w-full flex flex-col justify-center items-center">
+                  <div className="w-full flex flex-col justify-center items-center mt-4">
+                    <div className='leftBox text-white text-xl flex flex-row gap-2 items-center'>
+                      <span className="text-white ">Pre-order at</span>
+                      <span className="line-through text-gray-400 decoration-white text-lg">₹25000</span> ₹14999/-
+                    </div>
+                  </div>
 
-            :
-
-            <div className="w-full flex flex-col justify-center items-center">
-              <div className="w-full flex flex-col justify-center items-center mt-4">
-                <div className='leftBox text-white text-xl flex flex-row gap-2 items-center'>
-                  <span className="text-white ">Pre-order at</span>
-                  <span className="line-through text-gray-400 decoration-white text-lg">₹25000</span> ₹14999/-
-                </div>
+                <Link href={'https://store.pw.live/products/pi-book'} referrerPolicy="no-referrer" target="_blank">
+                  <button onClick={()=>TrackGoogleAnalyticsEvent('preorder_click','Pre-Order')} className="bg-blue-600 mt-4 p-2 px-5 rounded-md text-lg flex flex-row gap-2 items-center justify-center text-white hover:cursor-pointer">
+                    <h3>Pre-Order Now</h3>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="10"
+                      height="14"
+                      fill="none"
+                      viewBox="0 0 7 10"
+                    >
+                      <path
+                        fill="#fff"
+                        fillRule="evenodd"
+                        d="M.71 9.77a.75.75 0 0 1 .02-1.06L4.668 5 .73 1.29A.75.75 0 1 1 1.77.21l4.5 4.25a.75.75 0 0 1 0 1.08l-4.5 4.25a.75.75 0 0 1-1.06-.02"
+                        clipRule="evenodd"
+                      ></path>
+                    </svg>
+                  </button>
+                  </Link>
               </div>
+                  )}
 
-            <Link href={'https://store.pw.live/products/pi-book'} referrerPolicy="no-referrer" target="_blank">
-              <button onClick={()=>TrackGoogleAnalyticsEvent('preorder_click','Pre-Order')} className="bg-blue-600 mt-4 p-2 px-5 rounded-md text-lg flex flex-row gap-2 items-center justify-center text-white hover:cursor-pointer">
-                <h3>Pre-Order Now</h3>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="10"
-                  height="14"
-                  fill="none"
-                  viewBox="0 0 7 10"
-                >
-                  <path
-                    fill="#fff"
-                    fillRule="evenodd"
-                    d="M.71 9.77a.75.75 0 0 1 .02-1.06L4.668 5 .73 1.29A.75.75 0 1 1 1.77.21l4.5 4.25a.75.75 0 0 1 0 1.08l-4.5 4.25a.75.75 0 0 1-1.06-.02"
-                    clipRule="evenodd"
-                  ></path>
-                </svg>
-              </button>
-              </Link>
-          </div>
-            
-            }
+                  
+                </div>
+              ) : (
+                <div className="w-full flex flex-col justify-center items-center">
+                  <div className="w-full flex flex-col justify-center items-center mt-4">
+                    <div className='leftBox text-white text-xl flex flex-row gap-2 items-center'>
+                      <span className="text-white ">Pre-order at</span>
+                      <span className="line-through text-gray-400 decoration-white text-lg">₹25000</span> ₹14999/-
+                    </div>
+                  </div>
+
+                <Link href={'https://store.pw.live/products/pi-book'} referrerPolicy="no-referrer" target="_blank">
+                  <button onClick={()=>TrackGoogleAnalyticsEvent('preorder_click','Pre-Order')} className="bg-blue-600 mt-4 p-2 px-5 rounded-md text-lg flex flex-row gap-2 items-center justify-center text-white hover:cursor-pointer">
+                    <h3>Pre-Order Now</h3>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="10"
+                      height="14"
+                      fill="none"
+                      viewBox="0 0 7 10"
+                    >
+                      <path
+                        fill="#fff"
+                        fillRule="evenodd"
+                        d="M.71 9.77a.75.75 0 0 1 .02-1.06L4.668 5 .73 1.29A.75.75 0 1 1 1.77.21l4.5 4.25a.75.75 0 0 1 0 1.08l-4.5 4.25a.75.75 0 0 1-1.06-.02"
+                        clipRule="evenodd"
+                      ></path>
+                    </svg>
+                  </button>
+                  </Link>
+              </div>
+              )}
             </div>
           )}
         </div>
