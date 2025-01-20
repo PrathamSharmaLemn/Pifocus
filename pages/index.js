@@ -183,7 +183,7 @@ export default function Home() {
       {/* <HeavyHeader showBuyNow={showChat} /> */}
       {/* <Header showBuyNow={showChat} /> */}
       <main className='bg-bgColor'>
-        {showChat && <ChatWithUs />}
+        <ChatWithUs />
         {openModal && <ModalForm reff={modalRef} openModal={openModal} setOpenModal={setOpenModal} />}
         {/* <div ref={ref1}>
           {inView1 && <HeavyBanner1 setOpenModal={setOpenModal} />}
