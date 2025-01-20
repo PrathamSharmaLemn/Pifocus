@@ -25,7 +25,7 @@ export default function Banner6() {
                         </video> */}
                 </div>
                 <p className="text-xs text-center   text-white">
-                    Discover a curated collection of apps designed to enhance your learning experience. The Pi App Store offers a safe and secure platform to download and install apps, ensuring you have the tools you need to succeed.
+                Discover the PiStore, a custom-built app store designed exclusively for PiBook, your Android laptop. Easily browse and download any Android app you need, all from a safe and secure platform tailored to enhance your experience.
                 </p>
             </div>
 
@@ -53,8 +53,7 @@ export default function Banner6() {
                     </video> */}
                 </div>
                 <p className="text-xl text-center my-8 text-white">
-                    Discover a curated collection of apps designed to enhance your learning experience. The Pi Store<br /> offers a safe and secure platform to download and install apps, ensuring you have the tools you<br /> need to succeed.
-                </p>
+                    Discover the PiStore, a custom-built app store designed exclusively for PiBook, your Android laptop. <br /> Easily browse and download any Android app you need, all from a safe and secure platform tailored to enhance your experience.                </p>
             </div>
 
         </>

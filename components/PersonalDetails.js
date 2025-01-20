@@ -8,7 +8,7 @@ export default function PersonalDetails() {
                 <span>Back to Home</span>
             </div>
 
-            <p className="sm:text-7xl md:text-8xl lg:text-3xl  font-bold bg-gradient-to-r from-textGradientLeft to-textGradientRight inline-block text-transparent bg-clip-text">Pre-order your Pi Book at
+            <p className="sm:text-7xl md:text-8xl lg:text-3xl  font-bold bg-gradient-to-r from-textGradientLeft to-textGradientRight inline-block text-transparent bg-clip-text">Pre-order your PiBook at
             ₹99 Only!</p>
 
             <div className="bg-[#09090B]">

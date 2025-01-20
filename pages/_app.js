@@ -6,7 +6,7 @@ function MyApp({ Component, pageProps }) {
     return (
         <div>
             <Head>
-                <title>Pi Book</title>
+                <title>PiBook</title>
                 <link rel="icon" href="/Logo.svg" />
             </Head>
             

@@ -67,8 +67,9 @@ export default function Footer() {
                         <div className="flex flex-row items-center">
                             <p>Follow us</p>
                             <div className="flex flex-row gap-2 my-4 ml-4 ">
-                                <a href="" target="_blank" className="p-1 bg-white rounded-full text-black hover:cursor-pointer"><FaYoutube /></a>
-                                {/* <span className="p-1 bg-white rounded-full text-black hover:cursor-pointer"><FaInstagram /></span>
+                                <a href="https://www.youtube.com/@pibypw" target="_blank" referrerPolicy="no-referrer" className="p-1 bg-white rounded-full text-black hover:cursor-pointer"><FaYoutube /></a>
+                                <a href="https://www.instagram.com/pwinnovation?igsh=Mnd4M3pxa3E2anhr" target="_blank" referrerPolicy="no-referrer" className="p-1 bg-white rounded-full text-black hover:cursor-pointer"><FaInstagram /></a>
+                                {/* 
                                 <span className="p-1 bg-white rounded-full text-black hover:cursor-pointer"><FaTelegramPlane /></span>
                                 <span className="p-1 bg-white rounded-full text-black hover:cursor-pointer"><FaFacebookF /></span>
                                 <span className="p-1 bg-white rounded-full text-black hover:cursor-pointer"><FaTwitter /></span> */}
@@ -137,8 +138,9 @@ export default function Footer() {
                     <div className="text-white">
                         <p>Follow us</p>
                         <div className="flex flex-row gap-2 my-4 ">
-                            <a href="" className="p-1 bg-white rounded-full text-black hover:cursor-pointer"><FaYoutube /></a>
-                            {/* <span className="p-1 bg-white rounded-full text-black hover:cursor-pointer"><FaInstagram /></span>
+                            <a href="https://www.youtube.com/@pibypw" target="_blank" referrerPolicy="no-referrer" className="p-1 bg-white rounded-full text-black hover:cursor-pointer"><FaYoutube /></a>
+                            <a href="https://www.instagram.com/pwinnovation?igsh=Mnd4M3pxa3E2anhr" target="_blank" referrerPolicy="no-referrer" className="p-1 bg-white rounded-full text-black hover:cursor-pointer"><FaInstagram /></a>
+                            {/* 
                             <span className="p-1 bg-white rounded-full text-black hover:cursor-pointer"><FaTelegramPlane /></span>
                             <span className="p-1 bg-white rounded-full text-black hover:cursor-pointer"><FaFacebookF /></span>
                             <span className="p-1 bg-white rounded-full text-black hover:cursor-pointer"><FaTwitter /></span> */}
