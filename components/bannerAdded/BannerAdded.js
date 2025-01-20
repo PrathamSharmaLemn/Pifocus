@@ -32,7 +32,7 @@ export default function BannerAdded() {
                     </div>
                 </div>
                 <p className="text-center text-white text-sm mt-6">
-                    The Pi Book's powerful keymapper allows users to customize their experience by mapping any function to the gamepad buttons, touchpad, and analog sticks.
+                    The PiBook's powerful keymapper allows users to customize their experience by mapping any function to the gamepad buttons, touchpad, and analog sticks.
                 </p>
 
                 <p className="text-3xl my-8 font-bold bg-gradient-to-r text-center w-full from-textGradientLeft to-textGradientRight inline-block text-transparent bg-clip-text">Calling + 4G</p>
@@ -81,7 +81,7 @@ export default function BannerAdded() {
                 <div className="flex justify-around items-center sm:px-4 sm:gap-2 md:gap-8 ">
                     <div className="w-[30%]">
                         <p className="text-3xl sm:my-2 font-bold bg-gradient-to-r text-center w-full from-textGradientLeft to-textGradientRight inline-block text-transparent bg-clip-text">Keymapper</p>
-                        <p className="text-white text-center lg:text-lg">The Pi Book's powerful keymapper allows users to customize their experience by mapping any function to the gamepad buttons, touchpad, and analog sticks.</p>
+                        <p className="text-white text-center lg:text-lg">The PiBook's powerful keymapper allows users to customize their experience by mapping any function to the gamepad buttons, touchpad, and analog sticks.</p>
                     </div>
                     <div className="w-[50%]">
                         <div className="text-white rounded-2xl bg-white bg-opacity-10 sm:p-4 md:p-8">
@@ -145,7 +145,7 @@ export default function BannerAdded() {
                     </div>
                     <div className="w-[30%]">
                         <p className="text-3xl sm:my-2 font-bold bg-gradient-to-r text-center w-full from-textGradientLeft to-textGradientRight inline-block text-transparent bg-clip-text">Calling + 4G</p>
-                        <p className="text-white text-center lg:text-lg">Stay connected anywhere, anytime with seamless 4G and calling support on your PI Book— learning and productivity on the go!</p>
+                        <p className="text-white text-center lg:text-lg">Stay connected anywhere, anytime with seamless 4G and calling support on your PiBook— learning and productivity on the go!</p>
                     </div>
                 </div>
             </div>

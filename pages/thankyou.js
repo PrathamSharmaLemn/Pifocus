@@ -82,9 +82,9 @@ export default function thankyou() {
                 <div className="flex flex-col gap-4 justify-center items-center">
                     <img src="/thankyouGifPi.gif" className="w-52 h-52" />
                     <div className="text-white flex flex-col justify-center gap-2 items-center w-[70%]">
-                        <p className="text-xl sm:text-3xl md:text-4xl lg:text-4xl  font-bold bg-gradient-to-r from-textGradientLeft to-textGradientRight inline-block text-transparent bg-clip-text">Your Pi Book is Pre-ordered</p>
+                        <p className="text-xl sm:text-3xl md:text-4xl lg:text-4xl  font-bold bg-gradient-to-r from-textGradientLeft to-textGradientRight inline-block text-transparent bg-clip-text">Your PiBook is Pre-ordered</p>
 
-                        {/* <p >Your Pi Book is Pre-ordered.</p> */}
+                        {/* <p >Your PiBook is Pre-ordered.</p> */}
                         <p className="text-center text-xs sm:text-xl my-6">Your pre-order is confirmed! You'll receive a confirmation email or text with your pre-order details. We'll keep you updated on the launch date and shipping information.</p>
                     </div>
 

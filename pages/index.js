@@ -173,7 +173,7 @@ export default function Home() {
 
     <div className={styles.container}>
       <Head>
-        <title>Pi Book</title>
+        <title>PiBook</title>
         <link rel="icon" href="/Logo.svg" />
       </Head>
 
