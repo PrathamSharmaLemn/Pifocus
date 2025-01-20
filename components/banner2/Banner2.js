@@ -21,7 +21,7 @@ export default function Banner2() {
                         </div>
                         <div className="ml-1">
                             <Banner2Componenet title="11.6 Inches" subTitle="Display Size" src="/display.svg" />
-                            <Banner2Componenet title="6GB" subTitle="Ram" src="/ram.svg" />
+                            <Banner2Componenet title="6GB" subTitle="RAM" src="/ram.svg" />
                             <Banner2Componenet title={<>Powered by <br /> PiBook OS</>} subTitle="By PW" src="/os.svg" />
                         </div>
                     </div>
@@ -79,12 +79,12 @@ export default function Banner2() {
 
                             <div className="ml-12">
                                 <div>
-                                    <p className="text-4xl font-semibold text-white">11.4 Inches</p>
+                                    <p className="text-4xl font-semibold text-white">11.6 Inches</p>
                                     <p className="text-xs text-white">Display Size</p>
                                 </div>
                                 <div className="my-10">
                                     <p className="text-4xl font-semibold text-white">6GB</p>
-                                    <p className="text-xs text-white">Ram</p>
+                                    <p className="text-xs text-white">RAM</p>
                                 </div>
                                 <div>
                                     <p className="text-4xl font-semibold text-white">Powered by PiBook OS</p>
