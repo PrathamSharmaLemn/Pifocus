@@ -35,10 +35,12 @@ export default function BannerAdded() {
                     The PiBook's powerful keymapper allows users to customize their experience by mapping any function to the gamepad buttons, touchpad, and analog sticks.
                 </p>
 
-                <p className="text-3xl my-8 font-bold bg-gradient-to-r text-center w-full from-textGradientLeft to-textGradientRight inline-block text-transparent bg-clip-text">Calling + 4G</p>
+                <p className="text-3xl my-8 mb-4 font-bold bg-gradient-to-r text-center w-full from-textGradientLeft to-textGradientRight inline-block text-transparent bg-clip-text">Connectivity</p>
+                <p className="text-xl mb-8 font-bold bg-gradient-to-r text-center w-full from-textGradientLeft to-textGradientRight inline-block text-transparent bg-clip-text">Calling + 4G + Bluetooth + Wi-Fi</p>
 
-                <div className="bg-white bg-opacity-10 rounded-xl p-4 relative">
-                    <img src="/lte.png" alt="img" className="absolute w-10 h-10 right-3 top-3 opacity-70" />
+                <div className=" rounded-xl relative">
+                    <img src="/connectivity.png" alt="connectivity" className="w-full h-auto rounded-lg" />
+                    {/* <img src="/lte.png" alt="img" className="absolute w-10 h-10 right-3 top-3 opacity-70" />
                     <div className="flex flex-col gap-1 justify-center text-white w-full  items-center">
                         <div className="">
                             <p className="bg-[#FF7F7F] rounded-full py-4 px-6 font-semibold text-3xl text-white ">A</p>
@@ -69,8 +71,9 @@ export default function BannerAdded() {
 
 
                         </div>
-                    </div>
+                    </div> */}
                 </div>
+                <p className="text-white mt-5 text-xs w-[80%] mx-auto text-center lg:text-lg">Stay connected anywhere, anytime with seamless 4G and calling support on your PiBook— learning and productivity on the go!</p>
 
 
             </div>
@@ -109,8 +112,9 @@ export default function BannerAdded() {
 
 
                 <div className="flex justify-around items-center mt-24">
-                    <div className="bg-white bg-opacity-10 rounded-xl sm:p-4 md:p-8 relative w-[40%]">
-                        <img src="/lte.png" alt="img" className="absolute sm:w-7 sm:h-7 md:w-10 md:h-10 right-3 top-3 opacity-70" />
+                    <div className=" rounded-xl md:p-8 relative w-[50%]">
+                        <img src="/connectivity.png" alt="connectivity" className="w-full h-auto rounded-lg" />
+                        {/* <img src="/lte.png" alt="img" className="absolute sm:w-7 sm:h-7 md:w-10 md:h-10 right-3 top-3 opacity-70" />
                         <div className="flex flex-col gap-1 justify-center text-white w-full  items-center">
                             <div className="">
                                 <p className="bg-[#FF7F7F] rounded-full sm:py-2 sm:px-4 md:py-4 md:px-6 font-semibold text-3xl text-white ">A</p>
@@ -141,11 +145,12 @@ export default function BannerAdded() {
 
 
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                     <div className="w-[30%]">
-                        <p className="text-3xl sm:my-2 font-bold bg-gradient-to-r text-center w-full from-textGradientLeft to-textGradientRight inline-block text-transparent bg-clip-text">Calling + 4G</p>
-                        <p className="text-white text-center lg:text-lg">Stay connected anywhere, anytime with seamless 4G and calling support on your PiBook— learning and productivity on the go!</p>
+                        <p className="text-3xl sm:my-2 font-bold bg-gradient-to-r text-center w-full from-textGradientLeft to-textGradientRight inline-block text-transparent bg-clip-text">Connectivity</p>
+                        <p className="text-xl mb-8 font-bold bg-gradient-to-r text-center w-full from-textGradientLeft to-textGradientRight inline-block text-transparent bg-clip-text">Calling + 4G + Bluetooth + Wi-Fi</p>
+                        <p className="text-white text-center lg:text-lg">Stay connected anywhere, anytime with seamless 4G and calling support on your PiBook— learning and productivity on the go!</p>
                     </div>
                 </div>
             </div>
