@@ -38,7 +38,7 @@ export default function Header({ showBuyNow, setOpenModal }) {
 
   // Add timer calculation effect
   useEffect(() => {
-    const targetDate = new Date('2025-01-29T23:59:59').getTime(); // Set your target date here
+    const targetDate = new Date('2025-02-02T11:59:59').getTime(); // Set your target date here
 
     const timer = setInterval(() => {
       const now = new Date().getTime();
