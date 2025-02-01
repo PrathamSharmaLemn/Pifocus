@@ -56,9 +56,9 @@ export default function Banner1({setOpenModal}) {
                     {/* <div className="mt-8">
                         <Link href="/preorder" className="py-3 px-8 rounded-3xl text-sm bg-blue-500 text-white hover:cursor-pointer">Buy Now</Link>
                     </div> */}
-                    <div className="mt-8 btn-142 w-fit">
+                    <Link href={'https://store.pw.live/products/pi-book'} referrerPolicy="no-referrer" target="_blank" className="mt-8 btn-142 w-fit">
                         <span className="py-2 px-8 rounded-lg text-lg bg-blue-600 text-white hover:cursor-pointer">Buy Now</span>
-                    </div>
+                    </Link>
                 </div>
                 <div className="w-[650px] h-500 flex flex-col justify-center items-center relative bg-bgImage">
                     <div className="sm:w-80 sm:h-80 sm:mb-28 sm:ml-12 md:w-[370px]  md:h-[350px] lg:w-[520px] lg:h-[550px]  lg:mt-12">
