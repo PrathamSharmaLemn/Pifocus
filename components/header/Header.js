@@ -167,7 +167,7 @@ export default function Header({ showBuyNow, setOpenModal }) {
             {!showBuyNow ?
             <div className="w-full flex flex-col justify-center items-center mt-5">
               <div className='leftBox flex flex-row  items-center'>
-                <span className="text-white text-2xl ml-2">Buy Now your</span>
+                <span className="text-white text-2xl ml-2">Buy your</span>
                 <img
                   // src={Assets.logo}
                   className="w-32 "
@@ -293,7 +293,7 @@ export default function Header({ showBuyNow, setOpenModal }) {
                   {windowHeight > 700 ? (
                     <div>
                       <div className='leftBox flex flex-row items-center'>
-                        <span className="text-white text-2xl ml-2">Buy Now your</span>
+                        <span className="text-white text-2xl ml-2">Buy your</span>
                         <img
                           className="w-32"
                           src="/Pi book (1) 2.svg"
@@ -363,7 +363,7 @@ export default function Header({ showBuyNow, setOpenModal }) {
                 <Link href={'https://store.pw.live/products/pi-book'} referrerPolicy="no-referrer" target="_blank">
                   <button onClick={()=>TrackGoogleAnalyticsEvent('preorder_click','Buy-Now')} className="bg-blue-600 btn-142 mt-4 rounded-md text-lg flex flex-row gap-2 items-center justify-center text-white hover:cursor-pointer">
                     <span className=" p-2 px-5">
-                    <h3>Buy Now</h3>
+                    <h3 className="mr-2">Buy Now</h3>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="10"
