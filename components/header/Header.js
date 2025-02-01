@@ -134,7 +134,7 @@ export default function Header({ showBuyNow, setOpenModal }) {
           </div>
 
           {/* <Link href="/preorder" className="bg-blue-600 p-2 rounded-md text-sm hover:cursor-pointer mt-0">Pre-Order</Link> */}
-          <Link href={'https://store.pw.live/products/pi-book'} referrerPolicy="no-referrer" target="_blank"><span onClick={()=>TrackGoogleAnalyticsEvent('preorder_click','Pre-Order')} className="bg-blue-600 p-2 px-10 rounded-md text-sm hover:cursor-pointer mt-0">Pre-Order</span></Link>
+          <Link href={'https://store.pw.live/products/pi-book'} referrerPolicy="no-referrer" target="_blank"><span onClick={()=>TrackGoogleAnalyticsEvent('preorder_click','Buy-Now')} className="bg-blue-600 p-2 px-10 rounded-md text-sm hover:cursor-pointer mt-0">Buy Now</span></Link>
         </div>}
         
           
@@ -145,7 +145,7 @@ export default function Header({ showBuyNow, setOpenModal }) {
             </div> */}
 
             {/* Timer */}
-            {!showBuyNow &&<div className="w-full flex justify-center mt-5 items-center gap-1 px-2">
+            {/* {!showBuyNow &&<div className="w-full flex justify-center mt-5 items-center gap-1 px-2">
               <div className="flex flex-col items-center bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl p-3 rounded-l-lg w-20">
                 <span className="text-2xl font-bold text-white">{timeLeft.days}</span>
                 <span className="text-xs text-white">Days</span>
@@ -162,12 +162,12 @@ export default function Header({ showBuyNow, setOpenModal }) {
                 <span className="text-2xl font-bold text-white">{timeLeft.seconds}</span>
                 <span className="text-xs text-white">Seconds</span>
               </div>
-            </div>}
+            </div>} */}
 
             {!showBuyNow ?
             <div className="w-full flex flex-col justify-center items-center mt-5">
               <div className='leftBox flex flex-row  items-center'>
-                <span className="text-white text-2xl ml-2">Pre-order your</span>
+                <span className="text-white text-2xl ml-2">Buy Now your</span>
                 <img
                   // src={Assets.logo}
                   className="w-32 "
@@ -193,23 +193,27 @@ export default function Header({ showBuyNow, setOpenModal }) {
               </div>
               
               <Link href={'https://store.pw.live/products/pi-book'} referrerPolicy="no-referrer" target="_blank">
-              <button onClick={()=>TrackGoogleAnalyticsEvent('preorder_click','Pre-Order')} className="bg-blue-600 p-2 px-5 rounded-md text-lg flex flex-row gap-2 items-center justify-center text-white hover:cursor-pointer">
-                <h3>Pre-Order Now</h3>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="10"
-                  height="14"
-                  fill="none"
-                  viewBox="0 0 7 10"
-                >
-                  <path
-                    fill="#fff"
-                    fillRule="evenodd"
-                    d="M.71 9.77a.75.75 0 0 1 .02-1.06L4.668 5 .73 1.29A.75.75 0 1 1 1.77.21l4.5 4.25a.75.75 0 0 1 0 1.08l-4.5 4.25a.75.75 0 0 1-1.06-.02"
-                    clipRule="evenodd"
-                  ></path>
-                </svg>
-              </button>
+              <div className="relative inline-flex group">
+                <button onClick={()=>TrackGoogleAnalyticsEvent('preorder_click','Buy-Now')} className="relative btn-142 inline-flex items-center justify-center  text-lg font-bold text-white transition-all duration-200 bg-blue-600 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-600 hover:cursor-pointer">
+                  <span className="p-2 px-5">
+                  <h3 className="mr-2">Buy Now</h3>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="10"
+                    height="14"
+                    fill="none"
+                    viewBox="0 0 7 10"
+                  >
+                    <path
+                      fill="#fff"
+                      fillRule="evenodd"
+                      d="M.71 9.77a.75.75 0 0 1 .02-1.06L4.668 5 .73 1.29A.75.75 0 1 1 1.77.21l4.5 4.25a.75.75 0 0 1 0 1.08l-4.5 4.25a.75.75 0 0 1-1.06-.02"
+                      clipRule="evenodd"
+                    ></path>
+                  </svg>
+                  </span>
+                </button>
+              </div>
               </Link>
             </div>
 
@@ -218,29 +222,34 @@ export default function Header({ showBuyNow, setOpenModal }) {
             <div className="w-full flex flex-col justify-center items-center">
               <div className="w-full flex flex-col justify-center items-center mt-4">
                 <div className='leftBox text-white text-xl flex flex-row gap-2 items-center'>
-                  <span className="text-white ">Pre-order at</span>
+                  <span className="text-white ">Buy Now at</span>
                   <span className="line-through text-gray-400 decoration-white text-lg">₹25000</span> ₹14999/-
                 </div>
               </div>
 
             <Link href={'https://store.pw.live/products/pi-book'} referrerPolicy="no-referrer" target="_blank">
-              <button onClick={()=>TrackGoogleAnalyticsEvent('preorder_click','Pre-Order')} className="bg-blue-600 mt-4 p-2 px-5 rounded-md text-lg flex flex-row gap-2 items-center justify-center text-white hover:cursor-pointer">
-                <h3>Pre-Order Now</h3>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="10"
-                  height="14"
-                  fill="none"
-                  viewBox="0 0 7 10"
-                >
-                  <path
-                    fill="#fff"
-                    fillRule="evenodd"
-                    d="M.71 9.77a.75.75 0 0 1 .02-1.06L4.668 5 .73 1.29A.75.75 0 1 1 1.77.21l4.5 4.25a.75.75 0 0 1 0 1.08l-4.5 4.25a.75.75 0 0 1-1.06-.02"
-                    clipRule="evenodd"
-                  ></path>
-                </svg>
-              </button>
+              <div className="relative inline-flex group">
+                <div className="absolute transition-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#44BCFF] via-[#44BCFF] to-[#44BCFF] rounded-md blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt"></div>
+                <button onClick={()=>TrackGoogleAnalyticsEvent('preorder_click','Buy-Now')} className=" mt-4 relative btn-142 inline-flex items-center justify-center text-lg font-bold text-white transition-all duration-200 bg-blue-600 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-600 hover:cursor-pointer">
+                  <span className="p-2 px-5">
+                    <h3 className="mr-2">Buy Now</h3>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="10"
+                      height="14"
+                      fill="none"
+                      viewBox="0 0 7 10"
+                    >
+                      <path
+                        fill="#fff"
+                        fillRule="evenodd"
+                        d="M.71 9.77a.75.75 0 0 1 .02-1.06L4.668 5 .73 1.29A.75.75 0 1 1 1.77.21l4.5 4.25a.75.75 0 0 1 0 1.08l-4.5 4.25a.75.75 0 0 1-1.06-.02"
+                        clipRule="evenodd"
+                      ></path>
+                    </svg>
+                  </span>
+                </button>
+              </div>
               </Link>
           </div>
             
@@ -259,7 +268,7 @@ export default function Header({ showBuyNow, setOpenModal }) {
         } left-10 z-40`}>
           {(
             <div className={`bg-black/80 backdrop-blur-xl p-6 ${scrollPosition > 100 ? 'pt-2' : 'pt-6'} rounded-xl`}>
-              {!showBuyNow && windowHeight > 700 && (
+              {/* {!showBuyNow && windowHeight > 700 && (
                 <div className="flex gap-1">
                   <div className="flex flex-col items-center bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl p-2 rounded-l-lg w-16">
                     <span className="text-xl font-bold text-white">{timeLeft.days}</span>
@@ -278,13 +287,13 @@ export default function Header({ showBuyNow, setOpenModal }) {
                     <span className="text-xs text-white">Seconds</span>
                   </div>
                 </div>
-              )}
+              )} */}
               {!showBuyNow ? (
                 <div className="w-full flex flex-col justify-center items-center ">
                   {windowHeight > 700 ? (
                     <div>
                       <div className='leftBox flex flex-row items-center'>
-                        <span className="text-white text-2xl ml-2">Pre-order your</span>
+                        <span className="text-white text-2xl ml-2">Buy Now your</span>
                         <img
                           className="w-32"
                           src="/Pi book (1) 2.svg"
@@ -313,14 +322,14 @@ export default function Header({ showBuyNow, setOpenModal }) {
                     <div className="w-full flex flex-col justify-center items-center">
                   <div className="w-full flex flex-col justify-center items-center mt-4">
                     <div className='leftBox text-white text-xl flex flex-row gap-2 items-center'>
-                      <span className="text-white ">Pre-order at</span>
+                      <span className="text-white ">Buy Now at</span>
                       <span className="line-through text-gray-400 decoration-white text-lg">₹25000</span> ₹14999/-
                     </div>
                   </div>
 
                 <Link href={'https://store.pw.live/products/pi-book'} referrerPolicy="no-referrer" target="_blank">
-                  <button onClick={()=>TrackGoogleAnalyticsEvent('preorder_click','Pre-Order')} className="bg-blue-600 mt-4 p-2 px-5 rounded-md text-lg flex flex-row gap-2 items-center justify-center text-white hover:cursor-pointer">
-                    <h3>Pre-Order Now</h3>
+                  <button onClick={()=>TrackGoogleAnalyticsEvent('preorder_click','Buy-Now')} className="bg-blue-600 mt-4 p-2 px-5 rounded-md text-lg flex flex-row gap-2 items-center justify-center text-white hover:cursor-pointer">
+                    <h3>Buy Now</h3>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="10"
@@ -346,14 +355,15 @@ export default function Header({ showBuyNow, setOpenModal }) {
                 <div className="w-full flex flex-col justify-center items-center">
                   <div className="w-full flex flex-col justify-center items-center mt-4">
                     <div className='leftBox text-white text-xl flex flex-row gap-2 items-center'>
-                      <span className="text-white ">Pre-order at</span>
+                      <span className="text-white ">Buy Now at</span>
                       <span className="line-through text-gray-400 decoration-white text-lg">₹25000</span> ₹14999/-
                     </div>
                   </div>
 
                 <Link href={'https://store.pw.live/products/pi-book'} referrerPolicy="no-referrer" target="_blank">
-                  <button onClick={()=>TrackGoogleAnalyticsEvent('preorder_click','Pre-Order')} className="bg-blue-600 mt-4 p-2 px-5 rounded-md text-lg flex flex-row gap-2 items-center justify-center text-white hover:cursor-pointer">
-                    <h3>Pre-Order Now</h3>
+                  <button onClick={()=>TrackGoogleAnalyticsEvent('preorder_click','Buy-Now')} className="bg-blue-600 btn-142 mt-4 rounded-md text-lg flex flex-row gap-2 items-center justify-center text-white hover:cursor-pointer">
+                    <span className=" p-2 px-5">
+                    <h3>Buy Now</h3>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="10"
@@ -368,6 +378,7 @@ export default function Header({ showBuyNow, setOpenModal }) {
                         clipRule="evenodd"
                       ></path>
                     </svg>
+                    </span>
                   </button>
                   </Link>
               </div>
@@ -400,7 +411,7 @@ export default function Header({ showBuyNow, setOpenModal }) {
             window.open(`https://wa.me/9289105061`)
           }} className="mr-4 hover:cursor-pointer">Contact</span>
           {/* {showBuyNow && <Link href="/preorder" className="bg-blue-500 p-3 rounded-md text-sm hover:cursor-pointer">Pre-Order</Link>} */}
-          {showBuyNow && <Link href={'https://store.pw.live/products/pi-book'} referrerPolicy="no-referrer" target="_blank"><span onClick={()=>TrackGoogleAnalyticsEvent('preorder_click','Pre-Order')} className="bg-blue-500 p-3 rounded-md text-sm hover:cursor-pointer">Pre-Order</span></Link>}
+          {/* {showBuyNow && <Link href={'https://store.pw.live/products/pi-book'} referrerPolicy="no-referrer" target="_blank"><span onClick={()=>TrackGoogleAnalyticsEvent('preorder_click','Buy-Now')} className="bg-blue-600 p-3 rounded-md text-sm hover:cursor-pointer">Buy Now</span></Link>} */}
           {/* {showBuyNow && <ModalForm />} */}
 
         </div>

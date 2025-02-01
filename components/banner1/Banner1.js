@@ -53,13 +53,12 @@ export default function Banner1({setOpenModal}) {
                 <div className="flex flex-col z-10 justify-between">
                     <p className="sm:text-7xl md:text-8xl lg:text-9xl  font-bold bg-gradient-to-r from-textGradientLeft to-textGradientRight inline-block text-transparent bg-clip-text">PiBook</p>
                     <p className="sm:text-lg  md:text-xl text-white my-4 md:w-72 lg:w-96">A tech-forward & affordable laptop for students across Bharat to learn & upskill</p>
-                    <div className="mt-8">
-                        {/* <Link href="/preorder" className="py-3 px-8 rounded-3xl text-sm bg-blue-500 text-white hover:cursor-pointer">Pre - Book</Link> */}
-
-                    </div>
                     {/* <div className="mt-8">
-                        <span className="py-3 px-8 rounded-3xl text-sm bg-blue-500 text-white hover:cursor-pointer">Get it Now</span>
+                        <Link href="/preorder" className="py-3 px-8 rounded-3xl text-sm bg-blue-500 text-white hover:cursor-pointer">Buy Now</Link>
                     </div> */}
+                    <div className="mt-8 btn-142 w-fit">
+                        <span className="py-2 px-8 rounded-lg text-lg bg-blue-600 text-white hover:cursor-pointer">Buy Now</span>
+                    </div>
                 </div>
                 <div className="w-[650px] h-500 flex flex-col justify-center items-center relative bg-bgImage">
                     <div className="sm:w-80 sm:h-80 sm:mb-28 sm:ml-12 md:w-[370px]  md:h-[350px] lg:w-[520px] lg:h-[550px]  lg:mt-12">
