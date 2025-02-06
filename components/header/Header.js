@@ -123,6 +123,7 @@ export default function Header({ showBuyNow, setOpenModal }) {
             <a href="/" className="hover:cursor-pointer">Home</a>
             <div className="w-full text-white opacity-15 border-b-1"></div>
             <a href="https://www.pw.live/about-us" target="_blank" className="mx-4 hover:cursor-pointer"><span className="hover:cursor-pointer">About Us</span></a>
+            <a href="/warranty" target="_blank" className="mx-4 hover:cursor-pointer"><span className="hover:cursor-pointer">Warranty</span></a>
             <div className="w-full text-white opacity-15 border-b-1"></div>
             <div className="w-16 text-white opacity-15 border-b-2"></div>
             <span onClick={() => {
@@ -403,6 +404,7 @@ export default function Header({ showBuyNow, setOpenModal }) {
         </div>
         <div className='text-white flex-row'>
           {/* <span className="mx-2 hover:cursor-pointer">Home</span> */}
+          <a href="/" target="_blank" className="mx-4 hover:cursor-pointer">Home</a>
           <a href="https://www.pw.live/about-us" target="_blank" className="mx-4 hover:cursor-pointer">About Us</a>
           <span onClick={() => {
             TrackGoogleAnalyticsEvent('contact_click', 'Contact', {
@@ -410,6 +412,7 @@ export default function Header({ showBuyNow, setOpenModal }) {
             });
             window.open(`https://wa.me/9289105061`)
           }} className="mr-4 hover:cursor-pointer">Contact</span>
+          <a href="/warranty" target="_blank" className="mx-4 hover:cursor-pointer">Warranty</a>
           {/* {showBuyNow && <Link href="/preorder" className="bg-blue-500 p-3 rounded-md text-sm hover:cursor-pointer">Pre-Order</Link>} */}
           {/* {showBuyNow && <Link href={'https://store.pw.live/products/pi-book'} referrerPolicy="no-referrer" target="_blank"><span onClick={()=>TrackGoogleAnalyticsEvent('preorder_click','Buy-Now')} className="bg-blue-600 p-3 rounded-md text-sm hover:cursor-pointer">Buy Now</span></Link>} */}
           {/* {showBuyNow && <ModalForm />} */}
