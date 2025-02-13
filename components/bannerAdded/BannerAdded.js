@@ -34,6 +34,7 @@ export default function BannerAdded() {
                 <p className="text-center text-white text-sm mt-6">
                     The PiBook's powerful keymapper allows users to customize their experience by mapping any function to the gamepad buttons, touchpad, and analog sticks.
                 </p>
+                <span className="text-blue-200 border-2 border-blue-400/20 text-sm bg-blue-400/10 px-4 py-1 rounded-full hover:text-blue-400 mt-5 mx-auto block w-fit"><a href="https://www.youtube.com/watch?v=ADjK5KAbbfs" target="_blank" rel="noopener noreferrer">Tutorial Video</a></span>
 
                 <p className="text-3xl my-8 mb-4 font-bold bg-gradient-to-r text-center w-full from-textGradientLeft to-textGradientRight inline-block text-transparent bg-clip-text">Connectivity</p>
                 <p className="text-xl mb-8 font-bold bg-gradient-to-r text-center w-full from-textGradientLeft to-textGradientRight inline-block text-transparent bg-clip-text">Calling + 4G + Bluetooth + Wi-Fi</p>
@@ -75,6 +76,8 @@ export default function BannerAdded() {
                 </div>
                 <p className="text-white mt-5 text-xs w-[80%] mx-auto text-center lg:text-lg">Stay connected anywhere, anytime with seamless 4G and calling support on your PiBook— learning and productivity on the go!</p>
 
+                <span className="text-blue-200 border-2 border-blue-400/20 text-sm bg-blue-400/10 px-4 py-1 rounded-full hover:text-blue-400 mt-5 w-fit mx-auto block"><a href="https://www.youtube.com/shorts/EdNR8WbP-ZY" target="_blank" rel="noopener noreferrer">How to Connect SIM</a></span>
+
 
             </div>
 
@@ -82,9 +85,10 @@ export default function BannerAdded() {
 
             <div className="hidden sm:block sm:px-4 md: lg:px-28 my-12">
                 <div className="flex justify-around items-center sm:px-4 sm:gap-2 md:gap-8 ">
-                    <div className="w-[30%]">
+                    <div className="w-[30%] flex flex-col items-center justify-center">
                         <p className="text-3xl sm:my-2 font-bold bg-gradient-to-r text-center w-full from-textGradientLeft to-textGradientRight inline-block text-transparent bg-clip-text">Keymapper</p>
-                        <p className="text-white text-center lg:text-lg">The PiBook's powerful keymapper allows users to customize their experience by mapping any function to the gamepad buttons, touchpad, and analog sticks.</p>
+                        <p className="text-white text-center lg:text-lg">The PiBook's powerful keymapper allows users to customize their experience by mapping any function to the gamepad buttons, touchpad, and analog sticks. <br /> </p> 
+                        <span className="text-blue-200 border-2 border-blue-400/20 text-sm bg-blue-400/10 px-4 py-1 rounded-full hover:text-blue-400 mt-5"><a href="https://www.youtube.com/watch?v=ADjK5KAbbfs" target="_blank" rel="noopener noreferrer">Tutorial Video</a></span>
                     </div>
                     <div className="w-[50%]">
                         <div className="text-white rounded-2xl bg-white bg-opacity-10 sm:p-4 md:p-8">
@@ -147,10 +151,11 @@ export default function BannerAdded() {
                             </div>
                         </div> */}
                     </div>
-                    <div className="w-[30%]">
+                    <div className="w-[30%] flex flex-col items-center justify-center">
                         <p className="text-3xl sm:my-2 font-bold bg-gradient-to-r text-center w-full from-textGradientLeft to-textGradientRight inline-block text-transparent bg-clip-text">Connectivity</p>
                         <p className="text-xl mb-8 font-bold bg-gradient-to-r text-center w-full from-textGradientLeft to-textGradientRight inline-block text-transparent bg-clip-text">Calling + 4G + Bluetooth + Wi-Fi</p>
                         <p className="text-white text-center lg:text-lg">Stay connected anywhere, anytime with seamless 4G and calling support on your PiBook— learning and productivity on the go!</p>
+                        <span className="text-blue-200 border-2 border-blue-400/20 text-sm bg-blue-400/10 px-4 py-1 rounded-full hover:text-blue-400 mt-5"><a href="https://www.youtube.com/shorts/EdNR8WbP-ZY" target="_blank" rel="noopener noreferrer">How to Connect SIM</a></span>
                     </div>
                 </div>
             </div>
