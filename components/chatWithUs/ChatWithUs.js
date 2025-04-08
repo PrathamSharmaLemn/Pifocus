@@ -6,6 +6,7 @@ import Image from "next/image";
 import { FaArrowUp } from "react-icons/fa";
 import WhatsappChatBox from "../WhatsappChatBox/WhatsappChatBox";
 import { TrackGoogleAnalyticsEvent } from "../../utils/analytics";
+import Link from "next/link";
 
 const phone = process.env.NEXT_PUBLIC_PHONENO
 export default function ChatWithUs() {
@@ -32,10 +33,6 @@ export default function ChatWithUs() {
             {/* {openChat && <WhatsappChatBox setOpenChat={setOpenChat} />} */}
 
             <span onClick={() => {
-                TrackGoogleAnalyticsEvent('contact_click', 'Contact', {
-                    method: 'whatsapp'
-                });
-                window.open(`https://wa.me/9289105061`)
             }} className=" text-bgColor p-0 rounded-full hover:cursor-pointer fixed  z-50 right-5 bottom-5">
                 {/* {!openChat && <BsChatLeftTextFill
                     style={{ width: 30, height: 30 }}
@@ -54,14 +51,22 @@ export default function ChatWithUs() {
                         {/* <p className="text-black w-fit p-2 py-1 text-nowrap text-xxs sm:text-xs absolute min-w-14 -top-12 -right-0 sm:-top-12 sm:-left-4 rounded-full rounded-br-none bg-white transition-opacity duration-500 ease-in-out animate-fade-in-out">
                             Claim Now
                         </p> */}
-                        <button
-                            onClick={() => window.open('https://store.pw.live/products/pi-book', '_blank')}
-                            className={`bg-gradient-to-r from-black via-gray-800 to-black text-white px-6 py-3 rounded-full text-sm font-semibold cursor-pointer animate-bounce hover:scale-110 transition-all duration-300 border-2 border-white/50 shadow-[0_0_15px_rgba(255,255,255,0.5)] relative overflow-hidden before:absolute before:content-[''] before:w-1/2 before:h-full before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent before:-left-full before:top-0 before:skew-x-[45deg] hover:before:animate-[shine_1s_ease-in-out_infinite] before:transition-all opacity-0 translate-y-10 ${scrollPosition > 20 ? 'opacity-100 translate-y-0' : ''}`}
-                        >
-                            Claim Your PiBook
-                        </button>
+                        {
+                            scrollPosition > 20 &&
+                            <Link href="/claim"
+                                className={`bg-gradient-to-r from-black via-gray-800 to-black text-white px-6 py-3 rounded-full text-sm font-semibold cursor-pointer animate-bounce hover:scale-110 transition-all duration-300 border-2 border-white/50 shadow-[0_0_15px_rgba(255,255,255,0.5)] relative overflow-hidden before:absolute before:content-[''] before:w-1/2 before:h-full before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent before:-left-full before:top-0 before:skew-x-[45deg] hover:before:animate-[shine_1s_ease-in-out_infinite] before:transition-all opacity-0 translate-y-10 ${scrollPosition > 20 ? 'opacity-100 translate-y-0' : ''}`}
+                            >
+                                Claim Your PiBook
+                            </Link>
+                        }
                     </div>
-                    <div className="relative">
+                    <div className="relative"
+                    onClick={() => {
+                        TrackGoogleAnalyticsEvent('contact_click', 'Contact', {
+                            method: 'whatsapp'
+                        });
+                        window.open(`https://wa.me/9289105061`)
+                    }}>
                         <p className="text-black w-fit p-2 py-1 text-nowrap text-xxs sm:text-xs absolute min-w-14 -top-12 -right-0 sm:-top-12 sm:-left-4 rounded-full rounded-br-none bg-white transition-opacity duration-500 ease-in-out animate-fade-in-out">
                             Live Chat
                         </p>
