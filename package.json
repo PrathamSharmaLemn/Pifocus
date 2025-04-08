@@ -11,6 +11,7 @@
     "@react-three/drei": "^9.70.4",
     "@react-three/fiber": "^8.17.10",
     "@types/three": "^0.170.0",
+    "axios": "^1.8.4",
     "email-validator": "^2.0.4",
     "firebase": "^11.1.0",
     "jwt-decode": "^4.0.0",
