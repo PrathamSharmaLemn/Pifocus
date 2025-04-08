@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import { useEffect, useState,useRef } from 'react';
+import { useRouter } from 'next/router';
 import styles from '../styles/Home.module.css';
 import Header from '../components/header/Header'
 import Footer from '../components/footer/Footer'
@@ -21,10 +22,7 @@ import ModalForm from '../components/modal/ModalForm';
 import ReactGA from "react-ga4";
 import GoogleAnalytics from '@bradgarropy/next-google-analytics'
 import { TrackGoogleAnalyticsEvent } from '../utils/analytics';
-
-
-
-
+import { GoogleOAuthProvider } from '@react-oauth/google';
 
 const HeavyHeader = dynamic((showBuyNow,setOpenModal) => import('../components/header/Header'), {
   ssr: false, // Optional: Disable server-side rendering for the component if it's not needed
@@ -79,6 +77,7 @@ const HeavyFooter = dynamic(() => import('../components/footer/Footer'), {
 
 
 export default function Home() {
+  const router = useRouter();
   const [showChat, setShowChat] = useState(false);
   const [openModal,setOpenModal]=useState(false)
   const [refHeader, inViewHeader] = useInView({ triggerOnce: true, threshold: 0.1 });
@@ -170,7 +169,6 @@ export default function Home() {
         };
     }, [openModal]);
   return (
-
     <div className={styles.container}>
       <Head>
         <title>PiBook</title>
@@ -232,8 +230,6 @@ export default function Home() {
       </div> */}
       <HeavyFooter />
       <GoogleAnalytics measurementId="G-QDKDHC6PBB"/>
-
     </div>
-
   );
 }
