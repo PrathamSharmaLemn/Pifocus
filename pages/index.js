@@ -23,6 +23,7 @@ import ReactGA from "react-ga4";
 import GoogleAnalytics from '@bradgarropy/next-google-analytics'
 import { TrackGoogleAnalyticsEvent } from '../utils/analytics';
 import { GoogleOAuthProvider } from '@react-oauth/google';
+import Link from 'next/link';
 
 const HeavyHeader = dynamic((showBuyNow,setOpenModal) => import('../components/header/Header'), {
   ssr: false, // Optional: Disable server-side rendering for the component if it's not needed
@@ -222,6 +223,8 @@ export default function Home() {
         {/* <HeavyBanner5 /> */}
         <HeavyBanner7 />
         <HeavyBanner8 />
+        <div className="flex justify-center pb-12">
+        </div>
       </main>
 
       {/* <Footer /> */}
