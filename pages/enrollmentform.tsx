@@ -3,6 +3,12 @@
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { validateAccessCode } from "../lib/accessCodes";
+
+const PENPENCIL_SUBMIT_URL = "https://api.penpencil.co/pi-os-backend/v1/user/batch-access-request";
+const DOWNLOAD_URL = "https://d37yir8f8g6stw.cloudfront.net/pw-live/1.0.1/pw-live-setup.exe";
+const mapPlatformToCode = (platform: string) =>
+  platform?.toLowerCase().includes("amazon") ? "AMZ" : "FLP";
 
 export default function Page() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -19,6 +25,10 @@ export default function Page() {
   const [klass, setKlass] = useState("");
   const [board, setBoard] = useState("");
   const [track, setTrack] = useState("");
+  const [accessCode, setAccessCode] = useState("");
+  const [accessCodeStatus, setAccessCodeStatus] = useState<"" | "checking" | "valid" | "invalid">("");
+  const [accessCodeMessage, setAccessCodeMessage] = useState("");
+  const [accessCodePlatform, setAccessCodePlatform] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   // Class options with proper suffixes
@@ -99,6 +109,31 @@ export default function Page() {
     }
   }
 
+  async function handleAccessCodeChange(value: string) {
+    setAccessCode(value);
+    
+    if (!value.trim()) {
+      setAccessCodeStatus("");
+      setAccessCodeMessage("");
+      setAccessCodePlatform("");
+      return;
+    }
+    
+    setAccessCodeStatus("checking");
+    setAccessCodeMessage("Validating access code...");
+    
+    try {
+      const result = await validateAccessCode(value);
+      setAccessCodeStatus(result.valid ? "valid" : "invalid");
+      setAccessCodeMessage(result.message);
+      setAccessCodePlatform(result.platform || "");
+    } catch (error) {
+      setAccessCodeStatus("invalid");
+      setAccessCodeMessage("Unable to validate access code. Please try again.");
+      setAccessCodePlatform("");
+    }
+  }
+
   async function handleSendOtp() {
     if (!validatePhone(phone)) {
       setOtpError("Enter a valid 10-digit phone number");
@@ -136,7 +171,6 @@ export default function Page() {
         throw new Error(data.message || "Failed to send OTP");
       }
     } catch (error) {
-      console.error("Send OTP error:", error);
       setOtpError("Failed to send OTP. Please try again.");
     } finally {
       setIsLoading(false);
@@ -186,7 +220,6 @@ export default function Page() {
         await handleAutoRegister();
       }
     } catch (error) {
-      console.error("Verify OTP error:", error);
       // Try registration if verification fails
       await handleAutoRegister();
     } finally {
@@ -226,7 +259,6 @@ export default function Page() {
         throw new Error(data.message || "Registration failed");
       }
     } catch (error) {
-      console.error("Registration error:", error);
       setOtpError("Login/Registration failed. Please try again later.");
     }
   }
@@ -248,45 +280,48 @@ export default function Page() {
       alert("Please select your track (NEET or JEE)");
       return;
     }
+    if (!accessCode.trim()) {
+      alert("Please enter your access code");
+      return;
+    }
+    if (accessCodeStatus !== "valid") {
+      alert("Please enter a valid access code");
+      return;
+    }
 
     if (isSubmitting) return;
     setIsSubmitting(true);
 
     try {
-      const submissionId = Date.now().toString() + Math.random().toString(36).substr(2, 9);
-      
-      const formData = {
-        phone,
-        name: name.trim(),
-        class: klass,
+      // Build payload expected by external API
+      const values = [
+        phone.trim(),
+        name.trim(),
+        klass,
         board,
-        track: track || null,
-        submissionId
-      };
+        track || "",
+        accessCode.trim(),
+        mapPlatformToCode(accessCodePlatform)
+      ];
 
-      console.log(formData);
-      const response = await fetch('/api/submit-form', {
+      
+      const response = await fetch(PENPENCIL_SUBMIT_URL, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({ values }),
       });
 
       if (!response.ok) {
         const errorData = await response.json().catch(() => ({}));
-        console.error('Form submission failed:', errorData);
-        console.error('Response status:', response.status);
-        console.error('Response status text:', response.statusText);
         // Continue with the flow even if Google Sheets submission fails
       } else {
-        const result = await response.json();
-        console.log('Form data submitted successfully to Google Sheets:', result);
+        const result = await response.json().catch(() => ({}));
       }
 
       setStep("all-set");
     } catch (error) {
-      console.error('Failed to submit form data:', error);
       // Continue with the flow even if there's an error
       setStep("all-set");
     } finally {
@@ -592,6 +627,55 @@ export default function Page() {
                   </div>
                 )}
 
+                <div className="space-y-2">
+                  <label className="block text-sm text-gray-300">Access Code</label>
+                  <div className="relative">
+                    <input
+                      type="text"
+                      placeholder="Enter your access code"
+                      className={`w-full h-11 rounded-md border px-3 outline-none focus:ring-2 transition-colors ${
+                        accessCodeStatus === "valid" 
+                          ? "border-green-500 bg-green-500/10 text-green-400 focus:ring-green-500/50"
+                          : accessCodeStatus === "invalid"
+                          ? "border-red-500 bg-red-500/10 text-red-400 focus:ring-red-500/50"
+                          : "border-gray-600 bg-white/10 text-white focus:ring-white/50"
+                      } placeholder-gray-400`}
+                      value={accessCode}
+                      onChange={(e) => handleAccessCodeChange(e.target.value)}
+                    />
+                    {accessCodeStatus === "checking" && (
+                      <div className="absolute inset-y-0 right-3 flex items-center">
+                        <div className="w-4 h-4 border-2 border-gray-400 border-t-transparent rounded-full animate-spin"></div>
+                      </div>
+                    )}
+                    {accessCodeStatus === "valid" && (
+                      <div className="absolute inset-y-0 right-3 flex items-center">
+                        <svg className="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
+                      </div>
+                    )}
+                    {accessCodeStatus === "invalid" && (
+                      <div className="absolute inset-y-0 right-3 flex items-center">
+                        <svg className="w-4 h-4 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                      </div>
+                    )}
+                  </div>
+                  {accessCodeMessage && (
+                    <p className={`text-sm ${
+                      accessCodeStatus === "valid" 
+                        ? "text-green-400" 
+                        : accessCodeStatus === "invalid" 
+                        ? "text-red-400" 
+                        : "text-gray-400"
+                    }`}>
+                      {accessCodeMessage}
+                    </p>
+                  )}
+                </div>
+
                 <button
                   onClick={handleDetailsSubmit}
                   disabled={isSubmitting}
@@ -666,8 +750,8 @@ export default function Page() {
                         // Start download immediately in background
                         setTimeout(() => {
                           const link = document.createElement('a');
-                          link.href = '/api/download';
-                          link.download = 'PW-Live-Setup-1.0.0.exe';
+                          link.href = DOWNLOAD_URL;
+                          link.download = 'PW-Live-Setup-1.0.1.exe';
                           link.style.display = 'none';
                           document.body.appendChild(link);
                           link.click();
