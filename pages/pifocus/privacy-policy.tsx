@@ -147,8 +147,9 @@ export default function PrivacyPolicy() {
         window.print();
       });
       document.body.appendChild(printButton);
+      return printButton;
     }
-    addPrintButton();
+    const printButton = addPrintButton();
 
     // Back to top functionality
     function addBackToTop() {
@@ -176,8 +177,9 @@ export default function PrivacyPolicy() {
           backToTop.style.visibility = 'hidden';
         }
       });
+      return backToTop;
     }
-    addBackToTop();
+    const backToTop = addBackToTop();
 
     // Keyboard navigation support
     document.addEventListener('keydown', function(e) {
@@ -215,6 +217,11 @@ export default function PrivacyPolicy() {
         imageObserver.observe(img as HTMLImageElement);
       });
     }
+
+    return () => {
+      printButton.remove();
+      backToTop.remove();
+    };
   }, []);
 
   return (
